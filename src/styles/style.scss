@@ -15,7 +15,6 @@
 @use 'blocks/category';
 @use 'blocks/hit';
 @use 'blocks/product-item';
-@use 'blocks/collection';
 @use 'blocks/new';
 @use 'blocks/banner-section';
 @use 'blocks/about-block';
@@ -27,5 +26,8 @@
 @use 'blocks/journal';
 @use 'blocks/collection-page';
 @use 'blocks/catalog-page';
+@use 'blocks/catalog-6';
+@use 'blocks/catalog-5';
+@use 'blocks/pdp';
 
 @use 'segments/main';

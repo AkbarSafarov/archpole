@@ -1,7 +1,7 @@
-<section class="popular-section">
+<section class="popular-section py-6">
     <div class="container-xl">
 
-        <div class="popular-section__head">
+        <div class="popular-section__head pb-5">
             <h2 class="popular-section__title">ПОПУЛЯРНЫЕ ТОВАРЫ</h2>
             <div class="popular-section__controls d-none d-lg-flex">
                 <a href="#" class="btn btn-dark">ВСЕ ТОВАРЫ</a>
@@ -22,27 +22,28 @@
              data-swiper
              data-swiper-next=".popular-section__controls .arrow_btn.next"
              data-swiper-prev=".popular-section__controls .arrow_btn.prev"
-             data-swiper-breakpoints='{"0":{"slidesPerView":1.3,"spaceBetween":12},"576":{"slidesPerView":3,"spaceBetween":16},"992":{"slidesPerView":5,"spaceBetween":16}}'>
+             data-swiper-pagination=".popular-section .swiper-pagination"
+             data-swiper-breakpoints='{"0":{"slidesPerView":"auto","spaceBetween":12},"576":{"slidesPerView":"auto","spaceBetween":12},"992":{"slidesPerView":5,"spaceBetween":9}}'>
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    @@include('product.html', {"img": "files/product1.jpg", "name": "Пуф-кот «Обнимун» синий", "price": "14 000 ₽"})
+                    @@include('product.html', {"img": "files/product1.png", "name": "Пуф-кот «Обнимун» синий", "price": "14 000 ₽"})
                 </div>
                 <div class="swiper-slide">
-                    @@include('product.html', {"img": "files/product2.jpg", "name": "Арт стул «Овале»", "price": "53 200 ₽"})
+                    @@include('product.html', {"img": "files/product2.png", "name": "Арт стул «Овале»", "price": "53 200 ₽"})
                 </div>
                 <div class="swiper-slide">
-                    @@include('product.html', {"img": "files/product3.jpg", "name": "Стол барный «Боксер»", "price": "118 000 ₽"})
+                    @@include('product.html', {"img": "files/product3.png", "name": "Стол барный «Боксер»", "price": "118 000 ₽"})
                 </div>
                 <div class="swiper-slide">
-                    @@include('product.html', {"img": "files/product4.jpg", "name": "Диван «Тюлень» без хранения", "price": "198 000 ₽"})
+                    @@include('product.html', {"img": "files/product4.png", "name": "Диван «Тюлень» без хранения", "price": "198 000 ₽"})
                 </div>
                 <div class="swiper-slide">
-                    @@include('product.html', {"img": "files/product5.jpg", "name": "Кухня «Швед» двойной модуль", "price": "38 000 ₽"})
+                    @@include('product.html', {"img": "files/product5.png", "name": "Кухня «Швед» двойной модуль", "price": "38 000 ₽"})
                 </div>
             </div>
         </div>
-
-        <a href="#" class="popular-section__all-btn d-lg-none">ВСЕ ТОВАРЫ</a>
+        <div class="swiper-pagination"></div>
+        <a href="#" class="btn btn-dark d-lg-none">ВСЕ ТОВАРЫ</a>
 
     </div>
 </section>

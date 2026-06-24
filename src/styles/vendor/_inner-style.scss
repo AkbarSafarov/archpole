@@ -6,3 +6,16 @@
         --bs-gutter-x: 24px;
     }
 }
+
+// Custom spacing level 6: 56px (PC + tablet ≤991px), 48px (mobile ≤767px)
+.pt-6 { padding-top: 56px !important; }
+.pb-6 { padding-bottom: 56px !important; }
+.py-6 { padding-top: 56px !important; padding-bottom: 56px !important; }
+.px-6 { padding-left: 56px !important; padding-right: 56px !important; }
+
+@media (max-width: 767px) {
+    .pt-6 { padding-top: 48px !important; }
+    .pb-6 { padding-bottom: 48px !important; }
+    .py-6 { padding-top: 48px !important; padding-bottom: 48px !important; }
+    .px-6 { padding-left: 48px !important; padding-right: 48px !important; }
+}

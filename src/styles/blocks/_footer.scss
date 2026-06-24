@@ -1,46 +1,53 @@
 .footer {
     background: #161616;
-    padding-top: 64px;
+    padding: 60px 0;
+    position: relative;
+    overflow: hidden;
 
-    // ─── Column heading ───────────────────────────────────────────────────────
+    .container-xl {
+        position: relative;
+    }
+
+    .footer-icon {
+        position: absolute;
+        right: 232px;
+        bottom: -142px;
+        transition: all .8s;
+
+        &.active {
+            bottom: -60px;
+        }
+    }
 
     &__col-head {
         font-family: var(--second-family);
         font-weight: 400;
-        font-size: 18px;
-        line-height: 100%;
-        text-transform: uppercase;
+        font-size: 28px;
+        line-height: 90%;
         color: #fff;
-        margin: 0 0 24px;
+        text-transform: uppercase;
+        margin: 16px 0;
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 100%;
-
-        // Button reset (for nav cols)
         background: none;
         border: none;
         padding: 0;
         text-align: left;
         cursor: default;
 
-        // Plain variant (Контакты heading)
         &--plain { cursor: default; }
     }
 
-    // Chevron: hidden on PC
     &__chevron { display: none; }
-
-    // ─── Top grid ────────────────────────────────────────────────────────────
 
     &__top {
         display: grid;
         grid-template-columns: 0.85fr 1.35fr 0.95fr 0.9fr 1.2fr;
-        gap: 24px 48px;
-        padding-bottom: 64px;
+        gap: 24px 16px;
+        padding-bottom: 60px;
     }
-
-    // ─── Links list (always visible on PC) ───────────────────────────────────
 
     &__links {
         list-style: none;
@@ -48,41 +55,43 @@
         margin: 0;
         display: flex;
         flex-direction: column;
-        gap: 12px;
 
         a {
+            padding: 10px 0;
             font-family: var(--font-family);
-            font-size: 14px;
-            line-height: 140%;
-            color: rgba(255, 255, 255, 0.55);
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 90%;
+            color: #8a8a8a;
             text-decoration: none;
             transition: color 0.2s;
+            display: inline-block;
 
             &:hover { color: #fff; }
         }
     }
 
-    // ─── Contacts ────────────────────────────────────────────────────────────
-
     &__contacts-body {
         display: flex;
         flex-direction: column;
-        gap: 12px;
+        gap: 10px;
     }
 
     &__contacts-info {
         display: flex;
         flex-direction: column;
-        gap: 12px;
+        gap: 20px;
+        padding-top: 10px;
     }
 
     &__contacts-info a,
     &__contacts-info p,
     &__contacts-addr {
         font-family: var(--font-family);
-        font-size: 14px;
-        line-height: 140%;
-        color: rgba(255, 255, 255, 0.55);
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 120%;
+        color: #8a8a8a !important;
         font-style: normal;
         margin: 0;
         text-decoration: none;
@@ -91,34 +100,31 @@
         &:hover { color: #fff; }
     }
 
-    // ─── Divider ─────────────────────────────────────────────────────────────
-
     &__divider {
         border: none;
-        border-top: 1px solid rgba(255, 255, 255, 0.15);
+        border-top: 1px solid #343434;
         margin: 0;
     }
 
-    // ─── Bottom ──────────────────────────────────────────────────────────────
-
     &__bottom {
         display: flex;
-        align-items: flex-start;
+        align-items: end;
         gap: 60px;
-        padding: 28px 0 40px;
+        padding: 60px 0 0;
     }
 
     &__legal,
     &__copy {
         display: flex;
         flex-direction: column;
-        gap: 6px;
+        gap: 10px;
 
         a, span {
             font-family: var(--font-family);
-            font-size: 12px;
-            line-height: 150%;
-            color: rgba(255, 255, 255, 0.35);
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 105%;
+            color: #8a8a8a;
             text-decoration: none;
             transition: color 0.2s;
 
@@ -133,10 +139,8 @@
         gap: 20px;
     }
 
-    // ─── Tablet (<992px) ─────────────────────────────────────────────────────
-
     @media (max-width: 991px) {
-        padding-top: 0;
+        padding: 16px 0 32px !important;
 
         &__top {
             grid-template-columns: 1fr;
@@ -145,36 +149,32 @@
         }
 
         &__col {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            border-bottom: 1.50px solid #343434;
         }
 
-        // Button becomes clickable toggle
         &__col-head {
             cursor: pointer;
-            padding: 20px 0;
+            padding: 16px 0;
             margin: 0;
+            font-size: 24px;
         }
 
-        // Show chevron on tablet/mobile
         &__chevron {
             display: block;
             flex-shrink: 0;
             transition: transform 0.25s;
         }
 
-        // Links hidden by default, shown when .is-open
         &__col .footer__links { display: none; }
         &__col.is-open .footer__links {
             display: flex;
             padding-bottom: 20px;
         }
 
-        // Rotate chevron when open
         &__col.is-open &__chevron { transform: rotate(180deg); }
 
-        // Contacts: always visible, 2-column layout
         &__contacts {
-            padding: 32px 0;
+            padding: 24px 0 40px;
         }
 
         &__contacts-body {
@@ -184,20 +184,34 @@
             align-items: start;
         }
 
-        // Bottom: 2-col grid, brand on second row
+        .footer__contacts-info a, .footer__contacts-info p, .footer__contacts-addr {
+            font-size: 16px;
+        }
+
+        .footer__contacts-info {
+            gap: 12px;
+        }
+
         &__bottom {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 24px 40px;
+            gap: 40px;
+            padding: 40px 0 0;
         }
 
         &__brand {
             grid-column: 1 / -1;
             margin-left: 0;
         }
-    }
 
-    // ─── Mobile (<768px) ─────────────────────────────────────────────────────
+        .footer-icon {
+            right: 0px;
+            width: 204px;
+        }
+        .footer__legal a, .footer__legal span, .footer__copy a, .footer__copy span {
+            font-size: 14px;
+        }
+    }
 
     @media (max-width: 767px) {
 
@@ -210,6 +224,13 @@
             gap: 20px;
         }
 
-        &__brand { grid-column: 1; }
+        &__brand {
+            grid-column: 1;
+            padding-top: 30px;
+
+            svg {
+                width: 108px;
+            }
+        }
     }
 }

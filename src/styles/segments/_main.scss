@@ -2,20 +2,17 @@
 
 html, body {margin: 0;height: 100%;min-height: 100%;}
 
-
 $siteWidth: 1344px;                      // Ширина
 $siteMinWidth: 340px;                   // Минимальная ширина
 
 $siteFontFamily: var(--font-family), arial;                 // Основное семейство
 $siteFontSize: 18px;                    // Основной размер
 
-
 $H1Size: $siteFontSize*2 + 16;               // Размер заголовка
 
 $siteColor: #1B1B1F;                       // Цвет шрифта
 $linkColor: #183E98;                       // Цвет ссылок
 $HnColor: #000;                         // Цвет заголовка
-
 
 body {
     position: relative;
@@ -42,7 +39,6 @@ h5 {font-size: round($H1Size - 8);}
 h6 {font-size: round($H1Size - 9);}
 h5, h6 {font-size: round($H1Size - 10);}
 
-
 @media all and (max-width: 1024px) {
     h1 {margin-top: 0; font-size: 28px !important;}
     h2 {font-size: 26px;}
@@ -58,7 +54,6 @@ a:hover {text-decoration: none;}
 
 a img {border-color: $siteColor;}
 
-
 a[href^="tel:"] {
     text-decoration: none;
     color: inherit;
@@ -71,13 +66,11 @@ img, textarea, input, table {
 .site_wrapper {
    display: flex;
    flex-direction: column;
-   //overflow: hidden;
 }
 
 *{
     box-sizing: border-box;
 }
-
 
 .field {
     margin-bottom: 16px;
@@ -319,7 +312,6 @@ img, textarea, input, table {
     }
 }
 
-
 .site_wrapper {
     position: relative;
     display: flex;
@@ -341,7 +333,6 @@ button {
     padding: 0;
     background: none;
 }
-
 
 .content-padding {
     padding-left: 44px;
@@ -498,7 +489,6 @@ button {
         }
     }
 
-
     @media all and (min-width: 577px)  and (max-width: 991px) {
         padding: 48px 0;
 
@@ -522,7 +512,7 @@ button {
         }
     }
 
-    @media all and (max-width: 576px) {
+    @media all and (max-width: 767px) {
         padding: 32px 0;
 
         .content-padding {
@@ -747,8 +737,6 @@ button {
         transform: translateY(0);
     }
 }
-
-
 
 .catalog_list {
     padding: 32px 0 48px;

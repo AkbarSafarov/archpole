@@ -14,8 +14,6 @@
         .burger-menu__panel   { transform: translateX(0); }
     }
 
-    // ─── Overlay (dark backdrop) ──────────────────────────────────────────────
-
     &__overlay {
         position: absolute;
         inset: 0;
@@ -24,8 +22,6 @@
         transition: opacity 0.3s ease;
         cursor: pointer;
     }
-
-    // ─── Panel ────────────────────────────────────────────────────────────────
 
     &__panel {
         position: relative;
@@ -45,8 +41,6 @@
             max-width: 100%;
         }
     }
-
-    // ─── Panel header ─────────────────────────────────────────────────────────
 
     &__head {
         display: flex;
@@ -75,16 +69,12 @@
         svg { display: block; }
     }
 
-    // ─── Body: levels container ───────────────────────────────────────────────
-
     &__body {
         flex: 1;
         overflow-y: auto;
         overflow-x: hidden;
         position: relative;
     }
-
-    // ─── Single level ─────────────────────────────────────────────────────────
 
     &__level {
         display: none;
@@ -95,8 +85,6 @@
             display: flex;
         }
     }
-
-    // ─── Sub-menu header row (back + title) ───────────────────────────────────
 
     &__sub-head {
         display: flex;
@@ -129,12 +117,9 @@
         color: #161616;
     }
 
-    // ─── Nav + list ───────────────────────────────────────────────────────────
-
     &__nav {
         padding: 0 24px;
 
-        // Tablet+: 2-column balanced layout (column-first flow)
         @media (min-width: 768px) {
             columns: 2;
             column-gap: 32px;
@@ -147,14 +132,10 @@
         padding: 0;
     }
 
-    // ─── li ───────────────────────────────────────────────────────────────────
-
     &__item {
         break-inside: avoid;
         -webkit-column-break-inside: avoid;
     }
-
-    // ─── a ────────────────────────────────────────────────────────────────────
 
     &__link {
         display: flex;
@@ -180,8 +161,6 @@
         margin-left: 8px;
     }
 
-    // ─── Root-level footer: socials + address ─────────────────────────────────
-
     &__footer {
         margin-top: auto;
         padding: 24px;
@@ -194,7 +173,6 @@
         gap: 6px;
         margin-bottom: 16px;
 
-        // Reuse header__icon-btn for social buttons (same style)
         .header__icon-btn {
             flex-shrink: 0;
         }

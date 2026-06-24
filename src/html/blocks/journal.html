@@ -1,7 +1,6 @@
-<section class="journal_bottom">
+<section class="journal_bottom pt-6 pb-4">
     <div class="container-xl">
 
-        <!-- ═══ ЖУРНАЛ ═══ -->
         <div class="journal_section" data-swiper-container>
 
             <div class="journal_section__head">
@@ -25,10 +24,10 @@
 
             <div class="swiper journal_section__swiper"
                  data-swiper
-                 data-swiper-loop="false"
-                 data-swiper-space="24"
-                 data-swiper-per-view="4"
-                 data-swiper-breakpoints='{"0":{"slidesPerView":1.5,"spaceBetween":12},"576":{"slidesPerView":2,"spaceBetween":16},"768":{"slidesPerView":3,"spaceBetween":20},"1200":{"slidesPerView":4,"spaceBetween":24}}'>
+                 data-swiper-next=".journal_section .arrow_btn.next"
+                 data-swiper-prev=".journal_section .arrow_btn.prev"
+                 data-swiper-pagination=".journal_section .swiper-pagination"
+                 data-swiper-breakpoints='{"0":{"slidesPerView":"auto","spaceBetween":12},"576":{"slidesPerView":"auto","spaceBetween":12},"992":{"slidesPerView":4,"spaceBetween":16}}'>
                 <div class="swiper-wrapper">
 
                     <div class="swiper-slide">
@@ -66,22 +65,23 @@
                             <p class="journal_card__title">Зачем нужны два проекта визуализации будущего интерьера: классический и минимальный</p>
                         </a>
                     </div>
-
+                    <div class="swiper-slide">
+                        <a href="#" class="journal_card">
+                            <div class="journal_card__img">
+                                <img src="files/ju3.jpg" alt="Уникальная библиотека архитекторов">
+                            </div>
+                            <p class="journal_card__title">Уникальная библиотека архитекторов и урбанистов с мебелью ARCHPOLE</p>
+                        </a>
+                    </div>
                 </div>
             </div>
-
-            <!-- Tablet / mobile: divider + button -->
+            <div class="swiper-pagination"></div>
             <div class="journal_section__mob-foot d-lg-none">
-                <span class="journal_section__sep"></span>
                 <a href="#" class="btn btn-dark">Все статьи</a>
             </div>
 
         </div>
 
-        <!-- ═══ DIVIDER ═══ -->
-        <hr class="journal_bottom__divider">
-
-        <!-- ═══ СЛОГАН ═══ -->
         <div class="journal_bottom__tagline">
             <h2 class="journal_bottom__tagline-title">Archpole – архитектура жизни в мебели</h2>
             <p class="journal_bottom__tagline-desc">ARCHPOLE — российский бренд мебели с собственным производством. Мы создаём функциональные и долговечные предметы из натуральных материалов — для дома, бизнеса и проектных пространств. Наш подход — продуманная форма, честные материалы и внимание к деталям.</p>

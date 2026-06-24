@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Карточка товара — Стул">
+<title>Стул - Archpole</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal-default-theme.css" integrity="sha512-nF9G9AnUEVv+zx285OqwGE8c1gmkys3qV6iuDK5rVG/UuZLWRgGBy/tN5WzSXXuZDZ1YvwhJ9+a/DTj71L8Lrw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="libs/swiper-bundle.min.css">
+<link rel="stylesheet" href="libs/lightgallery.css">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<div class="site_wrapper">
+    <header class="header">
+
+    
+    <div class="header__announce js-announce">
+        <div class="container-xl d-flex justify-content-between">
+            <p class="header__announce-text">ДОРОГИЕ ДАМЫ, В ЧЕСТЬ ПРАЗДНИКА 8 МАРТА У НАС СКИДКА НА ДЕКОР 25%</p>
+            <button class="header__announce-close js-announce-close" type="button" aria-label="Закрыть">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.99984 7.05767L11.2997 3.75781L12.2425 4.70062L8.94264 8.00047L12.2425 11.3003L11.2997 12.2431L7.99984 8.94327L4.70002 12.2431L3.7572 11.3003L7.05704 8.00047L3.7572 4.70062L4.70002 3.75781L7.99984 7.05767Z" fill="#161616" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    
+    <div class="header__main">
+        <div class="container-xl header__inner">
+
+            
+            <div class="header__mob-left d-flex d-lg-none">
+                <button class="header__icon-btn js-burger" type="button" aria-label="Меню" aria-expanded="false">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.25 3H15.75V4.5H2.25V3ZM2.25 8.25H15.75V9.75H2.25V8.25ZM2.25 13.5H15.75V15H2.25V13.5Z" fill="black" />
+                    </svg>
+                </button>
+                <button class="header__icon-btn js-search-toggle" type="button" aria-label="Поиск">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.5233 12.4626L16.7353 15.6746L15.6746 16.7353L12.4626 13.5233C11.3077 14.4473 9.843 15 8.25 15C4.524 15 1.5 11.976 1.5 8.25C1.5 4.524 4.524 1.5 8.25 1.5C11.976 1.5 15 4.524 15 8.25C15 9.843 14.4473 11.3077 13.5233 12.4626ZM12.0185 11.9061C12.9356 10.9609 13.5 9.6717 13.5 8.25C13.5 5.34937 11.1506 3 8.25 3C5.34937 3 3 5.34937 3 8.25C3 11.1506 5.34937 13.5 8.25 13.5C9.6717 13.5 10.9609 12.9356 11.9061 12.0185L12.0185 11.9061Z" fill="#161616" />
+                    </svg>
+                </button>
+            </div>
+
+            
+            <a href="index.html" class="header__logo">
+                <svg width="155" height="28" viewBox="0 0 155 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.2548 0V28H12.509V15.5217H2.74587V28H0V0H15.2548ZM2.74587 12.4783H12.509V3.04348H2.74587V12.4783Z" fill="#161616" />
+                    <path d="M75.3589 28L75.3588 0.0407749H72.613V12.6712H62.8499V0.0203874L60.104 0L60.104 28H62.8499L62.8499 15.7147H72.613L72.613 28H75.3589Z" fill="#161616" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M35.0861 0V15.5217H25.0179L35.0861 25.8696L32.9504 28L22.8822 17.6522V28H20.1253V0H35.0861ZM22.8822 12.4783H32.3402V3.04348H22.8822V12.4783Z" fill="#161616" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M95.1493 0V15.8261H82.9973V28H80.1996V0H95.1493ZM82.9863 12.7826H92.4443V3.04348H82.9863V12.7826Z" fill="#161616" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M114.722 0V28H99.4668V0H114.722ZM102.207 24.9565H111.97V3.04348H102.207V24.9565Z" fill="#161616" />
+                    <path d="M55.5385 0H40.2727V28H55.5385V24.9565H43.0186V3.04348H55.5385V0Z" fill="#161616" />
+                    <path d="M122.344 0H119.598V28H134.864V24.9565H122.344V0Z" fill="#161616" />
+                    <path d="M155 0H139.734V28H155V24.9565H142.48V15.8261H155V12.7826H142.48V3.04348H155V0Z" fill="#161616" />
+                </svg>
+            </a>
+
+            
+            <nav class="header__nav d-none d-lg-flex" aria-label="Основная навигация">
+                <ul>
+                    <li><a href="#" class="header__nav-link">Каталог</a></li>
+                    <li>
+                        <a href="#" class="header__nav-link">Услуги</a></li>
+                    <li>
+                        <a href="#" class="header__nav-link">Партнерство</a></li>
+                    <li>
+                        <a href="#" class="header__nav-link">О нас</a></li>
+                </ul>
+            </nav>
+
+            
+            <div class="header__right d-none d-lg-flex align-items-center">
+                <form class="header__search" action="#" autocomplete="off">
+                    <svg class="header__search-icon"  width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.6873 9.74453L13.5425 12.5997L12.5997 13.5425L9.74453 10.6873C8.71793 11.5087 7.416 12 6 12C2.688 12 0 9.312 0 6C0 2.688 2.688 0 6 0C9.312 0 12 2.688 12 6C12 7.416 11.5087 8.71793 10.6873 9.74453ZM9.3498 9.24987C10.165 8.40973 10.6667 7.26373 10.6667 6C10.6667 3.42167 8.57833 1.33333 6 1.33333C3.42167 1.33333 1.33333 3.42167 1.33333 6C1.33333 8.57833 3.42167 10.6667 6 10.6667C7.26373 10.6667 8.40973 10.165 9.24987 9.3498L9.3498 9.24987Z" fill="#161616" />
+                    </svg>
+                    <input type="text" class="header__search-input" placeholder="ПОИСК" aria-label="Поиск">
+                </form>
+                <button class="header__icon-btn js-cart-toggle" type="button"  aria-label="Корзина">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.42069 1.66667H14.5874C14.8496 1.66667 15.0966 1.79016 15.254 2L17.504 5V17.5C17.504 17.9603 17.131 18.3333 16.6707 18.3333H3.33736C2.87713 18.3333 2.50403 17.9603 2.50403 17.5V5L4.75403 2C4.91141 1.79016 5.1584 1.66667 5.42069 1.66667ZM15.4207 5L14.1707 3.33333H5.83736L4.58736 5H15.4207ZM7.50403 8.33333H5.83736V10C5.83736 12.3012 7.70284 14.1667 10.004 14.1667C12.3052 14.1667 14.1707 12.3012 14.1707 10V8.33333H12.504V10C12.504 11.3808 11.3847 12.5 10.004 12.5C8.62329 12.5 7.50403 11.3808 7.50403 10V8.33333Z" fill="#161616" />
+                    </svg>
+                </button>
+                <button class="header__icon-btn js-wishlist-toggle" type="button" aria-label="Избранное">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.0008 3.77378C11.9583 2.01667 14.9833 2.075 16.8688 3.96447C18.7544 5.85393 18.8191 8.86417 17.0655 10.8275L9.99988 17.9042L2.93444 10.8275C1.18083 8.86417 1.24638 5.84918 3.13109 3.96447C5.01793 2.07763 8.03762 2.01406 10.0008 3.77378Z" fill="#161616" />
+                    </svg>
+                </button>
+                <button class="header__icon-btn js-account-toggle" type="button" aria-label="Личный кабинет">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.96018 18C7.40708 18 6.13274 17.8563 5.5354 17.7844C4.93805 17.7126 4.53982 17.6766 4.02212 17.497C3.70354 17.3892 3.42478 17.3533 3.14602 17.4251C2.98673 17.4611 2.74779 17.6048 2.54867 17.8204C2.4292 17.9281 2.26991 18 2.15044 18C1.91151 17.9641 1.75221 17.8204 1.63274 17.5689C1.51328 17.2455 1.47345 16.8503 1.47345 16.3832C1.47345 15.5928 1.47345 14.982 1.47345 14.515C1.47345 13.8323 1.51327 13.2934 1.51327 12.8623C1.5531 12.2515 1.59292 11.7126 1.63274 11.2455C1.71239 10.8144 1.67257 10.5629 1.51327 10.4192C1.3938 10.2754 1.23451 10.1677 1.0354 10.1677C0.716813 10.0958 0.438055 10.024 0.159294 9.88024C2.02559e-06 9.80838 -0.0398237 9.73653 0.0398223 9.62874C0.238937 9.48503 0.438053 9.34132 0.716814 9.23353C1.27434 9.01796 1.71239 8.76647 2.0708 8.47904C2.15044 8.33533 2.19027 8.22754 2.26991 7.94012C2.34956 7.65269 2.46903 7.1497 2.62832 6.61078C2.9469 5.49701 3.34513 4.45509 3.78319 3.48503C4.18142 2.73054 4.65929 1.90419 5.21681 1.07784C5.61504 0.467066 5.89381 0.107784 6.01327 0C6.09292 0.0359281 6.21239 0.107784 6.33186 0.251497C6.45133 0.395209 6.65044 0.610778 6.88938 0.97006C7.04867 1.22156 7.24779 1.32934 7.48673 1.36527C7.88496 1.36527 8.40265 1.32934 9 1.32934C9.59734 1.32934 10.115 1.36527 10.5133 1.36527C10.7522 1.36527 10.9513 1.22156 11.1106 0.97006C11.3496 0.646707 11.5487 0.395209 11.6681 0.251497C11.8274 0.107784 11.9071 0 11.9867 0C12.1062 0.107784 12.3451 0.467066 12.7832 1.07784C13.3407 1.94012 13.8186 2.73054 14.2168 3.48503C14.6549 4.45509 15.0531 5.49701 15.3717 6.61078C15.531 7.1497 15.6504 7.61677 15.7301 7.94012C15.8097 8.22754 15.8496 8.37126 15.9292 8.47904C16.2478 8.76647 16.7257 9.01796 17.2832 9.23353C17.5619 9.34132 17.7611 9.48503 17.9602 9.62874C18.0398 9.7006 18 9.77246 17.8407 9.88024C17.5619 10.024 17.2832 10.0958 16.9646 10.1677C16.8053 10.2036 16.646 10.2754 16.4867 10.4192C16.3673 10.5269 16.3274 10.8144 16.3673 11.2455C16.4071 11.6766 16.4469 12.2156 16.4867 12.8623C16.4867 13.2934 16.5266 13.8323 16.5266 14.515C16.5266 14.982 16.5266 15.5928 16.5266 16.3832C16.5266 16.8862 16.4867 17.2814 16.3673 17.5689C16.2478 17.8204 16.0885 17.9641 15.8496 18C15.6903 18 15.5708 17.9281 15.4513 17.8204C15.2124 17.6048 15.0133 17.497 14.854 17.4251C14.5752 17.3533 14.2566 17.3892 13.9779 17.497C13.4204 17.6407 13.0619 17.7126 12.4646 17.7844C11.8673 17.8563 10.5929 18 9.03982 18H8.96018ZM12.4248 3.01796C12.0664 2.69461 11.469 2.69461 11.1106 3.01796C10.7522 2.69461 10.1549 2.69461 9.79646 3.01796C9.43805 3.34132 9.43805 3.88024 9.79646 4.20359L11.0708 5.35329L12.385 4.16766C12.7434 3.84431 12.7434 3.30539 12.385 2.98204L12.4248 3.01796ZM5.49557 3.01796C5.85398 2.69461 6.45133 2.69461 6.80973 3.01796C7.16814 2.69461 7.76549 2.69461 8.1239 3.01796C8.4823 3.34132 8.4823 3.88024 8.1239 4.20359L6.84956 5.35329L5.5354 4.16766C5.17699 3.84431 5.17699 3.30539 5.5354 2.98204L5.49557 3.01796Z" fill="#161616" />
+                    </svg>
+                </button>
+            </div>
+
+            
+            <div class="header__mob-right d-flex d-lg-none">
+                <button class="header__icon-btn" type="button" aria-label="Корзина">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.87866 1.5H13.1287C13.3647 1.5 13.587 1.61114 13.7287 1.8L15.7537 4.5V15.75C15.7537 16.1642 15.4179 16.5 15.0037 16.5H3.00366C2.58945 16.5 2.25366 16.1642 2.25366 15.75V4.5L4.27866 1.8C4.42031 1.61114 4.6426 1.5 4.87866 1.5ZM13.8787 4.5L12.7537 3H5.25366L4.12866 4.5H13.8787ZM6.75366 7.5H5.25366V9C5.25366 11.071 6.9326 12.75 9.00368 12.75C11.0747 12.75 12.7537 11.071 12.7537 9V7.5H11.2537V9C11.2537 10.2427 10.2463 11.25 9.00368 11.25C7.761 11.25 6.75366 10.2427 6.75366 9V7.5Z" fill="#161616" />
+                    </svg>
+                </button>
+                <button class="header__icon-btn js-account-toggle" type="button" aria-label="Личный кабинет">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.96018 18C7.40708 18 6.13274 17.8563 5.5354 17.7844C4.93805 17.7126 4.53982 17.6766 4.02212 17.497C3.70354 17.3892 3.42478 17.3533 3.14602 17.4251C2.98673 17.4611 2.74779 17.6048 2.54867 17.8204C2.4292 17.9281 2.26991 18 2.15044 18C1.91151 17.9641 1.75221 17.8204 1.63274 17.5689C1.51328 17.2455 1.47345 16.8503 1.47345 16.3832C1.47345 15.5928 1.47345 14.982 1.47345 14.515C1.47345 13.8323 1.51327 13.2934 1.51327 12.8623C1.5531 12.2515 1.59292 11.7126 1.63274 11.2455C1.71239 10.8144 1.67257 10.5629 1.51327 10.4192C1.3938 10.2754 1.23451 10.1677 1.0354 10.1677C0.716813 10.0958 0.438055 10.024 0.159294 9.88024C2.02559e-06 9.80838 -0.0398237 9.73653 0.0398223 9.62874C0.238937 9.48503 0.438053 9.34132 0.716814 9.23353C1.27434 9.01796 1.71239 8.76647 2.0708 8.47904C2.15044 8.33533 2.19027 8.22754 2.26991 7.94012C2.34956 7.65269 2.46903 7.1497 2.62832 6.61078C2.9469 5.49701 3.34513 4.45509 3.78319 3.48503C4.18142 2.73054 4.65929 1.90419 5.21681 1.07784C5.61504 0.467066 5.89381 0.107784 6.01327 0C6.09292 0.0359281 6.21239 0.107784 6.33186 0.251497C6.45133 0.395209 6.65044 0.610778 6.88938 0.97006C7.04867 1.22156 7.24779 1.32934 7.48673 1.36527C7.88496 1.36527 8.40265 1.32934 9 1.32934C9.59734 1.32934 10.115 1.36527 10.5133 1.36527C10.7522 1.36527 10.9513 1.22156 11.1106 0.97006C11.3496 0.646707 11.5487 0.395209 11.6681 0.251497C11.8274 0.107784 11.9071 0 11.9867 0C12.1062 0.107784 12.3451 0.467066 12.7832 1.07784C13.3407 1.94012 13.8186 2.73054 14.2168 3.48503C14.6549 4.45509 15.0531 5.49701 15.3717 6.61078C15.531 7.1497 15.6504 7.61677 15.7301 7.94012C15.8097 8.22754 15.8496 8.37126 15.9292 8.47904C16.2478 8.76647 16.7257 9.01796 17.2832 9.23353C17.5619 9.34132 17.7611 9.48503 17.9602 9.62874C18.0398 9.7006 18 9.77246 17.8407 9.88024C17.5619 10.024 17.2832 10.0958 16.9646 10.1677C16.8053 10.2036 16.646 10.2754 16.4867 10.4192C16.3673 10.5269 16.3274 10.8144 16.3673 11.2455C16.4071 11.6766 16.4469 12.2156 16.4867 12.8623C16.4867 13.2934 16.5266 13.8323 16.5266 14.515C16.5266 14.982 16.5266 15.5928 16.5266 16.3832C16.5266 16.8862 16.4867 17.2814 16.3673 17.5689C16.2478 17.8204 16.0885 17.9641 15.8496 18C15.6903 18 15.5708 17.9281 15.4513 17.8204C15.2124 17.6048 15.0133 17.497 14.854 17.4251C14.5752 17.3533 14.2566 17.3892 13.9779 17.497C13.4204 17.6407 13.0619 17.7126 12.4646 17.7844C11.8673 17.8563 10.5929 18 9.03982 18H8.96018ZM12.4248 3.01796C12.0664 2.69461 11.469 2.69461 11.1106 3.01796C10.7522 2.69461 10.1549 2.69461 9.79646 3.01796C9.43805 3.34132 9.43805 3.88024 9.79646 4.20359L11.0708 5.35329L12.385 4.16766C12.7434 3.84431 12.7434 3.30539 12.385 2.98204L12.4248 3.01796ZM5.49557 3.01796C5.85398 2.69461 6.45133 2.69461 6.80973 3.01796C7.16814 2.69461 7.76549 2.69461 8.1239 3.01796C8.4823 3.34132 8.4823 3.88024 8.1239 4.20359L6.84956 5.35329L5.5354 4.16766C5.17699 3.84431 5.17699 3.30539 5.5354 2.98204L5.49557 3.01796Z" fill="#161616" />
+                    </svg>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+</header>
+
+<div class="burger-menu js-burger-menu" aria-hidden="true" role="dialog" aria-label="Меню">
+
+    
+    <div class="burger-menu__overlay js-burger-overlay"></div>
+
+    
+    <div class="burger-menu__panel">
+
+        
+        <div class="burger-menu__head">
+            <div class="burger-menu__head-side">
+                <button class="header__icon-btn js-burger-close" type="button" aria-label="Закрыть">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.93942 9.00009L2.09473 3.15538L3.15538 2.09473L9.00007 7.93936L14.8447 2.09473L15.9054 3.15538L10.0607 9.00009L15.9054 14.8447L14.8447 15.9054L9.00007 10.0607L3.15538 15.9054L2.09473 14.8447L7.93942 9.00009Z" fill="black" />
+                    </svg>
+                </button>
+                <button class="header__icon-btn" type="button" aria-label="Поиск">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.5233 12.4626L16.7353 15.6746L15.6746 16.7353L12.4626 13.5233C11.3077 14.4473 9.843 15 8.25 15C4.524 15 1.5 11.976 1.5 8.25C1.5 4.524 4.524 1.5 8.25 1.5C11.976 1.5 15 4.524 15 8.25C15 9.843 14.4473 11.3077 13.5233 12.4626ZM12.0185 11.9061C12.9356 10.9609 13.5 9.6717 13.5 8.25C13.5 5.34938 11.1506 3 8.25 3C5.34938 3 3 5.34938 3 8.25C3 11.1506 5.34938 13.5 8.25 13.5C9.6717 13.5 10.9609 12.9356 11.9061 12.0185L12.0185 11.9061Z" fill="#161616" />
+                    </svg>
+                </button>
+            </div>
+
+            <a href="index.html" class="burger-menu__logo">
+                <svg width="120" height="22" viewBox="0 0 155 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.2548 0V28H12.509V15.5217H2.74587V28H0V0H15.2548ZM2.74587 12.4783H12.509V3.04348H2.74587V12.4783Z" fill="#161616"/>
+                    <path d="M75.3589 28L75.3588 0.0407749H72.613V12.6712H62.8499V0.0203874L60.104 0L60.104 28H62.8499L62.8499 15.7147H72.613L72.613 28H75.3589Z" fill="#161616"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M35.0861 0V15.5217H25.0179L35.0861 25.8696L32.9504 28L22.8822 17.6522V28H20.1253V0H35.0861ZM22.8822 12.4783H32.3402V3.04348H22.8822V12.4783Z" fill="#161616"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M95.1493 0V15.8261H82.9973V28H80.1996V0H95.1493ZM82.9863 12.7826H92.4443V3.04348H82.9863V12.7826Z" fill="#161616"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M114.722 0V28H99.4668V0H114.722ZM102.207 24.9565H111.97V3.04348H102.207V24.9565Z" fill="#161616"/>
+                    <path d="M55.5385 0H40.2727V28H55.5385V24.9565H43.0186V3.04348H55.5385V0Z" fill="#161616"/>
+                    <path d="M122.344 0H119.598V28H134.864V24.9565H122.344V0Z" fill="#161616"/>
+                    <path d="M155 0H139.734V28H155V24.9565H142.48V15.8261H155V12.7826H142.48V3.04348H155V0Z" fill="#161616"/>
+                </svg>
+            </a>
+
+            <div class="burger-menu__head-side burger-menu__head-side--right">
+                <button class="header__icon-btn" type="button" aria-label="Корзина">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.87842 1.5H13.1284C13.3645 1.5 13.5868 1.61114 13.7284 1.8L15.7534 4.5V15.75C15.7534 16.1642 15.4177 16.5 15.0034 16.5H3.00342C2.58921 16.5 2.25342 16.1642 2.25342 15.75V4.5L4.27842 1.8C4.42006 1.61114 4.64236 1.5 4.87842 1.5ZM13.8784 4.5L12.7534 3H5.25342L4.12842 4.5H13.8784ZM6.75342 7.5H5.25342V9C5.25342 11.071 6.93235 12.75 9.00343 12.75C11.0745 12.75 12.7534 11.071 12.7534 9V7.5H11.2534V9C11.2534 10.2427 10.246 11.25 9.00343 11.25C7.76076 11.25 6.75342 10.2427 6.75342 9V7.5Z" fill="#161616" />
+                    </svg>
+                </button>
+                <button class="header__icon-btn" type="button" aria-label="Личный кабинет">
+                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.46239 17C6.99557 17 5.79204 16.8643 5.22788 16.7964C4.66372 16.7285 4.28761 16.6946 3.79867 16.525C3.49779 16.4232 3.23452 16.3892 2.97124 16.4571C2.8208 16.491 2.59513 16.6267 2.40708 16.8303C2.29425 16.9321 2.14381 17 2.03098 17C1.80531 16.9661 1.65487 16.8303 1.54204 16.5928C1.4292 16.2874 1.39159 15.9142 1.39159 15.4731C1.39159 14.7265 1.39159 14.1497 1.39159 13.7086C1.39159 13.0639 1.4292 12.5549 1.4292 12.1477C1.46681 11.5709 1.50443 11.0619 1.54204 10.6208C1.61726 10.2136 1.57964 9.97605 1.4292 9.84032C1.31637 9.70459 1.16593 9.60279 0.977875 9.60279C0.67699 9.53493 0.413719 9.46707 0.150444 9.33134C1.91306e-06 9.26347 -0.0376113 9.19561 0.0376099 9.09381C0.225663 8.95808 0.413716 8.82236 0.676991 8.72056C1.20354 8.51697 1.61726 8.27944 1.95575 8.00798C2.03097 7.87225 2.06858 7.77046 2.14381 7.499C2.21903 7.22754 2.33186 6.75249 2.4823 6.24351C2.78319 5.19162 3.15929 4.20758 3.57301 3.29142C3.94912 2.57884 4.40044 1.7984 4.92699 1.01796C5.3031 0.441118 5.56637 0.101796 5.6792 0C5.75442 0.0339321 5.86726 0.101796 5.98009 0.237525C6.09292 0.373253 6.28097 0.576846 6.50664 0.916168C6.65708 1.15369 6.84513 1.25549 7.0708 1.28942C7.4469 1.28942 7.93584 1.25549 8.5 1.25549C9.06416 1.25549 9.5531 1.28942 9.9292 1.28942C10.1549 1.28942 10.3429 1.15369 10.4934 0.916168C10.719 0.610778 10.9071 0.373253 11.0199 0.237525C11.1704 0.101796 11.2456 0 11.3208 0C11.4336 0.101796 11.6593 0.441118 12.073 1.01796C12.5996 1.83234 13.0509 2.57884 13.427 3.29142C13.8407 4.20758 14.2168 5.19162 14.5177 6.24351C14.6681 6.75249 14.781 7.19361 14.8562 7.499C14.9314 7.77046 14.969 7.90619 15.0442 8.00798C15.3451 8.27944 15.7965 8.51697 16.323 8.72056C16.5863 8.82236 16.7743 8.95808 16.9624 9.09381C17.0376 9.16168 17 9.22954 16.8496 9.33134C16.5863 9.46707 16.323 9.53493 16.0221 9.60279C15.8717 9.63673 15.7212 9.70459 15.5708 9.84032C15.458 9.94212 15.4204 10.2136 15.458 10.6208C15.4956 11.0279 15.5332 11.5369 15.5708 12.1477C15.5708 12.5549 15.6084 13.0639 15.6084 13.7086C15.6084 14.1497 15.6084 14.7265 15.6084 15.4731C15.6084 15.9481 15.5708 16.3214 15.458 16.5928C15.3451 16.8303 15.1947 16.9661 14.969 17C14.8186 17 14.7058 16.9321 14.5929 16.8303C14.3673 16.6267 14.1792 16.525 14.0288 16.4571C13.7655 16.3892 13.4646 16.4232 13.2013 16.525C12.6748 16.6607 12.3363 16.7285 11.7721 16.7964C11.208 16.8643 10.0044 17 8.53761 17H8.46239ZM11.7345 2.8503C11.396 2.54491 10.8319 2.54491 10.4934 2.8503C10.1549 2.54491 9.59071 2.54491 9.25221 2.8503C8.91372 3.15569 8.91372 3.66467 9.25221 3.97006L10.4558 5.05589L11.6969 3.93613C12.0354 3.63074 12.0354 3.12176 11.6969 2.81637L11.7345 2.8503ZM5.19026 2.8503C5.52876 2.54491 6.09292 2.54491 6.43141 2.8503C6.76991 2.54491 7.33407 2.54491 7.67257 2.8503C8.01106 3.15569 8.01106 3.66467 7.67257 3.97006L6.46903 5.05589L5.22788 3.93613C4.88938 3.63074 4.88938 3.12176 5.22788 2.81637L5.19026 2.8503Z" fill="#161616" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        
+        <div class="burger-menu__body">
+
+            
+            <div class="burger-menu__level is-active" data-id="root">
+                <nav class="burger-menu__nav">
+                    <ul class="burger-menu__list">
+                        <li class="burger-menu__item">
+                            <a href="#" class="burger-menu__link js-burger-nav" data-target="katalog">
+                                <span>Каталог</span>
+                                <svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </a>
+                        </li>
+                        <li class="burger-menu__item">
+                            <a href="#" class="burger-menu__link">
+                                <span>Избранное</span>
+                                <svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </a>
+                        </li>
+                        <li class="burger-menu__item">
+                            <a href="#" class="burger-menu__link js-burger-nav" data-target="uslugi">
+                                <span>Услуги</span>
+                                <svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </a>
+                        </li>
+                        <li class="burger-menu__item">
+                            <a href="#" class="burger-menu__link js-burger-nav" data-target="partnerstvo">
+                                <span>Партнерство</span>
+                                <svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </a>
+                        </li>
+                        <li class="burger-menu__item">
+                            <a href="#" class="burger-menu__link js-burger-nav" data-target="o-nas">
+                                <span>О нас</span>
+                                <svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                
+                <div class="burger-menu__footer">
+                    <div class="burger-menu__socials">
+                        <a href="tel:+74956625826" class="header__icon-btn" aria-label="Телефон">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.36556 10.6821C10.302 12.3288 11.6712 13.698 13.3179 14.6344L14.2024 13.3961C14.4965 12.9845 15.0516 12.8573 15.4956 13.0998C16.9024 13.8683 18.4571 14.3353 20.0789 14.4637C20.599 14.5049 21 14.9389 21 15.4606V19.9234C21 20.4361 20.6122 20.8657 20.1022 20.9181C19.5723 20.9726 19.0377 21 18.5 21C9.93959 21 3 14.0604 3 5.5C3 4.96227 3.02742 4.42771 3.08189 3.89776C3.1343 3.38775 3.56394 3 4.07665 3H8.53942C9.0611 3 9.49513 3.40104 9.5363 3.92109C9.66467 5.54288 10.1317 7.09764 10.9002 8.50444C11.1427 8.9484 11.0155 9.50354 10.6039 9.79757L9.36556 10.6821ZM6.84425 10.0252L8.7442 8.66809C8.20547 7.50514 7.83628 6.27183 7.64727 5H5.00907C5.00303 5.16632 5 5.333 5 5.5C5 12.9558 11.0442 19 18.5 19C18.667 19 18.8337 18.997 19 18.9909V16.3527C17.7282 16.1637 16.4949 15.7945 15.3319 15.2558L13.9748 17.1558C13.4258 16.9425 12.8956 16.6915 12.3874 16.4061L12.3293 16.373C10.3697 15.2587 8.74134 13.6303 7.627 11.6707L7.59394 11.6126C7.30849 11.1044 7.05754 10.5742 6.84425 10.0252Z" fill="#161616" />
+                            </svg>
+                        </a>
+                        <a href="mailto:love@archpole.ru" class="header__icon-btn" aria-label="Email">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3ZM20 7.23792L12.0718 14.338L4 7.21594V19H20V7.23792ZM4.51146 5L12.0619 11.662L19.501 5H4.51146Z" fill="#161616" />
+                            </svg>
+                        </a>
+                        <a href="#" class="header__icon-btn" aria-label="WhatsApp">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.25361 18.4944L7.97834 18.917C9.18909 19.623 10.5651 20 12.001 20C16.4193 20 20.001 16.4183 20.001 12C20.001 7.58172 16.4193 4 12.001 4C7.5827 4 4.00098 7.58172 4.00098 12C4.00098 13.4363 4.37821 14.8128 5.08466 16.0238L5.50704 16.7478L4.85355 19.1494L7.25361 18.4944ZM2.00516 22L3.35712 17.0315C2.49494 15.5536 2.00098 13.8345 2.00098 12C2.00098 6.47715 6.47813 2 12.001 2C17.5238 2 22.001 6.47715 22.001 12C22.001 17.5228 17.5238 22 12.001 22C10.1671 22 8.44851 21.5064 6.97086 20.6447L2.00516 22ZM8.39232 7.30833C8.5262 7.29892 8.66053 7.29748 8.79459 7.30402C8.84875 7.30758 8.90265 7.31384 8.95659 7.32007C9.11585 7.33846 9.29098 7.43545 9.34986 7.56894C9.64818 8.24536 9.93764 8.92565 10.2182 9.60963C10.2801 9.76062 10.2428 9.95633 10.125 10.1457C10.0652 10.2428 9.97128 10.379 9.86248 10.5183C9.74939 10.663 9.50599 10.9291 9.50599 10.9291C9.50599 10.9291 9.40738 11.0473 9.44455 11.1944C9.45903 11.25 9.50521 11.331 9.54708 11.3991C9.57027 11.4368 9.5918 11.4705 9.60577 11.4938C9.86169 11.9211 10.2057 12.3543 10.6259 12.7616C10.7463 12.8783 10.8631 12.9974 10.9887 13.108C11.457 13.5209 11.9868 13.8583 12.559 14.1082L12.5641 14.1105C12.6486 14.1469 12.692 14.1668 12.8157 14.2193C12.8781 14.2457 12.9419 14.2685 13.0074 14.2858C13.0311 14.292 13.0554 14.2955 13.0798 14.2972C13.2415 14.3069 13.335 14.2032 13.3749 14.1555C14.0984 13.279 14.1646 13.2218 14.1696 13.2222V13.2238C14.2647 13.1236 14.4142 13.0888 14.5476 13.097C14.6085 13.1007 14.6691 13.1124 14.7245 13.1377C15.2563 13.3803 16.1258 13.7587 16.1258 13.7587L16.7073 14.0201C16.8047 14.0671 16.8936 14.1778 16.8979 14.2854C16.9005 14.3523 16.9077 14.4603 16.8838 14.6579C16.8525 14.9166 16.7738 15.2281 16.6956 15.3913C16.6406 15.5058 16.5694 15.6074 16.4866 15.6934C16.3743 15.81 16.2909 15.8808 16.1559 15.9814C16.0737 16.0426 16.0311 16.0714 16.0311 16.0714C15.8922 16.159 15.8139 16.2028 15.6484 16.2909C15.391 16.428 15.1066 16.5068 14.8153 16.5218C14.6296 16.5313 14.4444 16.5447 14.2589 16.5347C14.2507 16.5342 13.6907 16.4482 13.6907 16.4482C12.2688 16.0742 10.9538 15.3736 9.85034 14.402C9.62473 14.2034 9.4155 13.9885 9.20194 13.7759C8.31288 12.8908 7.63982 11.9364 7.23169 11.0336C7.03043 10.5884 6.90299 10.1116 6.90098 9.62098C6.89729 9.01405 7.09599 8.4232 7.46569 7.94186C7.53857 7.84697 7.60774 7.74855 7.72709 7.63586C7.85348 7.51651 7.93392 7.45244 8.02057 7.40811C8.13607 7.34902 8.26293 7.31742 8.39232 7.30833Z" fill="#161616" />
+                            </svg>
+                        </a>
+                        <a href="#" class="header__icon-btn" aria-label="Pinterest">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.49161 19.1912C8.51535 18.8546 8.56306 18.5199 8.63456 18.1897C8.69754 17.8951 8.88867 17.0596 9.16872 15.8498L9.17581 15.8191C9.29895 15.2872 9.43089 14.7192 9.56283 14.1525C9.64199 13.8124 9.70356 13.5484 9.74438 13.4602C9.55012 13.0123 9.45298 12.5263 9.45969 12.0373C9.45969 10.6999 10.2157 9.66359 11.1958 9.6636C11.5555 9.65809 11.8996 9.81388 12.1383 10.09C12.3764 10.3655 12.4863 10.7335 12.4404 11.086C12.4404 11.5385 12.3548 11.8844 11.9865 13.1212C11.9158 13.3587 11.8674 13.5254 11.8215 13.692C11.7696 13.8799 11.7261 14.0503 11.6887 14.2136C11.5928 14.6003 11.6811 15.011 11.9262 15.3195C12.1707 15.6272 12.5421 15.7966 12.9319 15.7762C14.4242 15.7762 15.5321 13.7911 15.5321 11.2277C15.5321 9.25804 14.2412 7.95424 12.1 7.95416C11.0224 7.91127 9.97466 8.32523 9.20095 9.09986C8.42664 9.87508 7.99452 10.9437 8.00559 12.0614C7.98214 12.6633 8.17064 13.2536 8.51804 13.7053C8.69915 13.8441 8.76869 14.0885 8.69262 14.2941C8.65157 14.4632 8.55259 14.8473 8.51649 14.9755C8.49464 15.1032 8.41497 15.2131 8.30126 15.2715C8.18678 15.3303 8.05172 15.3297 7.94618 15.2737C6.78507 14.7954 6.14967 13.4963 6.14967 11.8349C6.14967 8.84907 8.64129 6.2497 12.3417 6.2497C15.4772 6.2497 17.8231 8.57864 17.8231 11.3896C17.8231 14.922 15.8911 17.4942 13.1337 17.4942C12.3393 17.5202 11.5838 17.162 11.087 16.535L11.044 16.712C10.9499 17.0992 10.9028 17.2928 10.8368 17.5638L10.8349 17.5715C10.6887 18.1717 10.5867 18.5885 10.5471 18.7452C10.4412 19.0998 10.307 19.448 10.1471 19.7841C10.7421 19.9253 11.3628 20 12.001 20C16.4193 20 20.001 16.4183 20.001 12C20.001 7.58172 16.4193 4 12.001 4C7.5827 4 4.00098 7.58172 4.00098 12C4.00098 15.1594 5.83244 17.8911 8.49161 19.1912ZM12.001 22C6.47813 22 2.00098 17.5228 2.00098 12C2.00098 6.47715 6.47813 2 12.001 2C17.5238 2 22.001 6.47715 22.001 12C22.001 17.5228 17.5238 22 12.001 22Z" fill="#161616" />
+                            </svg>
+                        </a>
+                    </div>
+                    <address class="burger-menu__addr">г. Москва, ул. Молодогвардейская,<br>дом 57, строение 5</address>
+                </div>
+            </div>
+
+            
+            <div class="burger-menu__level" data-id="katalog">
+                <div class="burger-menu__sub-head">
+                    <button class="burger-menu__back js-burger-back" type="button" aria-label="Назад">
+                        <svg width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M6 1L1 6L6 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <span class="burger-menu__sub-title">Каталог</span>
+                </div>
+                <nav class="burger-menu__nav">
+                    <ul class="burger-menu__list">
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Кухни</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Хранение</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Столы</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Свет</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link js-burger-nav" data-target="sideniya"><span>Сиденья</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Декор</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Артефакты</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Эко трофеи томато</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>ArchPole и искусство</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            
+            <div class="burger-menu__level" data-id="uslugi">
+                <div class="burger-menu__sub-head">
+                    <button class="burger-menu__back js-burger-back" type="button" aria-label="Назад">
+                        <svg width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M6 1L1 6L6 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <span class="burger-menu__sub-title">Услуги</span>
+                </div>
+                <nav class="burger-menu__nav">
+                    <ul class="burger-menu__list">
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Ремонт под ключ – MyFlat</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Кухни на заказ</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Дизайн проект</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Реставрация мебели</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Trade-in</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Мебель в аренду для съемок</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Нестандартные изделия</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            
+            <div class="burger-menu__level" data-id="partnerstvo">
+                <div class="burger-menu__sub-head">
+                    <button class="burger-menu__back js-burger-back" type="button" aria-label="Назад">
+                        <svg width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M6 1L1 6L6 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <span class="burger-menu__sub-title">Партнерство</span>
+                </div>
+                <nav class="burger-menu__nav">
+                    <ul class="burger-menu__list">
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Бизнесу</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Дизайнеру и архитектору</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Художнику</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Бартер</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            
+            <div class="burger-menu__level" data-id="o-nas">
+                <div class="burger-menu__sub-head">
+                    <button class="burger-menu__back js-burger-back" type="button" aria-label="Назад">
+                        <svg width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M6 1L1 6L6 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <span class="burger-menu__sub-title">О нас</span>
+                </div>
+                <nav class="burger-menu__nav">
+                    <ul class="burger-menu__list">
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>О бренде</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Оплата и доставка</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Контакты</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Журнал</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Вакансии</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Вопросы и ответы</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            
+            <div class="burger-menu__level" data-id="sideniya">
+                <div class="burger-menu__sub-head">
+                    <button class="burger-menu__back js-burger-back" type="button" aria-label="Назад">
+                        <svg width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M6 1L1 6L6 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <span class="burger-menu__sub-title">Сиденья</span>
+                </div>
+                <nav class="burger-menu__nav">
+                    <ul class="burger-menu__list">
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Табуреты</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Скамьи</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Столы</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Барные стулья и табуреты</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Стулья</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Диваны</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Кресла</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Кровати</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Пуфы</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+    <div class="content_block_wr">
+
+        
+        <div class="pdp-crumb">
+            <div class="container-xl">
+                <div class="pdp-crumb__row">
+                    <nav class="coll-breadcrumbs" aria-label="Вы здесь">
+                        <ol class="coll-breadcrumbs__list">
+                            <li class="coll-breadcrumbs__item">
+                                <a href="index.html" class="coll-breadcrumbs__link">Главная</a>
+                            </li>
+                            <li class="coll-breadcrumbs__item">
+                                <a href="catalog-5.html" class="coll-breadcrumbs__link">Каталог</a>
+                            </li>
+                            <li class="coll-breadcrumbs__item">
+                                <a href="catalog-6.html" class="coll-breadcrumbs__link">Сиденья</a>
+                            </li>
+                            <li class="coll-breadcrumbs__item">
+                                <span class="coll-breadcrumbs__current">Арт стул «ОВАЛЕ» рождённый в коллаборации с Ирой Чер. Арт. 18Т48</span>
+                            </li>
+                        </ol>
+                    </nav>
+                    <a href="#" class="pdp-crumb__share">
+                        <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M1 6h14M9 1l6 5-6 5" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Поделиться
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        
+        <section class="pdp-hero">
+            <div class="container-xl">
+                <div class="pdp-hero__row">
+
+                    
+                    <div class="pdp-hero__viewer">
+
+                        
+                        <div class="pdp-hero__thumbs">
+                            <button class="pdp-hero__thumb is-active js-pdp-thumb" type="button" data-img="files/product1.jpg" aria-label="Фото 1">
+                                <img src="files/product1.jpg" alt="">
+                            </button>
+                            <button class="pdp-hero__thumb js-pdp-thumb" type="button" data-img="files/product2.jpg" aria-label="Фото 2">
+                                <img src="files/product2.jpg" alt="">
+                            </button>
+                            <button class="pdp-hero__thumb js-pdp-thumb" type="button" data-img="files/product3.jpg" aria-label="Фото 3">
+                                <img src="files/product3.jpg" alt="">
+                            </button>
+                            <button class="pdp-hero__thumb js-pdp-thumb" type="button" data-img="files/product4.jpg" aria-label="Фото 4">
+                                <img src="files/product4.jpg" alt="">
+                            </button>
+                            <button class="pdp-hero__thumb js-pdp-thumb" type="button" data-img="files/product5.jpg" aria-label="Фото 5">
+                                <img src="files/product5.jpg" alt="">
+                            </button>
+                        </div>
+
+                        
+                        <div class="pdp-hero__main">
+                            <span class="pdp-hero__3d">
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path d="M7 1L13 4.5v5L7 13 1 9.5v-5L7 1Z" stroke="#161616" stroke-width="1.2" stroke-linejoin="round"/>
+                                    <path d="M7 1v12M1 4.5l6 3.5 6-3.5" stroke="#161616" stroke-width="1.2"/>
+                                </svg>
+                                3D модель
+                            </span>
+                            <img src="files/product1.jpg" alt="АРТ СТУЛ «ОВАЛЕ» рождённый в коллаборации с Ирой Чер" id="js-pdp-img" class="pdp-hero__main-img">
+                            
+                            <div class="pdp-hero__dots">
+                                <button class="pdp-hero__dot is-active js-pdp-dot" type="button" data-img="files/product1.jpg" aria-label="Фото 1"></button>
+                                <button class="pdp-hero__dot js-pdp-dot" type="button" data-img="files/product2.jpg" aria-label="Фото 2"></button>
+                                <button class="pdp-hero__dot js-pdp-dot" type="button" data-img="files/product3.jpg" aria-label="Фото 3"></button>
+                                <button class="pdp-hero__dot js-pdp-dot" type="button" data-img="files/product4.jpg" aria-label="Фото 4"></button>
+                                <button class="pdp-hero__dot js-pdp-dot" type="button" data-img="files/product5.jpg" aria-label="Фото 5"></button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    
+                    <div class="pdp-hero__info">
+
+                        <div class="pdp-hero__badges">
+                            <span class="pdp-hero__badge pdp-hero__badge--new">NEW</span>
+                            <span class="pdp-hero__badge pdp-hero__badge--stock">В НАЛИЧИИ</span>
+                        </div>
+
+                        <h1 class="pdp-hero__title">АРТ СТУЛ «ОВАЛЕ» РОЖДЁННЫЙ В КОЛЛАБОРАЦИИ С ИРОЙ ЧЕ АРТ. 18Т48</h1>
+
+                        <div class="pdp-hero__price-row">
+                            <span class="pdp-hero__price">48 150 ₽</span>
+                            <span class="pdp-hero__price-old">53 200 ₽</span>
+                        </div>
+
+                        <hr class="pdp-hero__divider">
+
+                        <div class="pdp-hero__option">
+                            <span class="pdp-hero__option-label">Отделка дерева:</span>
+                            <button class="pdp-hero__option-ctrl" type="button" aria-haspopup="listbox">
+                                <span class="pdp-hero__option-val">Винтажный зелёный</span>
+                                <span class="pdp-hero__option-swatch" style="background:#2d6147;" aria-hidden="true"></span>
+                                <svg class="pdp-hero__option-chev" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path d="M1 1.5L6 6.5L11 1.5" stroke="#161616" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="pdp-hero__option">
+                            <span class="pdp-hero__option-label">Отделка металла:</span>
+                            <button class="pdp-hero__option-ctrl" type="button" aria-haspopup="listbox">
+                                <span class="pdp-hero__option-val">Красный RAL 3003</span>
+                                <span class="pdp-hero__option-swatch" style="background:#8b1a1a;" aria-hidden="true"></span>
+                                <svg class="pdp-hero__option-chev" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path d="M1 1.5L6 6.5L11 1.5" stroke="#161616" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="pdp-hero__cta">
+                            <button class="pdp-hero__cart-btn btn btn-dark" type="button">ДОБАВИТЬ В КОРЗИНУ</button>
+                            <button class="pdp-hero__wish-btn js-wish" type="button" aria-label="В избранное">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.0008 3.77378C11.9583 2.01667 14.9833 2.075 16.8688 3.96447C18.7544 5.85393 18.8191 8.86417 17.0655 10.8275L9.99988 17.9042L2.93444 10.8275C1.18083 8.86417 1.24638 5.84918 3.13109 3.96447C5.01793 2.07763 8.03762 2.01406 10.0008 3.77378Z" stroke="#161616" stroke-width="1.4"/>
+                                </svg>
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        
+        <div class="pdp-accordion">
+            <div class="container-xl">
+
+                <div class="pdp-accordion__item js-pdp-accordion">
+                    <button class="pdp-accordion__toggle" type="button" aria-expanded="false">
+                        ОПИСАНИЕ
+                        <svg class="pdp-accordion__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M4 6L8 10L12 6" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="pdp-accordion__body" hidden>
+                        <p>Арт-стул «ОВАЛЕ» создан в коллаборации с художником Ирой Чер. Особенность стула — в уникальном рисунке на сидении, вдохновлённом авторскими работами художника. Конструкция выполнена из массива дерева с металлическими элементами. Каждый стул производится в мастерской вручную.</p>
+                    </div>
+                </div>
+
+                <div class="pdp-accordion__item js-pdp-accordion">
+                    <button class="pdp-accordion__toggle" type="button" aria-expanded="false">
+                        СРОК ИЗГОТОВЛЕНИЯ
+                        <svg class="pdp-accordion__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M4 6L8 10L12 6" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="pdp-accordion__body" hidden>
+                        <p>Стандартный срок изготовления — 4–6 недель с момента подтверждения заказа. Готовность изделия уточняется у менеджера.</p>
+                    </div>
+                </div>
+
+                <div class="pdp-accordion__item js-pdp-accordion">
+                    <button class="pdp-accordion__toggle" type="button" aria-expanded="false">
+                        ДОСТАВКА
+                        <svg class="pdp-accordion__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M4 6L8 10L12 6" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="pdp-accordion__body" hidden>
+                        <p>Доставка по Москве и Московской области — от 2 000 ₽. Доставка в другие регионы — по тарифам транспортных компаний. Подъём на этаж оплачивается отдельно.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        
+        <div class="pdp-gallery">
+            <div class="container-xl">
+                <div class="pdp-gallery__grid">
+                    <div class="pdp-gallery__item">
+                        <img src="files/dis1.jpg" alt="" loading="lazy">
+                    </div>
+                    <div class="pdp-gallery__item">
+                        <img src="files/dis2.jpg" alt="" loading="lazy">
+                    </div>
+                    <div class="pdp-gallery__item">
+                        <img src="files/dis3.jpg" alt="" loading="lazy">
+                    </div>
+                    <div class="pdp-gallery__item">
+                        <img src="files/about.jpg" alt="" loading="lazy">
+                    </div>
+                    <div class="pdp-gallery__item">
+                        <img src="files/service.jpg" alt="" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <section class="pdp-interiors">
+            <div class="container-xl">
+
+                <div class="pdp-interiors__head">
+                    <h2 class="pdp-interiors__title">В ВАШИХ ИНТЕРЬЕРАХ</h2>
+                    <div class="pdp-interiors__nav d-none d-lg-flex">
+                        <button class="pdp-interiors__nav-btn" type="button" aria-label="Предыдущие">
+                            <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M7 1L1 7l6 6" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <button class="pdp-interiors__nav-btn" type="button" aria-label="Следующие">
+                            <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M1 1L7 7l-6 6" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="pdp-interiors__grid">
+                    <a href="#" class="pdp-interiors__item">
+                        <div class="pdp-interiors__img-wr">
+                            <img src="files/dis1.jpg" alt="ARCHPOLE & Vologod: стул «Овале»" loading="lazy">
+                        </div>
+                        <p class="pdp-interiors__caption">ARCHPOLE & Vologod: стул «Овале» в интерьере с яркой историей</p>
+                    </a>
+                    <a href="#" class="pdp-interiors__item">
+                        <div class="pdp-interiors__img-wr">
+                            <img src="files/dis2.jpg" alt="Переговорная SFT" loading="lazy">
+                        </div>
+                        <p class="pdp-interiors__caption">Многофункциональная переговорка для компании SFT</p>
+                    </a>
+                    <a href="#" class="pdp-interiors__item">
+                        <div class="pdp-interiors__img-wr">
+                            <img src="files/dis3.jpg" alt="КСЕНIАFLAT" loading="lazy">
+                        </div>
+                        <p class="pdp-interiors__caption">КСЕНIАFLAT: романтичная квартира в ретростиле</p>
+                    </a>
+                    <a href="#" class="pdp-interiors__item">
+                        <div class="pdp-interiors__img-wr">
+                            <img src="files/about.jpg" alt="Коллаборация ARCHPOLE" loading="lazy">
+                        </div>
+                        <p class="pdp-interiors__caption">Самая крупная коллаборация в рамках «ARCHPOLE к»</p>
+                    </a>
+                </div>
+
+                <div class="pdp-interiors__mob-foot d-lg-none">
+                    <span class="pdp-interiors__sep"></span>
+                </div>
+
+            </div>
+        </section>
+
+        
+        <section class="pdp-related">
+            <div class="container-xl">
+
+                <div class="pdp-related__head">
+                    <h2 class="pdp-related__title">ПОХОЖИЕ ТОВАРЫ</h2>
+                    <a href="#" class="pdp-related__all d-none d-lg-flex">
+                        ВСЕ ТОВАРЫ
+                        <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M1 6h14M9 1l6 5-6 5" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="pdp-related__grid">
+                    <article class="product-card">
+    <a href="#" class="product-card__link" aria-label="Табурет «Минимализм»"></a>
+    <div class="product-card__image">
+        <button class="product-card__wish js-wish" type="button" aria-label="В избранное">
+            <svg class="norm" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.00057 2.64164C8.37082 1.41167 10.4883 1.4525 11.8082 2.77513C13.1281 4.09775 13.1734 6.20492 11.9458 7.57925L6.99993 12.5329L2.05413 7.57925C0.826601 6.20492 0.872486 4.09442 2.19178 2.77513C3.51257 1.45434 5.62635 1.40984 7.00057 2.64164ZM10.9824 3.59923C10.1079 2.72297 8.69609 2.68742 7.77991 3.50984L7.0011 4.20889L6.22188 3.51039C5.30306 2.68682 3.89377 2.72305 3.01674 3.60008C2.14772 4.4691 2.1041 5.86093 2.90495 6.7802L6.99993 10.8817L11.095 6.7802C11.8962 5.86058 11.8527 4.4714 10.9824 3.59923Z" fill="#161616" />
+            </svg>
+            <svg class="active" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.0006 2.64164C8.37085 1.41167 10.4884 1.4525 11.8082 2.77513C13.1281 4.09775 13.1734 6.20492 11.9459 7.57925L6.99996 12.5329L2.05416 7.57925C0.826632 6.20492 0.872517 4.09442 2.19181 2.77513C3.5126 1.45434 5.62638 1.40984 7.0006 2.64164Z" fill="#161616" />
+            </svg>
+        </button>
+        <img src="files/product2.jpg" alt="Табурет «Минимализм»" loading="lazy">
+    </div>
+    <div class="product-card__body">
+        <div class="product-card__name">Табурет «Минимализм»</div>
+        <div class="product-card__price">7 800 ₽</div>
+    </div>
+</article>
+
+                    <article class="product-card">
+    <a href="#" class="product-card__link" aria-label="Табурет домик для котиков «NATURALE»"></a>
+    <div class="product-card__image">
+        <button class="product-card__wish js-wish" type="button" aria-label="В избранное">
+            <svg class="norm" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.00057 2.64164C8.37082 1.41167 10.4883 1.4525 11.8082 2.77513C13.1281 4.09775 13.1734 6.20492 11.9458 7.57925L6.99993 12.5329L2.05413 7.57925C0.826601 6.20492 0.872486 4.09442 2.19178 2.77513C3.51257 1.45434 5.62635 1.40984 7.00057 2.64164ZM10.9824 3.59923C10.1079 2.72297 8.69609 2.68742 7.77991 3.50984L7.0011 4.20889L6.22188 3.51039C5.30306 2.68682 3.89377 2.72305 3.01674 3.60008C2.14772 4.4691 2.1041 5.86093 2.90495 6.7802L6.99993 10.8817L11.095 6.7802C11.8962 5.86058 11.8527 4.4714 10.9824 3.59923Z" fill="#161616" />
+            </svg>
+            <svg class="active" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.0006 2.64164C8.37085 1.41167 10.4884 1.4525 11.8082 2.77513C13.1281 4.09775 13.1734 6.20492 11.9459 7.57925L6.99996 12.5329L2.05416 7.57925C0.826632 6.20492 0.872517 4.09442 2.19181 2.77513C3.5126 1.45434 5.62638 1.40984 7.0006 2.64164Z" fill="#161616" />
+            </svg>
+        </button>
+        <img src="files/product3.jpg" alt="Табурет домик для котиков «NATURALE»" loading="lazy">
+    </div>
+    <div class="product-card__body">
+        <div class="product-card__name">Табурет домик для котиков «NATURALE»</div>
+        <div class="product-card__price">52 400 ₽</div>
+    </div>
+</article>
+
+                    <article class="product-card">
+    <a href="#" class="product-card__link" aria-label="Стол барный «Боксер»"></a>
+    <div class="product-card__image">
+        <button class="product-card__wish js-wish" type="button" aria-label="В избранное">
+            <svg class="norm" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.00057 2.64164C8.37082 1.41167 10.4883 1.4525 11.8082 2.77513C13.1281 4.09775 13.1734 6.20492 11.9458 7.57925L6.99993 12.5329L2.05413 7.57925C0.826601 6.20492 0.872486 4.09442 2.19178 2.77513C3.51257 1.45434 5.62635 1.40984 7.00057 2.64164ZM10.9824 3.59923C10.1079 2.72297 8.69609 2.68742 7.77991 3.50984L7.0011 4.20889L6.22188 3.51039C5.30306 2.68682 3.89377 2.72305 3.01674 3.60008C2.14772 4.4691 2.1041 5.86093 2.90495 6.7802L6.99993 10.8817L11.095 6.7802C11.8962 5.86058 11.8527 4.4714 10.9824 3.59923Z" fill="#161616" />
+            </svg>
+            <svg class="active" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.0006 2.64164C8.37085 1.41167 10.4884 1.4525 11.8082 2.77513C13.1281 4.09775 13.1734 6.20492 11.9459 7.57925L6.99996 12.5329L2.05416 7.57925C0.826632 6.20492 0.872517 4.09442 2.19181 2.77513C3.5126 1.45434 5.62638 1.40984 7.0006 2.64164Z" fill="#161616" />
+            </svg>
+        </button>
+        <img src="files/product4.jpg" alt="Стол барный «Боксер»" loading="lazy">
+    </div>
+    <div class="product-card__body">
+        <div class="product-card__name">Стол барный «Боксер»</div>
+        <div class="product-card__price">118 000 ₽</div>
+    </div>
+</article>
+
+                    <article class="product-card">
+    <a href="#" class="product-card__link" aria-label="Пуф-кот «Феникс»-синий"></a>
+    <div class="product-card__image">
+        <button class="product-card__wish js-wish" type="button" aria-label="В избранное">
+            <svg class="norm" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.00057 2.64164C8.37082 1.41167 10.4883 1.4525 11.8082 2.77513C13.1281 4.09775 13.1734 6.20492 11.9458 7.57925L6.99993 12.5329L2.05413 7.57925C0.826601 6.20492 0.872486 4.09442 2.19178 2.77513C3.51257 1.45434 5.62635 1.40984 7.00057 2.64164ZM10.9824 3.59923C10.1079 2.72297 8.69609 2.68742 7.77991 3.50984L7.0011 4.20889L6.22188 3.51039C5.30306 2.68682 3.89377 2.72305 3.01674 3.60008C2.14772 4.4691 2.1041 5.86093 2.90495 6.7802L6.99993 10.8817L11.095 6.7802C11.8962 5.86058 11.8527 4.4714 10.9824 3.59923Z" fill="#161616" />
+            </svg>
+            <svg class="active" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.0006 2.64164C8.37085 1.41167 10.4884 1.4525 11.8082 2.77513C13.1281 4.09775 13.1734 6.20492 11.9459 7.57925L6.99996 12.5329L2.05416 7.57925C0.826632 6.20492 0.872517 4.09442 2.19181 2.77513C3.5126 1.45434 5.62638 1.40984 7.0006 2.64164Z" fill="#161616" />
+            </svg>
+        </button>
+        <img src="files/product5.jpg" alt="Пуф-кот «Феникс»-синий" loading="lazy">
+    </div>
+    <div class="product-card__body">
+        <div class="product-card__name">Пуф-кот «Феникс»-синий</div>
+        <div class="product-card__price">34 000 ₽</div>
+    </div>
+</article>
+
+                </div>
+
+                <div class="pdp-related__mob-foot d-lg-none">
+                    <span class="pdp-related__sep"></span>
+                    <a href="#" class="btn btn-dark">ВСЕ ТОВАРЫ</a>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+    <footer class="footer">
+    <div class="container-xl">
+
+        
+        <div class="footer__top">
+
+            
+            <div class="footer__col">
+                <button class="footer__col-head" type="button">
+                    Каталог
+                    <svg class="footer__chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.0006 10.9764L14.1253 6.85154L15.3038 8.03004L10.0006 13.3334L4.69727 8.03004L5.87577 6.85154L10.0006 10.9764Z" fill="#8A8A8A" />
+                    </svg>
+                </button>
+                <ul class="footer__links">
+                    <li><a href="#">Столы</a></li>
+                    <li><a href="#">Сидения</a></li>
+                    <li><a href="#">Хранение</a></li>
+                    <li><a href="#">Свет</a></li>
+                    <li><a href="#">Декор</a></li>
+                    <li><a href="#">Коллекции</a></li>
+                    <li><a href="#">Кухни</a></li>
+                </ul>
+            </div>
+
+            
+            <div class="footer__col">
+                <button class="footer__col-head" type="button">
+                    Услуги
+                    <svg class="footer__chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.0006 10.9764L14.1253 6.85154L15.3038 8.03004L10.0006 13.3334L4.69727 8.03004L5.87577 6.85154L10.0006 10.9764Z" fill="#8A8A8A" />
+                    </svg>
+                </button>
+                <ul class="footer__links">
+                    <li><a href="#">Ремонт под ключ – MyFlat</a></li>
+                    <li><a href="#">Кухни на заказ</a></li>
+                    <li><a href="#">Дизайн проект</a></li>
+                    <li><a href="#">Реставрация мебели</a></li>
+                    <li><a href="#">Мебель в аренду для съемок</a></li>
+                    <li><a href="#">Нестандартные изделия</a></li>
+                    <li><a href="#">Trade-in</a></li>
+                </ul>
+            </div>
+
+            
+            <div class="footer__col">
+                <button class="footer__col-head" type="button">
+                    Партнерство
+                    <svg class="footer__chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.0006 10.9764L14.1253 6.85154L15.3038 8.03004L10.0006 13.3334L4.69727 8.03004L5.87577 6.85154L10.0006 10.9764Z" fill="#8A8A8A" />
+                    </svg>
+                </button>
+                <ul class="footer__links">
+                    <li><a href="#">Бизнесу</a></li>
+                    <li><a href="#">Дизайнеру и архитектору</a></li>
+                    <li><a href="#">Художнику</a></li>
+                    <li><a href="#">Бартер</a></li>
+                </ul>
+            </div>
+
+            
+            <div class="footer__col">
+                <button class="footer__col-head" type="button">
+                    О нас
+                    <svg class="footer__chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.0006 10.9764L14.1253 6.85154L15.3038 8.03004L10.0006 13.3334L4.69727 8.03004L5.87577 6.85154L10.0006 10.9764Z" fill="#8A8A8A" />
+                    </svg>
+                </button>
+                <ul class="footer__links">
+                    <li><a href="#">О бренде</a></li>
+                    <li><a href="#">Оплата доставка</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">Журнал</a></li>
+                    <li><a href="#">Вакансии</a></li>
+                    <li><a href="#">Вопросы и ответы</a></li>
+                </ul>
+            </div>
+
+            
+            <div class="footer__contacts">
+                <p class="footer__col-head footer__col-head--plain">Контакты</p>
+                <div class="footer__contacts-body">
+                    <div class="footer__contacts-info">
+                        <a href="tel:+74956625826">+7 495 662-58-26</a>
+                        <a href="mailto:love@archpole.ru">love@archpole.ru</a>
+                        <address class="footer__contacts-addr">г. Москва, ул. Молодогвардейская,<br>дом 57, строение 5</address>
+                        <p>Pinterest: @Archpole</p>
+                        <p>WhatsApp: +7 916 235-35-98</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        
+        <hr class="footer__divider">
+
+        
+        <div class="footer__bottom">
+
+            <div class="footer__legal">
+                <a href="#">Публичная оферта</a>
+                <a href="#">Политика конфиденциальности</a>
+                <a href="#">Согласие на обработку персональных данных</a>
+            </div>
+
+            <div class="footer__copy">
+                <span>Дизайн Chudo.</span>
+                <span>© 2008-2026&nbsp; Archpole. Все права защищены</span>
+            </div>
+
+            <div class="footer__brand">
+                <svg width="173" height="32" viewBox="0 0 173 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_4031_3802)">
+                        <path d="M16.8194 0L17.316 28.936C17.332 29.872 16.419 31.504 15.7862 32H14.4087C13.9201 27.52 13.9281 23.584 13.8881 17.656L3.48403 17.488L3.43597 28.224C3.43597 29.208 2.86731 31.144 2.49088 32.008H0V0H16.8194ZM13.9361 3.72H3.39593L3.40394 14.288H13.9441L13.9361 3.72Z" fill="white" />
+                        <path d="M128.148 0L128.445 28.864C128.445 29.616 127.692 31.536 127.435 32H111.377L111.329 0H128.148ZM125.169 3.704H114.468L114.476 28.08H125.177L125.169 3.704Z" fill="white" />
+                        <path d="M39.2453 0L39.4616 17.416L28.1605 17.704L39.0131 28.744C38.5566 29.464 37.1709 30.704 36.6103 30.624L25.9019 20.336L25.4854 30.472C25.4534 31.336 22.4579 31.336 22.4579 30.568L22.4259 0.008H39.2453V0ZM36.1858 3.704L25.6136 3.728L25.6376 14.28L36.2098 14.256L36.1858 3.704Z" fill="white" />
+                        <path d="M156.181 0H173V3.672L159.016 3.84V14.128L173 14.384V17.392L159.072 17.56L158.992 27.936L173 28.152V32H157.086C154.619 32.272 155.836 2.648 156.181 0Z" fill="white" />
+                        <path d="M70.4815 0.0001875L70.073 14.1362L80.5492 14.2162L80.8935 0.0001875H84.0973L83.857 28.0802C83.849 29.3602 83.5366 31.0162 83.2803 31.9922H81.6304C81.246 31.1522 80.6533 29.1762 80.6533 28.2242V17.4802L70.2092 17.6402C70.1131 23.5842 70.073 27.4802 69.7206 31.9922H68.287L66.8613 30.5442L67.2778 -0.0078125H70.4815V0.0001875Z" fill="white" />
+                        <path d="M105.722 0C106.099 5.48 106.099 10.776 106.123 17.36L92.3548 17.584L92.2747 28.92C92.2747 29.664 91.7141 31.44 91.4898 32H89.6557C89.5436 31.68 89.1751 30.208 89.1671 29.408L88.9028 0.008H105.722V0ZM92.2747 3.688L92.2587 14.248L102.823 14.264L102.839 3.704L92.2747 3.688Z" fill="white" />
+                        <path d="M61.6713 0L61.1667 3.704L47.9194 3.824L47.9354 27.992L61.5432 28.168C61.8796 29.528 61.0626 31.384 59.9333 31.992H45.5807C45.3404 31.52 44.5956 29.6 44.5956 28.856L44.8519 0H61.6713Z" fill="white" />
+                        <path d="M136.958 0L136.678 27.848L150.59 28.2L150.566 32H134.451C134.211 31.536 133.482 29.632 133.49 28.84L133.747 0H136.95H136.958Z" fill="white" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_4031_3802">
+                            <rect width="173" height="32" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </div>
+
+        </div>
+        <svg width="360" height="122" class="footer-icon" viewBox="0 0 360 122" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M179.182 369C148.124 369 122.64 366.054 110.695 364.581C98.7495 363.108 90.7858 362.371 80.433 358.689C74.0621 356.479 68.4876 355.743 62.913 357.216C59.7275 357.952 54.9493 360.898 50.9675 365.317C48.5784 367.527 45.3929 369 43.0038 369C38.2256 368.263 35.0402 365.317 32.6511 360.162C30.262 353.533 29.4656 345.431 29.4656 335.856C29.4656 319.653 29.4656 307.132 29.4656 297.557C29.4656 283.563 30.2619 272.515 30.2619 263.677C31.0583 251.156 31.8547 240.108 32.6511 230.533C34.2438 221.695 33.4474 216.539 30.2619 213.593C27.8728 210.647 24.6873 208.437 20.7055 208.437C14.3346 206.964 8.76007 205.491 3.18551 202.545C4.0507e-05 201.072 -0.796381 199.599 0.796352 197.389C4.77818 194.443 8.76002 191.497 14.3346 189.287C25.4837 184.868 34.2438 179.713 41.4111 173.82C43.0038 170.874 43.8002 168.665 45.3929 162.772C46.9856 156.88 49.3748 146.569 52.5602 135.521C58.9312 112.689 66.8948 91.3293 75.6548 71.4431C83.6185 55.9761 93.1749 39.0359 104.324 22.0958C112.288 9.57485 117.862 2.20958 120.251 0C121.844 0.736527 124.233 2.20958 126.622 5.15568C129.011 8.10179 132.993 12.521 137.771 19.8862C140.957 25.0419 144.939 27.2515 149.717 27.988C157.681 27.988 168.033 27.2515 179.979 27.2515C191.924 27.2515 202.277 27.988 210.241 27.988C215.019 27.988 219.001 25.0419 222.186 19.8862C226.965 13.2575 230.946 8.10179 233.335 5.15568C236.521 2.20958 238.114 0 239.706 0C242.095 2.20958 246.874 9.57485 255.634 22.0958C266.783 39.7725 276.339 55.9761 284.303 71.4431C293.063 91.3293 301.027 112.689 307.397 135.521C310.583 146.569 312.972 156.144 314.565 162.772C316.158 168.665 316.954 171.611 318.547 173.82C324.918 179.713 334.474 184.868 345.623 189.287C351.198 191.497 355.179 194.443 359.161 197.389C360.754 198.862 359.958 200.335 356.772 202.545C351.198 205.491 345.623 206.964 339.252 208.437C336.067 209.174 332.881 210.647 329.696 213.593C327.307 215.802 326.51 221.695 327.307 230.533C328.103 239.371 328.899 250.419 329.696 263.677C329.696 272.515 330.492 283.563 330.492 297.557C330.492 307.132 330.492 319.653 330.492 335.856C330.492 346.168 329.696 354.269 327.307 360.162C324.918 365.317 321.732 368.263 316.954 369C313.768 369 311.379 367.527 308.99 365.317C304.212 360.898 300.23 358.689 297.045 357.216C291.47 355.743 285.099 356.479 279.525 358.689C268.375 361.635 261.208 363.108 249.263 364.581C237.317 366.054 211.833 369 180.775 369H179.182ZM248.466 61.8683C241.299 55.2395 229.354 55.2395 222.186 61.8683C215.019 55.2395 203.073 55.2395 195.906 61.8683C188.739 68.497 188.739 79.5449 195.906 86.1736L221.39 109.743L247.67 85.4371C254.837 78.8084 254.837 67.7605 247.67 61.1317L248.466 61.8683ZM109.899 61.8683C117.066 55.2395 129.011 55.2395 136.179 61.8683C143.346 55.2395 155.292 55.2395 162.459 61.8683C169.626 68.497 169.626 79.5449 162.459 86.1736L136.975 109.743L110.695 85.4371C103.528 78.8084 103.528 67.7605 110.695 61.1317L109.899 61.8683Z" fill="white" />
+        </svg>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script src="libs/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/imask"></script>
+<script src="libs/swiper-bundle.min.js"></script>
+<script src="js/header.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/sliders-config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/catalog.js"></script>
+<script src="js/services.js"></script>
+<script src="js/solutions.js"></script>
+<script src="js/feature.js"></script>
+<script src="js/catalog-sort.js"></script>
+<script src="js/product-card.js"></script>
+
+</div>
+</body>
+</html>

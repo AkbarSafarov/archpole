@@ -1,67 +1,27 @@
 .new-section {
-    padding: 72px 0 80px;
-
-    @media (max-width: 991.98px) { padding: 48px 0; }
-    @media (max-width: 575.98px) { padding: 32px 0; }
-
-    // ── Head row ─────────────────────────────────────────────────────────────
 
     &__head {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-bottom: 32px;
-
-        @media (max-width: 575.98px) { margin-bottom: 20px; }
     }
 
     &__title {
         font-family: var(--second-family);
         font-weight: 400;
-        font-size: 40px;
-        line-height: 1;
+        font-size: 56px;
+        line-height: 100%;
         color: #161616;
         margin: 0;
 
-        @media (max-width: 991.98px) { font-size: 32px; }
-        @media (max-width: 575.98px) { font-size: 24px; }
+        @media (max-width: 991px) { font-size:42px; }
     }
-
-    // ── Desktop controls (button + arrows) ────────────────────────────────────
 
     &__controls {
         align-items: center;
         gap: 4px;
         flex-shrink: 0;
     }
-
-    &__all-btn {
-        display: inline-block;
-        padding: 14px 20px;
-        background: #161616;
-        color: #fff;
-        font-family: var(--font-family);
-        font-size: 12px;
-        font-weight: 500;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        text-decoration: none;
-        transition: background 0.2s;
-        margin-right: 8px;
-
-        &:hover { background: #333; color: #fff; }
-
-        // below slider on mobile/tablet
-        &.d-lg-none {
-            display: inline-block !important;
-            margin-top: 24px;
-            margin-right: 0;
-        }
-    }
-
-
-
-    // ── Swiper ────────────────────────────────────────────────────────────────
 
     &__swiper {
 
@@ -70,7 +30,49 @@
     .swiper-slide {
         height: auto;
         display: flex;
+
+        @media all and (max-width: 991px){
+            width: 268px;
+        }
+
     }
 
     .product-card { width: 100%; }
+
+    .new-section__swiper {
+        @media all and (max-width: 991px){
+            margin: 0 -32px 12px 0;
+            padding: 0 32px 0 0;
+        }
+
+        @media all and (max-width: 767px){
+            margin: 0 -12px 0 0;
+            padding: 0 12px 0 0;
+        }
+    }
+
+    .swiper-pagination {
+        margin: 12px 0 32px;
+        background: #f5f5f5;
+        display: none;
+        height: 2px;
+
+        .swiper-pagination-bullet {
+            height: 2px;
+            width: auto;
+            margin: 0;
+            flex: 1 1 auto;
+            background: none;
+            opacity: 1;
+            border: none;
+
+            &.swiper-pagination-bullet-active {
+                background: #161616;
+            }
+        }
+
+        @media all and (max-width: 991px) {
+            display: flex;
+        }
+    }
 }

@@ -1,8 +1,6 @@
 .main-slider {
     position: relative;
 
-    // ── Arrows ───────────────────────────────────────────────────────────────
-
     .arrow {
         position: absolute;
         left: 0;
@@ -23,12 +21,9 @@
         @media (max-width: 980px) { display: none; }
     }
 
-    // ── Swiper ────────────────────────────────────────────────────────────────
-
     &__swiper {
 
         position: relative;
-
 
     }
 
@@ -43,7 +38,6 @@
             content: '';
             position: absolute;
             inset: 0;
-            //background: linear-gradient(to top, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0) 55%);
             z-index: 1;
         }
     }
@@ -70,7 +64,7 @@
         color: #fff;
         margin: 0 0 24px;
 
-        @media (max-width: 991.98px) { font-size: 64px;
+        @media (max-width: 991px) { font-size: 64px;
             margin-bottom: 16px;}
     }
 
@@ -82,19 +76,16 @@
         color: #fff;
         margin: 0 0 32px;
 
-        @media (max-width: 991.98px) { font-size: 16px;
+        @media (max-width: 991px) { font-size: 16px;
             margin-bottom: 24px;}
     }
-
 
     .swiper-pagination {
         margin-top: 16px;
 
-        @media (max-width: 991.98px) {
+        @media (max-width: 991px) {
             margin-top: 12px;
         }
     }
-    // ── Pagination ────────────────────────────────────────────────────────────
-
 
 }

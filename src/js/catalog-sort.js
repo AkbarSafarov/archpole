@@ -1,7 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-    // ── Sort dropdown ─────────────────────────────────────────────────────────
-
     document.querySelectorAll('.js-sort-toggle').forEach(function (btn) {
         var wrap = btn.closest('.js-sort-wrap');
         if (!wrap) return;
@@ -36,7 +34,40 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelectorAll('.js-sort-toggle').forEach(function (b) { b.setAttribute('aria-expanded', 'false'); });
     });
 
-    // ── Collection tabs ───────────────────────────────────────────────────────
+    var subnavPrev = document.querySelector('.js-subnav-prev');
+    var subnavNext = document.querySelector('.js-subnav-next');
+    var subnavScroll = document.querySelector('.js-subnav-scroll');
+    if (subnavPrev && subnavNext && subnavScroll) {
+        var scrollStep = 220;
+        subnavPrev.addEventListener('click', function () {
+            subnavScroll.scrollBy({ left: -scrollStep, behavior: 'smooth' });
+        });
+        subnavNext.addEventListener('click', function () {
+            subnavScroll.scrollBy({ left: scrollStep, behavior: 'smooth' });
+        });
+    }
+
+    var subnavTabs = document.querySelectorAll('.js-subnav-tab');
+    if (subnavTabs.length) {
+        subnavTabs.forEach(function (tab) {
+            tab.addEventListener('click', function (e) {
+                e.preventDefault();
+                subnavTabs.forEach(function (t) { t.classList.remove('is-active'); });
+                this.classList.add('is-active');
+            });
+        });
+    }
+
+    var collTags = document.querySelectorAll('.js-coll-tag');
+    if (collTags.length) {
+        collTags.forEach(function (tag) {
+            tag.addEventListener('click', function (e) {
+                e.preventDefault();
+                collTags.forEach(function (t) { t.classList.remove('is-active'); });
+                this.classList.add('is-active');
+            });
+        });
+    }
 
     var tabs = document.querySelectorAll('.collection-pg__tab');
     if (tabs.length) {

@@ -6,7 +6,7 @@
     outline: none;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    padding: 17px 32px 17px;
+    padding: 18px 32px 16px;
     text-decoration: none;
     font-family: var(--font-family);
     font-weight: 500;
@@ -17,7 +17,7 @@
     transition: all .3s;
 
     @media all and (max-width: 990px) {
-        padding: 17px 24px;
+        padding: 18px 24px 16px;
     }
 
     &.btn-light {
@@ -51,7 +51,6 @@
         }
     }
 }
-
 
 .arrow_btn {
     border-radius: 0;

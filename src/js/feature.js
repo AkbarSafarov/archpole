@@ -33,7 +33,6 @@ document.addEventListener('DOMContentLoaded', function(){
                 if (navigator.clipboard && window.isSecureContext) {
                     navigator.clipboard.writeText(orderNumber).then(onSuccess).catch(onError);
                 } else {
-                    // Fallback для старых браузеров
                     try {
                         const textarea = document.createElement('textarea');
                         textarea.value = orderNumber;

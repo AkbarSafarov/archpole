@@ -1,7 +1,10 @@
 .about_company {
     position: relative;
 
-    // ─── PC: image as absolute background ────────────────────────────────────
+    .container-inner {
+        padding: 16px;
+        position: relative;
+    }
 
     &__image {
         position: absolute;
@@ -23,21 +26,23 @@
 
     &__card {
         background: #fff;
-        width: 38%;
-        min-height: 500px;
-        padding: 48px 40px;
+        width: 440px;
+        min-height: 568px;
+        padding: 40px 40px;
         display: flex;
         flex-direction: column;
-        gap: 16px;
+        align-items: start;
+        gap: 24px;
+        position: relative;
+        z-index: 1;
     }
 
     &__title {
         font-family: var(--second-family);
         font-weight: 400;
-        font-size: 44px;
+        font-size: 48px;
         line-height: 100%;
-        text-transform: uppercase;
-        color: var(--brand-black);
+        color: #161616;
         margin: 0;
     }
 
@@ -51,64 +56,48 @@
             font-family: var(--font-family);
             font-weight: 400;
             font-size: 16px;
-            line-height: 150%;
-            color: var(--t-black-80);
+            line-height: 145%;
+            color: #161616;
             margin: 0;
         }
     }
 
-    // ─── Tablet ───────────────────────────────────────────────────────────────
-
     @media (max-width: 991px) {
+        padding: 0 !important;
+
+        .container-inner {
+            padding: 260px 0 32px;
+        }
 
         &__image {
-            position: static;
-            height: 280px;
-            overflow: hidden;
-
-            img {
-                height: 280px;
-                object-position: center top;
-            }
+            left: -32px;
+            right: -32px;
         }
 
         &__card {
             width: 100%;
             min-height: unset;
-            margin-top: -70px;
-            padding: 40px;
+            margin-top: 0;
+            padding: 24px;
         }
 
-        &__title { font-size: 34px; }
-    }
+        &__title { font-size: 32px; }
 
-    // ─── Mobile ───────────────────────────────────────────────────────────────
+        .about_company__texts {
+            p {
+                font-size: 14px;
+            }
+        }
+    }
 
     @media (max-width: 767px) {
 
         &__image {
-            height: 240px;
-            img { height: 240px; }
+            left: -12px;
+            right: -12px;
         }
-
-        &__card {
-            margin-top: -60px;
-            padding: 32px 24px;
-            gap: 12px;
+        .container-inner {
+            padding: 246px 0 16px;
         }
-
-        &__title { font-size: 28px; }
-
-        &__texts p { font-size: 14px; }
-    }
-
-    @media (max-width: 576px) {
-
-        &__image {
-            height: 220px;
-            img { height: 220px; }
-        }
-
-        &__title { font-size: 24px; }
     }
 }

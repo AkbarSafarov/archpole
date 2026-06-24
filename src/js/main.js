@@ -187,11 +187,18 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // Footer accordion (tablet/mobile only)
     document.querySelectorAll('.footer__col .footer__col-head').forEach(btn => {
         btn.addEventListener('click', function() {
             if (window.innerWidth >= 992) return;
             this.closest('.footer__col').classList.toggle('is-open');
         });
     });
+
+    const footerIcon = document.querySelector('.footer-icon');
+    if (footerIcon) {
+        window.addEventListener('scroll', function () {
+            const atBottom = window.scrollY + window.innerHeight >= document.body.scrollHeight - 10;
+            footerIcon.classList.toggle('active', atBottom);
+        }, { passive: true });
+    }
 });

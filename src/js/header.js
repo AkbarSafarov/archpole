@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function () {
     var header = document.querySelector('.header');
     if (!header) return;
 
-    // ── Announcement close ────────────────────────────────────────────────────
     var announce      = header.querySelector('.js-announce');
     var announceClose = header.querySelector('.js-announce-close');
 
@@ -13,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // ── Search toggle (mobile) ────────────────────────────────────────────────
     var searchToggle = header.querySelector('.js-search-toggle');
 
     if (searchToggle) {
@@ -27,7 +25,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // ── Burger menu ───────────────────────────────────────────────────────────
     var burgerMenu    = document.querySelector('.js-burger-menu');
     var burgerBtn     = header.querySelector('.js-burger');
     var burgerClose   = burgerMenu ? burgerMenu.querySelector('.js-burger-close') : null;
@@ -58,7 +55,6 @@ document.addEventListener('DOMContentLoaded', function () {
         burgerMenu.setAttribute('aria-hidden', 'true');
         document.body.style.overflow = '';
         if (burgerBtn) burgerBtn.setAttribute('aria-expanded', 'false');
-        // reset to root after slide-out transition
         setTimeout(function () {
             levelHistory = ['root'];
             showLevel('root');
@@ -78,7 +74,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     if (burgerMenu) {
-        // Navigate forward (js-burger-nav теперь на <a>, нужен preventDefault)
         burgerMenu.querySelectorAll('.js-burger-nav').forEach(function (link) {
             link.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -89,7 +84,6 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
 
-        // Navigate back
         burgerMenu.querySelectorAll('.js-burger-back').forEach(function (btn) {
             btn.addEventListener('click', function () {
                 if (levelHistory.length <= 1) return;
@@ -99,14 +93,12 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Close on Escape
     document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape' && burgerMenu && burgerMenu.classList.contains('is-open')) {
             closeMenu();
         }
     });
 
-    // Close on outside click (clicking the dark overlay)
     if (burgerMenu) {
         burgerMenu.querySelector('.burger-menu__overlay').addEventListener('click', closeMenu);
     }

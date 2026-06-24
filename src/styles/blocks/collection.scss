@@ -3,13 +3,11 @@
     position: relative;
     overflow: hidden;
 
-    // Mobile / tablet: full-width coloured bg
-    @media (max-width: 991.98px) {
+    @media (max-width: 991px) {
         background-color: var(--service-bg);
         transition: background-color 0.5s;
     }
 
-    // PC: left-half pseudo bg that stretches to viewport edge
     @media (min-width: 992px) {
         &::before {
             content: '';
@@ -29,8 +27,6 @@
         z-index: 1;
     }
 
-    // ── Inner two-column layout ───────────────────────────────────────────────
-
     &__inner {
         @media (min-width: 992px) {
             display: flex;
@@ -38,8 +34,6 @@
             min-height: 580px;
         }
     }
-
-    // ── Left column ───────────────────────────────────────────────────────────
 
     &__left {
         padding: 72px 0 80px;
@@ -49,12 +43,10 @@
             padding: 72px 48px 72px 0;
         }
 
-        @media (max-width: 575.98px) {
+        @media (max-width: 767px) {
             padding: 40px 0 48px;
         }
     }
-
-    // ── Title ─────────────────────────────────────────────────────────────────
 
     &__title {
         font-family: var(--second-family);
@@ -64,10 +56,8 @@
         color: #fff;
         margin: 0 0 32px;
 
-        @media (max-width: 575.98px) { font-size: 28px; margin-bottom: 24px; }
+        @media (max-width: 767px) { font-size: 28px; margin-bottom: 24px; }
     }
-
-    // ── Service tabs ──────────────────────────────────────────────────────────
 
     &__tabs {
         display: flex;
@@ -75,7 +65,7 @@
         gap: 8px;
         margin-bottom: 36px;
 
-        @media (max-width: 575.98px) { gap: 6px; margin-bottom: 28px; }
+        @media (max-width: 767px) { gap: 6px; margin-bottom: 28px; }
     }
 
     &__tab {
@@ -101,10 +91,8 @@
             color: #fff;
         }
 
-        @media (max-width: 575.98px) { font-size: 12px; padding: 8px 12px; }
+        @media (max-width: 767px) { font-size: 12px; padding: 8px 12px; }
     }
-
-    // ── Description Swiper ────────────────────────────────────────────────────
 
     &__swiper {
         min-height: 160px; // prevents collapse with fade stacking
@@ -121,10 +109,8 @@
 
         &:last-of-type { margin-bottom: 32px; }
 
-        @media (max-width: 575.98px) { font-size: 14px; }
+        @media (max-width: 767px) { font-size: 14px; }
     }
-
-    // ── Button ────────────────────────────────────────────────────────────────
 
     &__btn {
         display: inline-block;
@@ -141,8 +127,6 @@
 
         &:hover { background: rgba(255, 255, 255, 0.85); color: #161616; }
     }
-
-    // ── Right photo ───────────────────────────────────────────────────────────
 
     &__right {
         flex: 0 0 50%;
