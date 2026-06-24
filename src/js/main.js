@@ -186,4 +186,12 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         }
     });
+
+    // Footer accordion (tablet/mobile only)
+    document.querySelectorAll('.footer__col .footer__col-head').forEach(btn => {
+        btn.addEventListener('click', function() {
+            if (window.innerWidth >= 992) return;
+            this.closest('.footer__col').classList.toggle('is-open');
+        });
+    });
 });

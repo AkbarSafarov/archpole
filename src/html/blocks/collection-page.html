@@ -1,0 +1,100 @@
+<section class="collection-pg">
+
+    <!-- Breadcrumbs -->
+    <div class="container-xl">
+        <nav class="coll-breadcrumbs" aria-label="Вы здесь">
+            <ol class="coll-breadcrumbs__list">
+                <li class="coll-breadcrumbs__item"><a href="index.html" class="coll-breadcrumbs__link">Главная</a></li>
+                <li class="coll-breadcrumbs__item"><a href="catalog-3.html" class="coll-breadcrumbs__link">Каталог</a></li>
+                <li class="coll-breadcrumbs__item"><span class="coll-breadcrumbs__current">Коллекции</span></li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Title -->
+    <div class="container-xl">
+        <div class="collection-pg__head">
+            <a href="#" class="collection-pg__back" aria-label="Назад">
+                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 1L1 7l6 6" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+            <h1 class="collection-pg__title">КОЛЛЕКЦИИ</h1>
+        </div>
+    </div>
+
+    <!-- Collection tabs -->
+    <div class="container-xl">
+        <div class="collection-pg__tabs-wr">
+            <div class="collection-pg__tabs">
+                <a href="#" class="collection-pg__tab">
+                    <img src="files/cat-icon1.svg" alt="DUBLDOM" class="collection-pg__tab-img">
+                    <span>DUBLDOM</span>
+                </a>
+                <a href="#" class="collection-pg__tab">
+                    <img src="files/cat-icon2.svg" alt="Тетрис" class="collection-pg__tab-img">
+                    <span>Тетрис</span>
+                </a>
+                <a href="#" class="collection-pg__tab">
+                    <img src="files/cat-icon3.svg" alt="FullMoon" class="collection-pg__tab-img">
+                    <span>FullMoon</span>
+                </a>
+                <a href="#" class="collection-pg__tab is-active">
+                    <img src="files/product1.jpg" alt="Оригами" class="collection-pg__tab-img">
+                    <span>Оригами</span>
+                </a>
+                <a href="#" class="collection-pg__tab">
+                    <img src="files/product2.jpg" alt="OAK" class="collection-pg__tab-img">
+                    <span>OAK</span>
+                </a>
+                <a href="#" class="collection-pg__tab">
+                    <img src="files/cat-icon4.svg" alt="Матрица" class="collection-pg__tab-img">
+                    <span>Матрица</span>
+                </a>
+                <a href="#" class="collection-pg__tab">
+                    <img src="files/cat-icon5.svg" alt="Минимализм" class="collection-pg__tab-img">
+                    <span>Минимализм</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sort bar (tablet only) -->
+    <div class="container-xl">
+        <div class="collection-pg__sortbar d-none d-md-flex d-lg-none">
+            <div class="collection-pg__sort-wrap js-sort-wrap">
+                <button class="collection-pg__sort-btn js-sort-toggle" type="button" aria-expanded="false">
+                    <span class="js-sort-label">Сначала дешевле</span>
+                    <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1l5 5 5-5" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <ul class="collection-pg__sort-list js-sort-list" hidden>
+                    <li><button type="button" class="collection-pg__sort-opt js-sort-opt is-active">Сначала дешевле</button></li>
+                    <li><button type="button" class="collection-pg__sort-opt js-sort-opt">Сначала дороже</button></li>
+                    <li><button type="button" class="collection-pg__sort-opt js-sort-opt">По популярности</button></li>
+                    <li><button type="button" class="collection-pg__sort-opt js-sort-opt">Новинки</button></li>
+                </ul>
+            </div>
+            <label class="collection-pg__instock">
+                <span>В наличии</span>
+                <span class="collection-pg__toggle">
+                    <input type="checkbox" checked>
+                    <span class="collection-pg__toggle-track"></span>
+                </span>
+            </label>
+        </div>
+    </div>
+
+    <!-- Products grid -->
+    <div class="container-xl">
+        <div class="collection-pg__grid">
+            @@include('product.html', {"img": "files/product1.jpg", "name": "Гардероб «Оригами»", "price": "68 000 ₽"})
+            @@include('product.html', {"img": "files/product2.jpg", "name": "Прикроватная тумба «Оригами»", "price": "36 000 ₽"})
+            @@include('product.html', {"img": "files/product3.jpg", "name": "Прикроватная тумба на декоративных колесах «Оригами»", "price": "42 000 ₽"})
+            @@include('product.html', {"img": "files/product4.jpg", "name": "Стеллаж «Оригами»", "price": "68 000 ₽"})
+            @@include('product.html', {"img": "files/product5.jpg", "name": "Тумба под раковину «Оригами»", "price": "144 000 ₽"})
+        </div>
+    </div>
+
+</section>

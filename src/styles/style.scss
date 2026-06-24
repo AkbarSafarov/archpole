@@ -8,8 +8,10 @@
 
 @use 'blocks/icons';
 @use 'blocks/header';
+@use 'blocks/burger-menu';
 @use 'blocks/footer';
 @use 'blocks/main-slider';
+@use 'blocks/main-text-block';
 @use 'blocks/category';
 @use 'blocks/hit';
 @use 'blocks/product-item';
@@ -18,5 +20,12 @@
 @use 'blocks/banner-section';
 @use 'blocks/about-block';
 @use 'blocks/bottom-block';
+@use 'blocks/dlya-dizainerov';
+@use 'blocks/solution';
+@use 'blocks/services-section';
+@use 'blocks/about-company';
+@use 'blocks/journal';
+@use 'blocks/collection-page';
+@use 'blocks/catalog-page';
 
 @use 'segments/main';

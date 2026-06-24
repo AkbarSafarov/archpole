@@ -1,0 +1,171 @@
+.journal_bottom {
+    padding: 60px 0;
+
+    // ─── Журнал ──────────────────────────────────────────────────────────────
+
+    .journal_section {
+
+        &__head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 32px;
+        }
+
+        &__title {
+            font-family: var(--second-family);
+            font-weight: 400;
+            font-size: 52px;
+            line-height: 100%;
+            text-transform: uppercase;
+            color: var(--brand-black);
+            margin: 0;
+        }
+
+        &__controls {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        &__swiper {
+            overflow: visible;
+        }
+
+        &__mob-foot {
+            margin-top: 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 24px;
+        }
+
+        &__sep {
+            display: block;
+            width: 80px;
+            height: 1px;
+            background: var(--brand-black);
+        }
+    }
+
+    // ─── Карточка статьи ─────────────────────────────────────────────────────
+
+    .journal_card {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+
+        &__img {
+            aspect-ratio: 3 / 2;
+            overflow: hidden;
+            margin-bottom: 16px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+                transition: transform .4s;
+            }
+        }
+
+        &:hover &__img img {
+            transform: scale(1.04);
+        }
+
+        &__title {
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 140%;
+            color: var(--brand-black);
+            margin: 0;
+        }
+    }
+
+    // ─── Divider ─────────────────────────────────────────────────────────────
+
+    &__divider {
+        border: none;
+        border-top: 1px solid var(--t-black-20);
+        margin: 48px 0;
+    }
+
+    // ─── Слоган ──────────────────────────────────────────────────────────────
+
+    &__tagline {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        &-title {
+            font-family: var(--second-family);
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 100%;
+            text-transform: uppercase;
+            color: var(--brand-black);
+            margin: 0;
+        }
+
+        &-desc {
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            color: var(--t-black-70);
+            margin: 0;
+            max-width: 640px;
+        }
+    }
+
+    // ─── Tablet ───────────────────────────────────────────────────────────────
+
+    @media (max-width: 991px) {
+        padding: 48px 0;
+
+        .journal_section {
+
+            &__title { font-size: 40px; }
+
+            &__head { margin-bottom: 24px; }
+        }
+
+        &__divider { margin: 40px 0; }
+
+        &__tagline {
+
+            &-title { font-size: 28px; }
+
+            &-desc { max-width: 100%; }
+        }
+    }
+
+    // ─── Mobile ───────────────────────────────────────────────────────────────
+
+    @media (max-width: 767px) {
+        padding: 40px 0;
+
+        .journal_section {
+
+            &__title { font-size: 32px; }
+
+            &__head { margin-bottom: 20px; }
+        }
+
+        .journal_card {
+
+            &__title { font-size: 13px; }
+        }
+
+        &__divider { margin: 32px 0; }
+
+        &__tagline {
+            gap: 16px;
+
+            &-title { font-size: 24px; }
+
+            &-desc { font-size: 14px; }
+        }
+    }
+}

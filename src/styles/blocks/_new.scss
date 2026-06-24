@@ -1,134 +1,76 @@
-.spaces-section {
-    position: relative;
-    background: url('../../files/resh.jpg') center / cover no-repeat;
+.new-section {
+    padding: 72px 0 80px;
 
-    // Dark overlay (gradient: darker left → lighter right on PC)
-    &::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(
-            to right,
-            rgba(0, 0, 0, 0.72) 0%,
-            rgba(0, 0, 0, 0.55) 50%,
-            rgba(0, 0, 0, 0.30) 100%
-        );
-        pointer-events: none;
+    @media (max-width: 991.98px) { padding: 48px 0; }
+    @media (max-width: 575.98px) { padding: 32px 0; }
 
-        @media (max-width: 991.98px) {
-            background: rgba(0, 0, 0, 0.58);
-        }
-    }
+    // ── Head row ─────────────────────────────────────────────────────────────
 
-    > .container-xl {
-        position: relative;
-        z-index: 1;
-    }
-
-    // ── Inner flex column: top content ↕ bottom nav ───────────────────────────
-
-    &__inner {
+    &__head {
         display: flex;
-        flex-direction: column;
+        align-items: center;
         justify-content: space-between;
-        min-height: 600px;
-        padding-top: 64px;
+        margin-bottom: 32px;
 
-        @media (max-width: 991.98px) { min-height: 520px; padding-top: 48px; }
-        @media (max-width: 575.98px) { min-height: 560px; padding-top: 40px; }
-    }
-
-    // ── Title + subtitle ──────────────────────────────────────────────────────
-
-    &__top {
-        max-width: 400px;
+        @media (max-width: 575.98px) { margin-bottom: 20px; }
     }
 
     &__title {
         font-family: var(--second-family);
         font-weight: 400;
-        font-size: 96px;
-        line-height: 0.88;
-        color: #fff;
-        margin: 0 0 20px;
-
-        @media (max-width: 991.98px) { font-size: 72px; }
-        @media (max-width: 575.98px) { font-size: 52px; margin-bottom: 16px; }
-    }
-
-    &__sub {
-        font-family: var(--font-family);
-        font-size: 15px;
-        line-height: 1.5;
-        color: rgba(255, 255, 255, 0.75);
+        font-size: 40px;
+        line-height: 1;
+        color: #161616;
         margin: 0;
 
-        @media (max-width: 575.98px) { font-size: 14px; }
+        @media (max-width: 991.98px) { font-size: 32px; }
+        @media (max-width: 575.98px) { font-size: 24px; }
     }
 
-    // ── Room nav ──────────────────────────────────────────────────────────────
+    // ── Desktop controls (button + arrows) ────────────────────────────────────
 
-    &__nav {
-        // PC: single row, 6 equal columns
-        display: flex;
-
-        // Tablet: 2-column grid
-        @media (min-width: 576px) and (max-width: 991.98px) {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-        }
-
-        // Mobile: single column
-        @media (max-width: 575.98px) {
-            display: flex;
-            flex-direction: column;
-        }
-    }
-
-    &__link {
-        flex: 1;
-        display: flex;
+    &__controls {
         align-items: center;
-        justify-content: space-between;
-        gap: 12px;
-        padding: 20px 0;
-        border-top: 1px solid rgba(255, 255, 255, 0.35);
+        gap: 4px;
+        flex-shrink: 0;
+    }
+
+    &__all-btn {
+        display: inline-block;
+        padding: 14px 20px;
+        background: #161616;
         color: #fff;
-        text-decoration: none;
         font-family: var(--font-family);
-        font-size: 20px;
-        transition: border-color 0.2s, color 0.2s;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: background 0.2s;
+        margin-right: 8px;
 
-        @media (max-width: 991.98px) {
-            font-size: 16px;
-            padding: 18px 0;
-        }
+        &:hover { background: #333; color: #fff; }
 
-        // PC: gap between adjacent items via right padding
-        @media (min-width: 992px) {
-            padding-right: 20px;
-
-            &:last-child { padding-right: 0; }
-        }
-
-        // Tablet/mobile: chevron always visible
-        .spaces-section__arrow {
-            flex-shrink: 0;
-
-            @media (min-width: 992px) {
-                opacity: 0;
-                transition: opacity 0.2s;
-            }
-        }
-
-        &:hover,
-        &.is-active {
-            border-top-color: rgba(255, 255, 255, 0.9);
-            color: #fff;
-
-            .spaces-section__arrow {
-                @media (min-width: 992px) { opacity: 1; }
-            }
+        // below slider on mobile/tablet
+        &.d-lg-none {
+            display: inline-block !important;
+            margin-top: 24px;
+            margin-right: 0;
         }
     }
+
+
+
+    // ── Swiper ────────────────────────────────────────────────────────────────
+
+    &__swiper {
+
+    }
+
+    .swiper-slide {
+        height: auto;
+        display: flex;
+    }
+
+    .product-card { width: 100%; }
 }

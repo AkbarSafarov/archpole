@@ -99,19 +99,227 @@
         </div>
     </div>
 
-    <!-- Mobile nav drawer -->
-    <div class="header__drawer js-drawer" hidden>
-        <nav class="header__drawer-nav">
-            <ul>
-                <li><a href="#" class="header__nav-link">Каталог</a></li>
-                <li>
-                    <a href="#" class="header__nav-link">Услуги</a></li>
-                <li>
-                    <a href="#" class="header__nav-link">Партнерство</a></li>
-                <li>
-                    <a href="#" class="header__nav-link">О нас</a></li>
-            </ul>
-        </nav>
-    </div>
-
 </header>
+
+<!-- ═══════════════════════════════════════════════════════════
+     БУРГЕР-МЕНЮ (tablet / mobile only, position: fixed overlay)
+══════════════════════════════════════════════════════════════ -->
+<div class="burger-menu js-burger-menu" aria-hidden="true" role="dialog" aria-label="Меню">
+
+    <!-- затемнение позади панели -->
+    <div class="burger-menu__overlay js-burger-overlay"></div>
+
+    <!-- белая панель -->
+    <div class="burger-menu__panel">
+
+        <!-- ── Шапка панели ─────────────────────────────────────── -->
+        <div class="burger-menu__head">
+            <div class="burger-menu__head-side">
+                <button class="header__icon-btn js-burger-close" type="button" aria-label="Закрыть">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 7.05769L11.3L3.75781L12.2425 4.70062L8.94264 8.00047L12.2425 11.3003L11.2997 12.2431L8 8.94327L4.70002 12.2431L3.7572 11.3003L7.05704 8.00047L3.7572 4.70062L4.70002 3.75781L8 7.05769Z" fill="#161616"/>
+                        <path d="M7.99984 7.05767L11.2997 3.75781L12.2425 4.70062L8.94264 8.00047L12.2425 11.3003L11.2997 12.2431L7.99984 8.94327L4.70002 12.2431L3.7572 11.3003L7.05704 8.00047L3.7572 4.70062L4.70002 3.75781L7.99984 7.05767Z" fill="#161616"/>
+                    </svg>
+                </button>
+                <button class="header__icon-btn" type="button" aria-label="Поиск">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.0209 11.0793L14.6952 13.7536L13.7536 14.6952L11.0793 12.0209C10.116 12.7729 8.90933 13.2222 7.59998 13.2222C4.40267 13.2222 1.80887 10.6284 1.80887 7.43111C1.80887 4.2338 4.40267 1.64 7.59998 1.64C10.7973 1.64 13.3911 4.2338 13.3911 7.43111C13.3911 8.74044 12.9418 9.94711 12.1898 10.9104L12.0209 11.0793ZM10.6964 10.5836C11.4893 9.81289 11.9911 8.73156 11.9911 7.53111C11.9911 5.04889 9.98222 3.04 7.49998 3.04C5.01776 3.04 3.00887 5.04889 3.00887 7.53111C3.00887 10.0133 5.01776 12.0222 7.49998 12.0222C8.70044 12.0222 9.78178 11.5204 10.5524 10.7276L10.6964 10.5836Z" fill="#161616"/>
+                    </svg>
+                </button>
+            </div>
+
+            <a href="index.html" class="burger-menu__logo">
+                <svg width="120" height="22" viewBox="0 0 155 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.2548 0V28H12.509V15.5217H2.74587V28H0V0H15.2548ZM2.74587 12.4783H12.509V3.04348H2.74587V12.4783Z" fill="#161616"/>
+                    <path d="M75.3589 28L75.3588 0.0407749H72.613V12.6712H62.8499V0.0203874L60.104 0L60.104 28H62.8499L62.8499 15.7147H72.613L72.613 28H75.3589Z" fill="#161616"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M35.0861 0V15.5217H25.0179L35.0861 25.8696L32.9504 28L22.8822 17.6522V28H20.1253V0H35.0861ZM22.8822 12.4783H32.3402V3.04348H22.8822V12.4783Z" fill="#161616"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M95.1493 0V15.8261H82.9973V28H80.1996V0H95.1493ZM82.9863 12.7826H92.4443V3.04348H82.9863V12.7826Z" fill="#161616"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M114.722 0V28H99.4668V0H114.722ZM102.207 24.9565H111.97V3.04348H102.207V24.9565Z" fill="#161616"/>
+                    <path d="M55.5385 0H40.2727V28H55.5385V24.9565H43.0186V3.04348H55.5385V0Z" fill="#161616"/>
+                    <path d="M122.344 0H119.598V28H134.864V24.9565H122.344V0Z" fill="#161616"/>
+                    <path d="M155 0H139.734V28H155V24.9565H142.48V15.8261H155V12.7826H142.48V3.04348H155V0Z" fill="#161616"/>
+                </svg>
+            </a>
+
+            <div class="burger-menu__head-side burger-menu__head-side--right">
+                <button class="header__icon-btn" type="button" aria-label="Корзина">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.87866 1.5H13.1287C13.3647 1.5 13.587 1.61114 13.7287 1.8L15.7537 4.5V15.75C15.7537 16.1642 15.4179 16.5 15.0037 16.5H3.00366C2.58945 16.5 2.25366 16.1642 2.25366 15.75V4.5L4.27866 1.8C4.42031 1.61114 4.6426 1.5 4.87866 1.5ZM13.8787 4.5L12.7537 3H5.25366L4.12866 4.5H13.8787ZM6.75366 7.5H5.25366V9C5.25366 11.071 6.9326 12.75 9.00368 12.75C11.0747 12.75 12.7537 11.071 12.7537 9V7.5H11.2537V9C11.2537 10.2427 10.2463 11.25 9.00368 11.25C7.761 11.25 6.75366 10.2427 6.75366 9V7.5Z" fill="#161616"/>
+                    </svg>
+                </button>
+                <button class="header__icon-btn" type="button" aria-label="Личный кабинет">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 8C10.2091 8 12 6.20914 12 4C12 1.79086 10.2091 0 8 0C5.79086 0 4 1.79086 4 4C4 6.20914 5.79086 8 8 8ZM8 9C5.33 9 0 10.34 0 13V14C0 15.1 0.9 16 2 16H14C15.1 16 16 15.1 16 14V13C16 10.34 10.67 9 8 9Z" fill="#161616"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- ── Тело: уровни меню ─────────────────────────────────── -->
+        <div class="burger-menu__body">
+
+            <!-- ─ Уровень 0: корневое меню ─ -->
+            <div class="burger-menu__level is-active" data-id="root">
+                <nav class="burger-menu__nav">
+                    <ul class="burger-menu__list">
+                        <li class="burger-menu__item">
+                            <a href="#" class="burger-menu__link js-burger-nav" data-target="katalog">
+                                <span>Каталог</span>
+                                <svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </a>
+                        </li>
+                        <li class="burger-menu__item">
+                            <a href="#" class="burger-menu__link">
+                                <span>Избранное</span>
+                                <svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </a>
+                        </li>
+                        <li class="burger-menu__item">
+                            <a href="#" class="burger-menu__link js-burger-nav" data-target="uslugi">
+                                <span>Услуги</span>
+                                <svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </a>
+                        </li>
+                        <li class="burger-menu__item">
+                            <a href="#" class="burger-menu__link js-burger-nav" data-target="partnerstvo">
+                                <span>Партнерство</span>
+                                <svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </a>
+                        </li>
+                        <li class="burger-menu__item">
+                            <a href="#" class="burger-menu__link js-burger-nav" data-target="o-nas">
+                                <span>О нас</span>
+                                <svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Контакты в подвале корневого меню -->
+                <div class="burger-menu__footer">
+                    <div class="burger-menu__socials">
+                        <a href="tel:+74956625826" class="header__icon-btn" aria-label="Телефон">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328z" fill="#161616"/></svg>
+                        </a>
+                        <a href="mailto:love@archpole.ru" class="header__icon-btn" aria-label="Email">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114V5.383zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.731z" fill="#161616"/></svg>
+                        </a>
+                        <a href="#" class="header__icon-btn" aria-label="WhatsApp">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" fill="#161616"/></svg>
+                        </a>
+                        <a href="#" class="header__icon-btn" aria-label="Pinterest">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 0a8 8 0 0 0-2.915 15.452c-.07-.633-.134-1.606.027-2.297.146-.625.99-4.202.99-4.202s-.253-.506-.253-1.255c0-1.175.682-2.054 1.531-2.054.723 0 1.071.542 1.071 1.191 0 .726-.465 1.813-.704 2.818-.2.843.422 1.528 1.252 1.528 1.503 0 2.659-1.583 2.659-3.872 0-2.024-1.454-3.44-3.531-3.44-2.405 0-3.817 1.804-3.817 3.669 0 .727.28 1.505.629 1.93a.252.252 0 0 1 .058.243c-.064.265-.207.843-.235.96-.037.156-.124.189-.285.114-1.049-.488-1.704-2.021-1.704-3.253 0-2.647 1.923-5.079 5.545-5.079 2.912 0 5.17 2.075 5.17 4.847 0 2.892-1.822 5.221-4.352 5.221-.85 0-1.65-.441-1.924-.962l-.522 1.95c-.19.728-.698 1.637-1.039 2.191A8 8 0 1 0 8 0z" fill="#161616"/></svg>
+                        </a>
+                    </div>
+                    <address class="burger-menu__addr">г. Москва, ул. Молодогвардейская,<br>дом 57, строение 5</address>
+                </div>
+            </div>
+
+            <!-- ─ Уровень 1: Каталог ─ -->
+            <div class="burger-menu__level" data-id="katalog">
+                <div class="burger-menu__sub-head">
+                    <button class="burger-menu__back js-burger-back" type="button" aria-label="Назад">
+                        <svg width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M6 1L1 6L6 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <span class="burger-menu__sub-title">Каталог</span>
+                </div>
+                <nav class="burger-menu__nav">
+                    <ul class="burger-menu__list">
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Кухни</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Хранение</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Столы</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Свет</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link js-burger-nav" data-target="sideniya"><span>Сиденья</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Декор</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Артефакты</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Эко трофеи томато</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>ArchPole и искусство</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- ─ Уровень 1: Услуги ─ -->
+            <div class="burger-menu__level" data-id="uslugi">
+                <div class="burger-menu__sub-head">
+                    <button class="burger-menu__back js-burger-back" type="button" aria-label="Назад">
+                        <svg width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M6 1L1 6L6 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <span class="burger-menu__sub-title">Услуги</span>
+                </div>
+                <nav class="burger-menu__nav">
+                    <ul class="burger-menu__list">
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Ремонт под ключ – MyFlat</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Кухни на заказ</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Дизайн проект</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Реставрация мебели</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Trade-in</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Мебель в аренду для съемок</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Нестандартные изделия</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- ─ Уровень 1: Партнерство ─ -->
+            <div class="burger-menu__level" data-id="partnerstvo">
+                <div class="burger-menu__sub-head">
+                    <button class="burger-menu__back js-burger-back" type="button" aria-label="Назад">
+                        <svg width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M6 1L1 6L6 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <span class="burger-menu__sub-title">Партнерство</span>
+                </div>
+                <nav class="burger-menu__nav">
+                    <ul class="burger-menu__list">
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Бизнесу</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Дизайнеру и архитектору</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Художнику</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Бартер</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- ─ Уровень 1: О нас ─ -->
+            <div class="burger-menu__level" data-id="o-nas">
+                <div class="burger-menu__sub-head">
+                    <button class="burger-menu__back js-burger-back" type="button" aria-label="Назад">
+                        <svg width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M6 1L1 6L6 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <span class="burger-menu__sub-title">О нас</span>
+                </div>
+                <nav class="burger-menu__nav">
+                    <ul class="burger-menu__list">
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>О бренде</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Оплата и доставка</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Контакты</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Журнал</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Вакансии</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Вопросы и ответы</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- ─ Уровень 2: Сиденья ─ -->
+            <div class="burger-menu__level" data-id="sideniya">
+                <div class="burger-menu__sub-head">
+                    <button class="burger-menu__back js-burger-back" type="button" aria-label="Назад">
+                        <svg width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M6 1L1 6L6 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <span class="burger-menu__sub-title">Сиденья</span>
+                </div>
+                <nav class="burger-menu__nav">
+                    <ul class="burger-menu__list">
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Табуреты</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Скамьи</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Столы</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Барные стулья и табуреты</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Стулья</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Диваны</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Кресла</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Кровати</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                        <li class="burger-menu__item"><a href="#" class="burger-menu__link"><span>Пуфы</span><svg class="burger-menu__arr" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div><!-- /body -->
+    </div><!-- /panel -->
+</div><!-- /burger-menu -->

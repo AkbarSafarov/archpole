@@ -21,8 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
         fadeEffect: { crossFade: true },
         loop: false,
         speed: 600,
-        allowTouchMove: true,
-        autoHeight: true,
+        allowTouchMove: false,
         on: {
             slideChange: function () {
                 activate(this.activeIndex, false);
