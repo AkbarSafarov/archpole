@@ -1,0 +1,169 @@
+.footer {
+    padding: 64px 0;
+    background: #fff;
+
+    &__top {
+        padding-bottom: 44px;
+
+        .contacts {
+            flex: 0 0 calc(25% - 12px);
+
+            .title {
+                font-family: var(--third-family);
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 117%;
+                letter-spacing: -0.02em;
+                color: var(--brand-black);
+                margin-bottom: 32px;
+
+                @media all and (max-width: 767px){
+                    margin-bottom: 16px;
+                }
+            }
+
+            a {
+                font-family: var(--font-family);
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 150%;
+                color: var(--brand-black);
+
+                &:hover {
+                    color: var(--brand-gold);
+                }
+            }
+
+            .call_link {
+                margin-top: 16px;
+            }
+
+            .markets {
+                padding-top: 44px;
+
+                a {
+                    display: inline-block;
+                    vertical-align: top;
+                    max-width: 40px;
+                    text-decoration: none;
+                }
+
+                @media all and (max-width: 767px){
+                    padding-top: 24px;
+                }
+            }
+        }
+    }
+
+    &__menu {
+        flex: 0 0 calc(75% - 12px);
+        padding: 0;
+
+        .navbar-nav{
+            justify-content: start;
+            flex-direction: row;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            width: 100%;
+
+            > li {
+                flex: 0 0 calc(33.33% - 16px);
+
+                > a {
+                    font-family: var(--third-family);
+                    font-weight: 400;
+                    font-size: 24px;
+                    line-height: 117%;
+                    letter-spacing: -0.02em;
+                    color: var(--brand-black);
+                    text-decoration: none;
+                }
+
+                > ul {
+                    padding: 32px 0 0;
+                    margin: 0;
+                    list-style: none;
+
+                    li {
+                        margin-bottom: 8px;
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+
+                        a {
+                            font-family: var(--font-family);
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 150%;
+                            color: var(--brand-black);
+                            text-decoration: none;
+                            display: inline-block;
+                            vertical-align: top;
+                            transition: all .3s;
+
+                            &:hover {
+                                color: var(--brand-gold);
+                            }
+                        }
+                    }
+                }
+            }
+
+            @media all and (max-width: 767px){
+                > li {
+                    margin-bottom: 20px;
+
+                    > ul {
+                        padding-top: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__bottom {
+
+        .copy {
+            flex: 1 1 auto;
+            text-align: center;
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 143%;
+            color: var(--t-black-40);
+        }
+    }
+
+    @media all and (max-width: 1024px) {
+        padding: 32px 0;
+
+        &__top {
+            padding-bottom: 24px;
+        }
+
+        &__bottom {
+
+        }
+    }
+
+    @media all and (max-width: 767px) {
+        &__bottom {
+            text-align: center;
+
+            .logo {
+                margin-bottom: 16px;
+            }
+
+            .copy {
+                text-align: center;
+            }
+
+            .markets {
+                padding-top: 16px;
+                justify-content: center;
+            }
+        }
+    }
+}

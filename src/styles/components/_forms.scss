@@ -1,0 +1,46 @@
+.form-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: var(--t-black-60);
+    margin-bottom: 6px;
+}
+
+.form-control,
+.form-select {
+    height: 48px;
+    padding-right: 1rem;
+    background-color: var(--brand-white);
+
+    &:hover:not(:focus):not(:disabled):not([readonly]) {
+        border-color: rgba(26, 51, 45, 0.6);
+    }
+}
+
+textarea.form-control {
+    height: auto;
+    min-height: 100px;
+    padding: 0.75rem 1rem 0.75rem 1.5rem;
+    resize: vertical;
+}
+
+.form-select {
+    padding-right: 2.5rem;
+}
+
+.form-check-input {
+    border-color: rgba(26, 51, 45, 0.3);
+    cursor: pointer;
+    transition: border-color 0.15s ease, background-color 0.15s ease;
+
+    &:hover:not(:disabled):not(:checked) {
+        border-color: var(--brand-gold);
+    }
+
+    &.is-invalid { border-color: var(--state-error); }
+}
+
+.form-switch .form-check-input:checked {
+    background-color: var(--brand-gold);
+    border-color: var(--brand-gold);
+}

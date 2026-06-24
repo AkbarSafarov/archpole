@@ -1,0 +1,22 @@
+@use 'vendor/bootstrap-config';
+@use 'vendor/inner-style';
+
+@use 'components/colors';
+@use 'components/fonts';
+@use 'components/buttons';
+@use 'components/forms';
+
+@use 'blocks/icons';
+@use 'blocks/header';
+@use 'blocks/footer';
+@use 'blocks/main-slider';
+@use 'blocks/category';
+@use 'blocks/hit';
+@use 'blocks/product-item';
+@use 'blocks/collection';
+@use 'blocks/new';
+@use 'blocks/banner-section';
+@use 'blocks/about-block';
+@use 'blocks/bottom-block';
+
+@use 'segments/main';

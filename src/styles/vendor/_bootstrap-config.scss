@@ -1,0 +1,92 @@
+// Bootstrap 5 — project variable overrides
+// All variables override Bootstrap's !default values.
+// Add new overrides here rather than touching BS source.
+
+@use "bootstrap/scss/bootstrap" with (
+
+    $primary:   #99851f,   // --brand-gold
+    $secondary: #1a332d,   // --brand-black
+    $light:     #ffffff,   // --brand-light
+    $dark:      #161616,   // --brand-black
+
+    $body-color: #1a332d,  // --brand-black
+    $body-bg:    #f9f9fa,  // --brand-light
+
+    $font-family-base:       "Nunito Sans"#{","} sans-serif,
+    $font-family-sans-serif: "Nunito Sans"#{","} sans-serif,
+    $font-size-base:         1rem,
+    $line-height-base:       1.5,
+    $headings-font-weight:   600,
+
+    $spacer:             1rem,
+    $grid-gutter-width:  1.5rem,
+    $spacers: (
+        0: 0,
+        1: 0.25rem,
+        2: 0.5rem,
+        3: 1rem,
+        4: 1.5rem,
+        5: 2rem,
+    ),
+
+    $border-radius:    0px,
+    $border-radius-sm: 0px,
+    $border-radius-lg: 0px,
+    $border-radius-xl: 0px,
+
+    // border-radius is asymmetric (24 24 24 0) — set via CSS in _buttons.scss
+    $btn-padding-y:         0.625rem,
+    $btn-padding-x:         1.5rem,
+    $btn-padding-y-sm:      0.5rem,
+    $btn-padding-x-sm:      1rem,
+    $btn-padding-y-lg:      0.9375rem,
+    $btn-padding-x-lg:      2rem,
+    $btn-font-family:       var(--font-family)#{","} sans-serif,
+    $btn-font-size:         0.75rem,
+    $btn-font-size-sm:      0.6875rem,
+    $btn-font-size-lg:      0.8125rem,
+    $btn-font-weight:       700,
+    $btn-line-height:       1,
+    $btn-border-width:      2px,
+    $btn-border-radius:     24px,
+    $btn-border-radius-sm:  20px,
+    $btn-border-radius-lg:  28px,
+    $btn-transition:        color 0.15s ease#{","} background-color 0.15s ease#{","} border-color 0.15s ease#{","} box-shadow 0.15s ease,
+
+    $input-border-width:       2px,
+    $input-border-color:       rgba(26, 51, 45, 0.4),
+    $input-focus-border-color: #99851f,
+    $input-border-radius:      24px,
+    $input-border-radius-sm:   20px,
+    $input-border-radius-lg:   28px,
+    $input-padding-y:          0.75rem,
+    $input-padding-x:          1.5rem,
+    $input-font-size:          0.875rem,
+    $input-color:              #1a332d,
+    $input-placeholder-color:  rgba(26, 51, 45, 0.35),
+
+    $form-check-input-width:                1.125em,
+    $form-check-input-checked-bg-color:     #99851f,
+    $form-check-input-checked-border-color: #99851f,
+
+    $form-feedback-valid-color:   #99851f,
+    $form-feedback-invalid-color: #d94800,
+    $form-valid-border-color:     #99851f,
+    $form-invalid-border-color:   #d94800,
+    $form-valid-color:            #99851f,
+    $form-invalid-color:          #d94800,
+
+    $link-color:       #1a332d,   // --brand-black
+    $link-decoration:  none,
+    $link-hover-color: #99851f,   // --brand-gold
+
+    $transition-base: all 0.2s ease,
+
+    $container-max-widths: (
+        sm:  540px,
+        md:  720px,
+        lg:  960px,
+        xl:  1200px,
+        xxl: 1440px
+    )
+);

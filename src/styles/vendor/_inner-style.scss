@@ -1,0 +1,8 @@
+﻿// Container padding: 32px on PC/tablet, 12px on mobile
+[class*="container"] {
+    --bs-gutter-x: 64px;
+
+    @media (max-width: 767px) {
+        --bs-gutter-x: 24px;
+    }
+}

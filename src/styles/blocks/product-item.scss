@@ -1,0 +1,92 @@
+.product-card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    cursor: pointer;
+    outline: 1px solid transparent;
+    transition: outline-color 0.2s;
+
+    &:hover { outline-color: #161616; }
+
+    // ── Invisible full-card link ──────────────────────────────────────────────
+
+    &__link {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+    }
+
+    // ── Image area ────────────────────────────────────────────────────────────
+
+    &__image {
+        background: #f2f2f2;
+        aspect-ratio: 1 / 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+    }
+
+    // ── Wishlist button ───────────────────────────────────────────────────────
+
+    &__wish {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        z-index: 2;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        color: #161616;
+
+        svg path { transition: fill 0.2s, stroke 0.2s; }
+
+        &.is-active svg path,
+        &:hover svg path {
+            fill: #161616;
+            stroke: #161616;
+        }
+    }
+
+    // ── Info ──────────────────────────────────────────────────────────────────
+
+    &__body {
+        padding: 12px 0 0;
+    }
+
+    &__name {
+        font-family: var(--font-family);
+        font-size: 15px;
+        line-height: 1.35;
+        color: #161616;
+        margin: 0 0 10px;
+    }
+
+    &__line {
+        width: 32px;
+        height: 1px;
+        background: #161616;
+        margin-bottom: 10px;
+    }
+
+    &__price {
+        font-family: var(--font-family);
+        font-size: 15px;
+        color: #161616;
+        margin: 0;
+    }
+}
