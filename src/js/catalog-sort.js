@@ -100,6 +100,34 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+    var promoEl = document.querySelector('.cat6-promo__swiper');
+    if (promoEl) {
+        var promoPhoto = document.querySelector('.cat6-promo__photo img');
+        var originalSlides = Array.from(promoEl.querySelectorAll('.swiper-slide')).map(function (s) {
+            return s.dataset.photo || null;
+        });
+
+        new Swiper(promoEl, {
+            loop: true,
+            slidesPerView: 1,
+            speed: 500,
+            navigation: {
+                prevEl: '.cat6-promo .arrow_btn.prev',
+                nextEl: '.cat6-promo .arrow_btn.next'
+            },
+            pagination: {
+                el: '.cat6-promo__dots',
+                clickable: true
+            },
+            on: {
+                slideChange: function () {
+                    var photo = originalSlides[this.realIndex];
+                    if (photo && promoPhoto) promoPhoto.src = photo;
+                }
+            }
+        });
+    }
+
     var tabs = document.querySelectorAll('.collection-pg__tab');
     if (tabs.length) {
         tabs.forEach(function (tab) {

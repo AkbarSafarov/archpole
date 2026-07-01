@@ -8,8 +8,193 @@
     @@include('header.html')
     <div class="content_block_wr">
 
+        <div class="profile-pg py-5">
+            <div class="container-xl">
+                <div class="profile-pg__row">
+
+                    <!-- Sidebar (desktop) -->
+                    <aside class="profile-pg__sidebar d-none d-lg-flex">
+                        <div class="profile-pg__user pb-6">
+                            <div class="profile-pg__avatar">
+                                <img src="img/avatar-pl.svg" alt="Аватар">
+                            </div>
+                            <p class="profile-pg__username">КОНСТАНТИН<br>ЛАГУТИН</p>
+                        </div>
+                        <nav class="profile-pg__nav">
+                            <a href="profile.html" class="profile-pg__nav-link">Профиль</a>
+                            <a href="my-orders.html" class="profile-pg__nav-link is-active">Мои заказы</a>
+                            <a href="promocodes.html" class="profile-pg__nav-link">Промокоды</a>
+                            <a href="notifications.html" class="profile-pg__nav-link">Уведомления</a>
+                            <a href="security.html" class="profile-pg__nav-link">Безопасность</a>
+                            <a href="#" class="profile-pg__nav-link js-logout-trigger">Выйти из аккаунта</a>
+                        </nav>
+                    </aside>
+
+                    <!-- Main content -->
+                    <div class="profile-pg__main">
+
+                        <!-- User block (tablet/mobile) -->
+                        <div class="profile-pg__user-mob d-lg-none mb-2">
+                            <div class="profile-pg__avatar profile-pg__avatar--mob">
+                                <img src="img/avatar-pl.svg" alt="Аватар">
+                            </div>
+                            <p class="profile-pg__username">КОНСТАНТИН<br>ЛАГУТИН</p>
+                        </div>
+
+                        <!-- Horizontal tabs (tablet/mobile) -->
+                        <div class="profile-pg__tabs d-lg-none my-3">
+                            <div class="profile-pg__tabs-inner">
+                                <a href="profile.html" class="profile-pg__tab">Профиль</a>
+                                <a href="my-orders.html" class="profile-pg__tab is-active">Мои заказы</a>
+                                <a href="promocodes.html" class="profile-pg__tab">Промокоды</a>
+                                <a href="notifications.html" class="profile-pg__tab">Уведомления</a>
+                                <a href="security.html" class="profile-pg__tab">Безопасность</a>
+                            </div>
+                        </div>
+
+                        <!-- My orders -->
+                        <section class="profile-pg__section pb-5 mb-md-4 pt-3 pt-md-0">
+                            <h2 class="profile-pg__section-title  mb-4">МОИ ЗАКАЗЫ</h2>
+
+                            <!-- Filter tabs -->
+                            <div class="orders-tabs">
+                                <button class="orders-tabs__btn is-active" data-tab="active" type="button">Активные</button>
+                                <button class="orders-tabs__btn" data-tab="done" type="button">Завершенные</button>
+                            </div>
+
+                            <!-- Active orders panel -->
+                            <div class="orders-panel is-active" id="panel-active">
+                                <div class="orders-list">
+
+                                    <article class="order-card js-order-card" data-order-id="o1">
+                                        <div class="order-card__info">
+                                            <div class="order-card__head">
+                                                <span class="order-card__badge order-card__badge--delivered">ДОСТАВЛЕН</span>
+                                                <p class="order-card__num">№4452 <span>·</span> 100 000 ₽</p>
+                                            </div>
+                                            <div class="order-card__meta">
+                                                <p>Способ оплаты: <span>наличные</span></p>
+                                                <p>Дата заказа: <span>12.01.2026</span></p>
+                                                <p>Доставка: <span>г. Москва, ул. Тверская, дом 1</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="order-card__imgs">
+                                            <div class="order-card__img"><img src="files/ch.png" alt=""></div>
+                                        </div>
+                                    </article>
+
+                                    <article class="order-card js-order-card" data-order-id="o2">
+                                        <div class="order-card__info">
+                                            <div class="order-card__head">
+                                                <span class="order-card__badge order-card__badge--in-work">В РАБОТЕ</span>
+                                                <p class="order-card__num">№4452 <span>·</span> 125 000 ₽</p>
+                                            </div>
+                                            <div class="order-card__meta">
+                                                <p>Способ оплаты: <span>наличные</span></p>
+                                                <p>Дата заказа: <span>12.01.2026</span></p>
+                                                <p>Доставка: <span>г. Москва, ул. Тверская, дом 1</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="order-card__imgs">
+                                            <div class="order-card__img"><img src="files/ch.png" alt=""></div>
+                                            <div class="order-card__img"><img src="files/ch.png" alt=""></div>
+                                            <div class="order-card__img"><img src="files/ch.png" alt=""></div>
+                                        </div>
+                                    </article>
+
+                                    <article class="order-card js-order-card" data-order-id="o3">
+                                        <div class="order-card__info">
+                                            <div class="order-card__head">
+                                                <span class="order-card__badge order-card__badge--in-work">В РАБОТЕ</span>
+                                                <p class="order-card__num">№4564 <span>·</span> 278 000 ₽</p>
+                                            </div>
+                                            <div class="order-card__meta">
+                                                <p>Способ оплаты: <span>наличные</span></p>
+                                                <p>Дата заказа: <span>12.01.2026</span></p>
+                                                <p>Доставка: <span>г. Москва, ул. Тверская, дом 1</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="order-card__imgs">
+                                            <div class="order-card__img"><img src="files/ch.png" alt=""></div>
+                                            <div class="order-card__img"><img src="files/ch.png" alt=""></div>
+                                            <div class="order-card__img"><img src="files/ch.png" alt=""></div>
+                                        </div>
+                                    </article>
+
+                                    <article class="order-card js-order-card" data-order-id="o4">
+                                        <div class="order-card__info">
+                                            <div class="order-card__head">
+                                                <span class="order-card__badge order-card__badge--cancelled">ОТМЕНЕН</span>
+                                                <p class="order-card__num">№8646 <span>·</span> 298 000 ₽</p>
+                                            </div>
+                                            <div class="order-card__meta">
+                                                <p>Способ оплаты: <span>наличные</span></p>
+                                                <p>Дата заказа: <span>12.01.2026</span></p>
+                                                <p>Доставка: <span>г. Москва, ул. Тверская, дом 1</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="order-card__imgs">
+                                            <div class="order-card__img"><img src="files/ch.png" alt=""></div>
+                                            <div class="order-card__img"><img src="files/ch.png" alt=""></div>
+                                        </div>
+                                    </article>
+
+                                </div>
+                            </div>
+
+                            <!-- Completed orders panel -->
+                            <div class="orders-panel" id="panel-done">
+                                <div class="orders-empty">
+                                    <p class="orders-empty__text">ЗАВЕРШЕННЫХ ЗАКАЗОВ ЕЩЕ НЕТ</p>
+                                    <a href="catalog.html" class="orders-empty__btn">В КАТАЛОГ</a>
+                                </div>
+                            </div>
+
+                        </section>
+
+                        <!-- Logout (mobile/tablet) -->
+                        <div class="profile-pg__logout d-lg-none">
+                            <a href="#" class="profile-pg__logout-btn js-logout-trigger">ВЫЙТИ ИЗ АККАУНТА</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Order detail drawer -->
+        <div class="order-drawer" id="orderDrawer" hidden>
+            <div class="order-drawer__overlay js-drawer-close"></div>
+            <div class="order-drawer__panel">
+                <button class="order-drawer__close js-drawer-close" type="button" aria-label="Закрыть">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                        <path d="M1 1L15 15M15 1L1 15" stroke="#161616" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <div class="order-drawer__scroll" id="drawerScroll">
+                    <!-- populated by JS -->
+                </div>
+                <div class="order-drawer__footer">
+                    <a href="#" class="order-drawer__support">НАПИСАТЬ В ПОДДЕРЖКУ</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Logout confirmation modal -->
+        <div class="profile-modal" id="logoutModal" hidden>
+            <div class="profile-modal__overlay js-modal-close"></div>
+            <div class="profile-modal__box">
+                <p class="profile-modal__title">Выйти из аккаунта?</p>
+                <div class="profile-modal__btns">
+                    <a href="logout.html" class="profile-modal__btn profile-modal__btn--yes">ДА</a>
+                    <button class="profile-modal__btn profile-modal__btn--no js-modal-close" type="button">НЕТ</button>
+                </div>
+            </div>
+        </div>
+
     </div>
     @@include('footer.html')
 </div>
+<script src="js/my-orders.js"></script>
 </body>
 </html>

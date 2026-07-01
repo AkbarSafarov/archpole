@@ -8,8 +8,137 @@
     @@include('header.html')
     <div class="content_block_wr">
 
+        <div class="profile-pg py-5">
+            <div class="container-xl">
+                <div class="profile-pg__row">
+
+                    <!-- Sidebar (desktop) -->
+                    <aside class="profile-pg__sidebar d-none d-lg-flex">
+                        <div class="profile-pg__user pb-6">
+                            <div class="profile-pg__avatar">
+                                <img src="img/avatar-pl.svg" alt="Аватар">
+                            </div>
+                            <p class="profile-pg__username">КОНСТАНТИН<br>ЛАГУТИН</p>
+                        </div>
+                        <nav class="profile-pg__nav">
+                            <a href="profile.html" class="profile-pg__nav-link">Профиль</a>
+                            <a href="my-orders.html" class="profile-pg__nav-link">Мои заказы</a>
+                            <a href="promocodes.html" class="profile-pg__nav-link">Промокоды</a>
+                            <a href="notifications.html" class="profile-pg__nav-link is-active">Уведомления</a>
+                            <a href="security.html" class="profile-pg__nav-link">Безопасность</a>
+                            <a href="#" class="profile-pg__nav-link js-logout-trigger">Выйти из аккаунта</a>
+                        </nav>
+                    </aside>
+
+                    <!-- Main content -->
+                    <div class="profile-pg__main">
+
+                        <!-- User block (tablet/mobile) -->
+                        <div class="profile-pg__user-mob d-lg-none mb-2">
+                            <div class="profile-pg__avatar profile-pg__avatar--mob">
+                                <img src="img/avatar-pl.svg" alt="Аватар">
+                            </div>
+                            <p class="profile-pg__username">КОНСТАНТИН<br>ЛАГУТИН</p>
+                        </div>
+
+                        <!-- Horizontal tabs (tablet/mobile) -->
+                        <div class="profile-pg__tabs d-lg-none my-3">
+                            <div class="profile-pg__tabs-inner">
+                                <a href="profile.html" class="profile-pg__tab">Профиль</a>
+                                <a href="my-orders.html" class="profile-pg__tab">Мои заказы</a>
+                                <a href="promocodes.html" class="profile-pg__tab">Промокоды</a>
+                                <a href="notifications.html" class="profile-pg__tab is-active">Уведомления</a>
+                                <a href="security.html" class="profile-pg__tab">Безопасность</a>
+                            </div>
+                        </div>
+
+                        <!-- Notifications -->
+                        <section class="profile-pg__section pb-5 mb-md-4 pt-3 pt-md-0">
+                            <h2 class="profile-pg__section-title mb-4">УВЕДОМЛЕНИЯ</h2>
+                            <ul class="notif-list">
+                                <li class="notif-list__item">
+                                    <span class="notif-list__label">Новые коллекции и товары</span>
+                                    <label class="catalog-pg__toggle">
+                                        <input type="checkbox">
+                                        <span class="catalog-pg__toggle-track"></span>
+                                    </label>
+                                </li>
+                                <li class="notif-list__item">
+                                    <span class="notif-list__label">Подборки для интерьера</span>
+                                    <label class="catalog-pg__toggle">
+                                        <input type="checkbox">
+                                        <span class="catalog-pg__toggle-track"></span>
+                                    </label>
+                                </li>
+                                <li class="notif-list__item">
+                                    <span class="notif-list__label">Реализованные проекты</span>
+                                    <label class="catalog-pg__toggle">
+                                        <input type="checkbox" checked>
+                                        <span class="catalog-pg__toggle-track"></span>
+                                    </label>
+                                </li>
+                                <li class="notif-list__item">
+                                    <span class="notif-list__label">Статьи и рекомендации</span>
+                                    <label class="catalog-pg__toggle">
+                                        <input type="checkbox" checked>
+                                        <span class="catalog-pg__toggle-track"></span>
+                                    </label>
+                                </li>
+                                <li class="notif-list__item">
+                                    <span class="notif-list__label">Новости компании</span>
+                                    <label class="catalog-pg__toggle">
+                                        <input type="checkbox" checked>
+                                        <span class="catalog-pg__toggle-track"></span>
+                                    </label>
+                                </li>
+                                <li class="notif-list__item">
+                                    <span class="notif-list__label">Специальные предложения и акции</span>
+                                    <label class="catalog-pg__toggle">
+                                        <input type="checkbox">
+                                        <span class="catalog-pg__toggle-track"></span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </section>
+
+                        <!-- Logout (mobile/tablet) -->
+                        <div class="profile-pg__logout d-lg-none">
+                            <a href="#" class="profile-pg__logout-btn js-logout-trigger">ВЫЙТИ ИЗ АККАУНТА</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Logout confirmation modal -->
+        <div class="profile-modal" id="logoutModal" hidden>
+            <div class="profile-modal__overlay js-modal-close"></div>
+            <div class="profile-modal__box">
+                <p class="profile-modal__title">Выйти из аккаунта?</p>
+                <div class="profile-modal__btns">
+                    <a href="logout.html" class="profile-modal__btn profile-modal__btn--yes">ДА</a>
+                    <button class="profile-modal__btn profile-modal__btn--no js-modal-close" type="button">НЕТ</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Toast notification -->
+        <div class="profile-toast" id="profileToast" hidden>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.00065 14.6667C4.31875 14.6667 1.33398 11.6819 1.33398 7.99999C1.33398 4.31809 4.31875 1.33333 8.00065 1.33333C11.6825 1.33333 14.6673 4.31809 14.6673 7.99999C14.6673 11.6819 11.6825 14.6667 8.00065 14.6667ZM7.33572 10.6667L12.0498 5.95261L11.107 5.00981L7.33572 8.78106L5.45012 6.89539L4.50731 7.83826L7.33572 10.6667Z" fill="#309F55" />
+            </svg>
+            <span class="profile-toast__text" id="profileToastText">Настройки сохранены</span>
+            <button class="profile-toast__close js-toast-close" type="button" aria-label="Закрыть">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.00045 7.05767L11.3003 3.75781L12.2431 4.70062L8.94325 8.00047L12.2431 11.3003L11.3003 12.2431L8.00045 8.94327L4.70063 12.2431L3.75781 11.3003L7.05765 8.00047L3.75781 4.70062L4.70063 3.75781L8.00045 7.05767Z" fill="#747474" />
+                </svg>
+            </button>
+        </div>
+
     </div>
     @@include('footer.html')
 </div>
+<script src="js/notifications.js"></script>
 </body>
 </html>

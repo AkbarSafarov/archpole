@@ -348,6 +348,150 @@
 
     <div class="content_block_wr">
 
+        <div class="profile-pg py-5">
+            <div class="container-xl">
+                <div class="profile-pg__row">
+
+                    <!-- Sidebar (desktop) -->
+                    <aside class="profile-pg__sidebar d-none d-lg-flex">
+                        <div class="profile-pg__user pb-6">
+                            <div class="profile-pg__avatar">
+                                <img src="img/avatar-pl.svg" alt="Аватар">
+                            </div>
+                            <p class="profile-pg__username">КОНСТАНТИН<br>ЛАГУТИН</p>
+                        </div>
+                        <nav class="profile-pg__nav">
+                            <a href="profile.html" class="profile-pg__nav-link is-active">Профиль</a>
+                            <a href="my-orders.html" class="profile-pg__nav-link">Мои заказы</a>
+                            <a href="promocodes.html" class="profile-pg__nav-link">Промокоды</a>
+                            <a href="notifications.html" class="profile-pg__nav-link">Уведомления</a>
+                            <a href="security.html" class="profile-pg__nav-link">Безопасность</a>
+                            <a href="#" class="profile-pg__nav-link js-logout-trigger">Выйти из аккаунта</a>
+                        </nav>
+                    </aside>
+
+                    <!-- Main content -->
+                    <div class="profile-pg__main">
+
+                        <!-- User block (tablet/mobile) -->
+                        <div class="profile-pg__user-mob d-lg-none mb-2">
+                            <div class="profile-pg__avatar profile-pg__avatar--mob">
+                                <img src="img/avatar-pl.svg" alt="Аватар">
+                            </div>
+                            <p class="profile-pg__username">КОНСТАНТИН<br>ЛАГУТИН</p>
+                        </div>
+
+                        <!-- Horizontal tabs (tablet/mobile) -->
+                        <div class="profile-pg__tabs d-lg-none my-3">
+                            <div class="profile-pg__tabs-inner">
+                                <a href="profile.html" class="profile-pg__tab is-active">Профиль</a>
+                                <a href="my-orders.html" class="profile-pg__tab">Мои заказы</a>
+                                <a href="promocodes.html" class="profile-pg__tab">Промокоды</a>
+                                <a href="notifications.html" class="profile-pg__tab">Уведомления</a>
+                                <a href="security.html" class="profile-pg__tab">Безопасность</a>
+                            </div>
+                        </div>
+
+                        <!-- Personal data -->
+                        <section class="profile-pg__section pb-5 mb-md-4 pt-3 pt-md-0">
+                            <h2 class="profile-pg__section-title mb-4">ЛИЧНЫЕ ДАННЫЕ</h2>
+                            <form class="profile-pg__form js-personal-form" action="#" novalidate>
+                                <div class="profile-pg__field">
+                                    <label class="profile-pg__field-label" for="p-name">Имя</label>
+                                    <input class="profile-pg__field-input" type="text" id="p-name" value="Константин">
+                                </div>
+                                <div class="profile-pg__field">
+                                    <label class="profile-pg__field-label" for="p-surname">Фамилия</label>
+                                    <input class="profile-pg__field-input" type="text" id="p-surname" value="Лагутин">
+                                </div>
+                                <div class="profile-pg__field profile-pg__field--date">
+                                    <label class="profile-pg__field-label" for="p-birth">Дата рождения</label>
+                                    <input class="profile-pg__field-input" type="text" id="p-birth" placeholder="дд.мм.гггг">
+                                    <svg class="profile-pg__field-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.66669 3.33333C1.66669 2.8731 2.03979 2.5 2.50002 2.5H17.5C17.9603 2.5 18.3334 2.8731 18.3334 3.33333V16.6667C18.3334 17.1269 17.9603 17.5 17.5 17.5H2.50002C2.03979 17.5 1.66669 17.1269 1.66669 16.6667V3.33333ZM3.33335 15.8333H16.6667V7.5H3.33335V15.8333ZM9.16669 10.8333H5.00002V14.1667H9.16669V10.8333Z" fill="#CACACA" />
+                                    </svg>
+                                </div>
+                                <div class="profile-pg__gender mt-3 mb-4">
+                                    <label class="profile-pg__check">
+                                        <input type="checkbox" name="gender" value="m" checked>
+                                        <span class="profile-pg__check-box"></span>
+                                        Мужчина
+                                    </label>
+                                    <label class="profile-pg__check">
+                                        <input type="checkbox" name="gender" value="f">
+                                        <span class="profile-pg__check-box"></span>
+                                        Женщина
+                                    </label>
+                                </div>
+                                <button class="profile-pg__save-btn" type="submit">СОХРАНИТЬ</button>
+                            </form>
+                        </section>
+
+                        <!-- Contacts -->
+                        <section class="profile-pg__section">
+                            <h2 class="profile-pg__section-title mb-4">КОНТАКТЫ</h2>
+                            <div class="profile-pg__form">
+                                <!-- Phone with inline send button -->
+                                <div class="profile-pg__field profile-pg__field--phone">
+                                    <label class="profile-pg__field-label" for="p-phone">Телефон</label>
+                                    <input class="profile-pg__field-input" type="tel" id="p-phone" placeholder="+7">
+                                    <button class="profile-pg__field-send js-phone-send" type="button" title="Подтвердить номер телефона" hidden>
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M2.5 10.8333H7.5V9.1666H2.5V1.538C2.5 1.30789 2.68655 1.12134 2.91667 1.12134C2.98688 1.12134 3.05595 1.13908 3.11747 1.17291L18.5028 9.63485C18.7045 9.74577 18.7781 9.9991 18.6672 10.2008C18.6291 10.27 18.5721 10.327 18.5028 10.3651L3.11747 18.827C2.91583 18.9379 2.66247 18.8644 2.55157 18.6628C2.51774 18.6012 2.5 18.5322 2.5 18.4619V10.8333Z" fill="#161616" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <!-- SMS verification row (appears after clicking ►) -->
+                                <div class="profile-pg__verify-row" id="smsRow" hidden>
+                                    <div class="profile-pg__field">
+                                        <label class="profile-pg__field-label" for="p-sms">Код из смс</label>
+                                        <input class="profile-pg__field-input" type="text" id="p-sms" maxlength="6" placeholder=" ">
+                                    </div>
+                                    <button class="profile-pg__verify-btn js-phone-verify" type="button" disabled>ПОДТВЕРДИТЬ</button>
+                                </div>
+                                <!-- Email -->
+                                <div class="profile-pg__field">
+                                    <label class="profile-pg__field-label" for="p-email">Почта</label>
+                                    <input class="profile-pg__field-input" type="email" id="p-email" placeholder=" ">
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Logout button (mobile/tablet) -->
+                        <div class="profile-pg__logout d-lg-none">
+                            <a href="#" class="profile-pg__logout-btn js-logout-trigger">ВЫЙТИ ИЗ АККАУНТА</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Logout confirmation modal -->
+        <div class="profile-modal" id="logoutModal" hidden>
+            <div class="profile-modal__overlay js-modal-close"></div>
+            <div class="profile-modal__box">
+                <p class="profile-modal__title">Выйти из аккаунта?</p>
+                <div class="profile-modal__btns">
+                    <a href="logout.html" class="profile-modal__btn profile-modal__btn--yes">ДА</a>
+                    <button class="profile-modal__btn profile-modal__btn--no js-modal-close" type="button">НЕТ</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Toast notification -->
+        <div class="profile-toast" id="profileToast" hidden>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.00065 14.6667C4.31875 14.6667 1.33398 11.6819 1.33398 7.99999C1.33398 4.31809 4.31875 1.33333 8.00065 1.33333C11.6825 1.33333 14.6673 4.31809 14.6673 7.99999C14.6673 11.6819 11.6825 14.6667 8.00065 14.6667ZM7.33572 10.6667L12.0498 5.95261L11.107 5.00981L7.33572 8.78106L5.45012 6.89539L4.50731 7.83826L7.33572 10.6667Z" fill="#309F55" />
+            </svg>
+            <span class="profile-toast__text" id="profileToastText">Данные успешно изменены</span>
+            <button class="profile-toast__close js-toast-close" type="button" aria-label="Закрыть">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.00045 7.05767L11.3003 3.75781L12.2431 4.70062L8.94325 8.00047L12.2431 11.3003L11.3003 12.2431L8.00045 8.94327L4.70063 12.2431L3.75781 11.3003L7.05765 8.00047L3.75781 4.70062L4.70063 3.75781L8.00045 7.05767Z" fill="#747474" />
+                </svg>
+            </button>
+        </div>
+
     </div>
     <footer class="footer">
     <div class="container-xl">
@@ -504,5 +648,6 @@
 <script src="js/product-card.js"></script>
 
 </div>
+<script src="js/profile.js"></script>
 </body>
 </html>

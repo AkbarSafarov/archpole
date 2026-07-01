@@ -351,83 +351,73 @@
         
         <div class="pdp-crumb">
             <div class="container-xl">
-                <div class="pdp-crumb__row">
-                    <nav class="coll-breadcrumbs" aria-label="Вы здесь">
-                        <ol class="coll-breadcrumbs__list">
-                            <li class="coll-breadcrumbs__item">
-                                <a href="index.html" class="coll-breadcrumbs__link">Главная</a>
-                            </li>
-                            <li class="coll-breadcrumbs__item">
-                                <a href="catalog-5.html" class="coll-breadcrumbs__link">Каталог</a>
-                            </li>
-                            <li class="coll-breadcrumbs__item">
-                                <a href="catalog-6.html" class="coll-breadcrumbs__link">Сиденья</a>
-                            </li>
-                            <li class="coll-breadcrumbs__item">
-                                <span class="coll-breadcrumbs__current">Арт стул «ОВАЛЕ» рождённый в коллаборации с Ирой Чер. Арт. 18Т48</span>
-                            </li>
-                        </ol>
-                    </nav>
-                    <a href="#" class="pdp-crumb__share">
-                        <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <path d="M1 6h14M9 1l6 5-6 5" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        Поделиться
-                    </a>
-                </div>
+                <nav class="path_block" aria-label="Хлебные крошки" role="navigation"
+     itemscope itemtype="http://schema.org/BreadcrumbList">
+    <div class="path_block__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+        <a class="path_block__link" href="/" itemprop="item" title="Главная">
+            <span class="path_block__text" itemprop="name">Главная</span>
+        </a>
+        <meta itemprop="position" content="1">
+    </div>
+    <div class="path_block__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+        <i class="path_block__sep" aria-hidden="true"></i>
+        <a class="path_block__link" href="/catalog/" itemprop="item" title="Каталог">
+            <span class="path_block__text" itemprop="name">Каталог</span>
+        </a>
+        <meta itemprop="position" content="2">
+    </div>
+    <div class="path_block__item" aria-current="page" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+        <i class="path_block__sep" aria-hidden="true"></i>
+        <span itemprop="item">
+            <span class="path_block__text" itemprop="name">Смесители</span>
+        </span>
+        <meta itemprop="position" content="3">
+    </div>
+</nav>
+
             </div>
         </div>
 
         
-        <section class="pdp-hero">
+        <section class="pdp-hero py-0 py-lg-5">
             <div class="container-xl">
                 <div class="pdp-hero__row">
-
-                    
                     <div class="pdp-hero__viewer">
 
-                        
-                        <div class="pdp-hero__thumbs">
-                            <button class="pdp-hero__thumb is-active js-pdp-thumb" type="button" data-img="files/product1.jpg" aria-label="Фото 1">
-                                <img src="files/product1.jpg" alt="">
-                            </button>
-                            <button class="pdp-hero__thumb js-pdp-thumb" type="button" data-img="files/product2.jpg" aria-label="Фото 2">
-                                <img src="files/product2.jpg" alt="">
-                            </button>
-                            <button class="pdp-hero__thumb js-pdp-thumb" type="button" data-img="files/product3.jpg" aria-label="Фото 3">
-                                <img src="files/product3.jpg" alt="">
-                            </button>
-                            <button class="pdp-hero__thumb js-pdp-thumb" type="button" data-img="files/product4.jpg" aria-label="Фото 4">
-                                <img src="files/product4.jpg" alt="">
-                            </button>
-                            <button class="pdp-hero__thumb js-pdp-thumb" type="button" data-img="files/product5.jpg" aria-label="Фото 5">
-                                <img src="files/product5.jpg" alt="">
-                            </button>
-                        </div>
-
-                        
-                        <div class="pdp-hero__main">
-                            <span class="pdp-hero__3d">
-                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                    <path d="M7 1L13 4.5v5L7 13 1 9.5v-5L7 1Z" stroke="#161616" stroke-width="1.2" stroke-linejoin="round"/>
-                                    <path d="M7 1v12M1 4.5l6 3.5 6-3.5" stroke="#161616" stroke-width="1.2"/>
-                                </svg>
-                                3D модель
-                            </span>
-                            <img src="files/product1.jpg" alt="АРТ СТУЛ «ОВАЛЕ» рождённый в коллаборации с Ирой Чер" id="js-pdp-img" class="pdp-hero__main-img">
-                            
-                            <div class="pdp-hero__dots">
-                                <button class="pdp-hero__dot is-active js-pdp-dot" type="button" data-img="files/product1.jpg" aria-label="Фото 1"></button>
-                                <button class="pdp-hero__dot js-pdp-dot" type="button" data-img="files/product2.jpg" aria-label="Фото 2"></button>
-                                <button class="pdp-hero__dot js-pdp-dot" type="button" data-img="files/product3.jpg" aria-label="Фото 3"></button>
-                                <button class="pdp-hero__dot js-pdp-dot" type="button" data-img="files/product4.jpg" aria-label="Фото 4"></button>
-                                <button class="pdp-hero__dot js-pdp-dot" type="button" data-img="files/product5.jpg" aria-label="Фото 5"></button>
+                        <div class="swiper pdp-hero__thumbs-swiper d-none d-lg-block">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="files/ch.png" alt="Фото 1"></div>
+                                <div class="swiper-slide"><img src="files/ch2.png" alt="Фото 2"></div>
+                                <div class="swiper-slide"><img src="files/ch3.png" alt="Фото 3"></div>
+                                <div class="swiper-slide"><img src="files/product4.jpg" alt="Фото 4"></div>
+                                <div class="swiper-slide"><img src="files/ch3.png" alt="Фото 5"></div>
+                                <div class="swiper-slide"><img src="files/product5.jpg" alt="Фото 6"></div>
+                                <div class="swiper-slide"><img src="files/ch3.png" alt="Фото 7"></div>
                             </div>
                         </div>
 
+                        <div class="pdp-hero__main">
+                            <span class="pdp-hero__3d">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M9.99998 0.833328L17.9166 5.41666V14.5833L9.99998 19.1667L2.08331 14.5833V5.41666L9.99998 0.833328ZM3.74998 6.38156V13.6224L9.99998 17.2408V10L3.74998 6.38156Z" fill="black" />
+                                </svg>
+                                3D модель
+                            </span>
+                            <div class="swiper pdp-hero__main-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="files/ch.png" alt="АРТ СТУЛ «ОВАЛЕ» фото 1"></div>
+                                    <div class="swiper-slide"><img src="files/ch2.png" alt="АРТ СТУЛ «ОВАЛЕ» фото 2"></div>
+                                    <div class="swiper-slide"><img src="files/ch3.png" alt="АРТ СТУЛ «ОВАЛЕ» фото 3"></div>
+                                    <div class="swiper-slide"><img src="files/product4.jpg" alt="АРТ СТУЛ «ОВАЛЕ» фото 4"></div>
+                                    <div class="swiper-slide"><img src="files/ch3.png" alt="АРТ СТУЛ «ОВАЛЕ» фото 5"></div>
+                                    <div class="swiper-slide"><img src="files/product5.jpg" alt="АРТ СТУЛ «ОВАЛЕ» фото 6"></div>
+                                    <div class="swiper-slide"><img src="files/ch3.png" alt="АРТ СТУЛ «ОВАЛЕ» фото 7"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination pdp-hero__dots  d-flex d-lg-none"></div>
                     </div>
 
-                    
                     <div class="pdp-hero__info">
 
                         <div class="pdp-hero__badges">
@@ -435,35 +425,66 @@
                             <span class="pdp-hero__badge pdp-hero__badge--stock">В НАЛИЧИИ</span>
                         </div>
 
-                        <h1 class="pdp-hero__title">АРТ СТУЛ «ОВАЛЕ» РОЖДЁННЫЙ В КОЛЛАБОРАЦИИ С ИРОЙ ЧЕ АРТ. 18Т48</h1>
+                        <h1 class="pdp-hero__title mb-2">АРТ СТУЛ «ОВАЛЕ» РОЖДЁННЫЙ В КОЛЛАБОРАЦИИ С ИРОЙ ЧЕ АРТ. 18Т48</h1>
 
-                        <div class="pdp-hero__price-row">
+                        <div class="pdp-hero__price-row mb-5">
                             <span class="pdp-hero__price">48 150 ₽</span>
                             <span class="pdp-hero__price-old">53 200 ₽</span>
                         </div>
+                        <div class="pdp-hero__option-wrap mb-5">
+                            <div class="pdp-hero__option">
+                                <span class="pdp-hero__option-label">Отделка дерева:</span>
+                                <div class="pdp-hero__option-select">
+                                    <button class="pdp-hero__option-ctrl js-pdp-opt" type="button" aria-haspopup="listbox" aria-expanded="false">
+                                        <span class="pdp-hero__option-val">Винтажный зелёный</span>
+                                        <span class="pdp-hero__option-swatch" style="background:#2d6147;" aria-hidden="true"></span>
+                                        <svg class="pdp-hero__option-chev" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M10.0006 10.9763L14.1253 6.85151L15.3038 8.03001L10.0006 13.3333L4.69727 8.03001L5.87577 6.85151L10.0006 10.9763Z" fill="#161616" />
+                                        </svg>
+                                    </button>
+                                    <ul class="pdp-hero__option-list" role="listbox" hidden>
+                                        <li class="pdp-hero__option-item js-pdp-opt-item is-active" role="option" data-val="Винтажный зелёный" data-color="#2d6147">
+                                            <span class="pdp-hero__option-item-swatch" style="background:#2d6147;"></span>Винтажный зелёный
+                                        </li>
+                                        <li class="pdp-hero__option-item js-pdp-opt-item" role="option" data-val="Натуральный дуб" data-color="#c8a96e">
+                                            <span class="pdp-hero__option-item-swatch" style="background:#c8a96e;"></span>Натуральный дуб
+                                        </li>
+                                        <li class="pdp-hero__option-item js-pdp-opt-item" role="option" data-val="Чёрный матовый" data-color="#1a1a1a">
+                                            <span class="pdp-hero__option-item-swatch" style="background:#1a1a1a;"></span>Чёрный матовый
+                                        </li>
+                                        <li class="pdp-hero__option-item js-pdp-opt-item" role="option" data-val="Белый" data-color="#f0ede8">
+                                            <span class="pdp-hero__option-item-swatch" style="background:#f0ede8; outline: 1px solid #ddd;"></span>Белый
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
 
-                        <hr class="pdp-hero__divider">
-
-                        <div class="pdp-hero__option">
-                            <span class="pdp-hero__option-label">Отделка дерева:</span>
-                            <button class="pdp-hero__option-ctrl" type="button" aria-haspopup="listbox">
-                                <span class="pdp-hero__option-val">Винтажный зелёный</span>
-                                <span class="pdp-hero__option-swatch" style="background:#2d6147;" aria-hidden="true"></span>
-                                <svg class="pdp-hero__option-chev" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                    <path d="M1 1.5L6 6.5L11 1.5" stroke="#161616" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </button>
-                        </div>
-
-                        <div class="pdp-hero__option">
-                            <span class="pdp-hero__option-label">Отделка металла:</span>
-                            <button class="pdp-hero__option-ctrl" type="button" aria-haspopup="listbox">
-                                <span class="pdp-hero__option-val">Красный RAL 3003</span>
-                                <span class="pdp-hero__option-swatch" style="background:#8b1a1a;" aria-hidden="true"></span>
-                                <svg class="pdp-hero__option-chev" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                    <path d="M1 1.5L6 6.5L11 1.5" stroke="#161616" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </button>
+                            <div class="pdp-hero__option">
+                                <span class="pdp-hero__option-label">Отделка металла:</span>
+                                <div class="pdp-hero__option-select">
+                                    <button class="pdp-hero__option-ctrl js-pdp-opt" type="button" aria-haspopup="listbox" aria-expanded="false">
+                                        <span class="pdp-hero__option-val">Красный RAL 3003</span>
+                                        <span class="pdp-hero__option-swatch" style="background:#8b1a1a;" aria-hidden="true"></span>
+                                        <svg class="pdp-hero__option-chev" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M10.0006 10.9763L14.1253 6.85151L15.3038 8.03001L10.0006 13.3333L4.69727 8.03001L5.87577 6.85151L10.0006 10.9763Z" fill="#161616" />
+                                        </svg>
+                                    </button>
+                                    <ul class="pdp-hero__option-list" role="listbox" hidden>
+                                        <li class="pdp-hero__option-item js-pdp-opt-item is-active" role="option" data-val="Красный RAL 3003" data-color="#8b1a1a">
+                                            <span class="pdp-hero__option-item-swatch" style="background:#8b1a1a;"></span>Красный RAL 3003
+                                        </li>
+                                        <li class="pdp-hero__option-item js-pdp-opt-item" role="option" data-val="Чёрный RAL 9005" data-color="#0a0a0a">
+                                            <span class="pdp-hero__option-item-swatch" style="background:#0a0a0a;"></span>Чёрный RAL 9005
+                                        </li>
+                                        <li class="pdp-hero__option-item js-pdp-opt-item" role="option" data-val="Белый RAL 9016" data-color="#f5f5f0">
+                                            <span class="pdp-hero__option-item-swatch" style="background:#f5f5f0; outline: 1px solid #ddd;"></span>Белый RAL 9016
+                                        </li>
+                                        <li class="pdp-hero__option-item js-pdp-opt-item" role="option" data-val="Золото" data-color="#c9a84c">
+                                            <span class="pdp-hero__option-item-swatch" style="background:#c9a84c;"></span>Золото
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="pdp-hero__cta">
@@ -476,149 +497,202 @@
                         </div>
 
                     </div>
-
                 </div>
             </div>
         </section>
 
         
-        <div class="pdp-accordion">
+        <div class="pdp-accordion py-5">
             <div class="container-xl">
+                <div class="pdp-accordion__wrapper">
+                    <div class="pdp-accordion__item js-pdp-accordion">
+                        <button class="pdp-accordion__toggle" type="button" aria-expanded="false">
+                            ОПИСАНИЕ
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.0007 13.1716L16.9504 8.2218L18.3646 9.636L12.0007 16L5.63672 9.636L7.05093 8.2218L12.0007 13.1716Z" fill="#161616" />
+                            </svg>
+                        </button>
+                        <div class="pdp-accordion__body" hidden>
+                            <p>Арт-стул «ОВАЛЕ» создан в коллаборации с художником Ирой Чер. Особенность стула — в уникальном рисунке на сидении, вдохновлённом авторскими работами художника. Конструкция выполнена из массива дерева с металлическими элементами. Каждый стул производится в мастерской вручную.</p>
+                        </div>
+                    </div>
 
-                <div class="pdp-accordion__item js-pdp-accordion">
-                    <button class="pdp-accordion__toggle" type="button" aria-expanded="false">
-                        ОПИСАНИЕ
-                        <svg class="pdp-accordion__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <path d="M4 6L8 10L12 6" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                    <div class="pdp-accordion__body" hidden>
-                        <p>Арт-стул «ОВАЛЕ» создан в коллаборации с художником Ирой Чер. Особенность стула — в уникальном рисунке на сидении, вдохновлённом авторскими работами художника. Конструкция выполнена из массива дерева с металлическими элементами. Каждый стул производится в мастерской вручную.</p>
+                    <div class="pdp-accordion__item js-pdp-accordion">
+                        <button class="pdp-accordion__toggle" type="button" aria-expanded="false">
+                            СРОК ИЗГОТОВЛЕНИЯ
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.0007 13.1716L16.9504 8.2218L18.3646 9.636L12.0007 16L5.63672 9.636L7.05093 8.2218L12.0007 13.1716Z" fill="#161616" />
+                            </svg>
+                        </button>
+                        <div class="pdp-accordion__body" hidden>
+                            <p>Стандартный срок изготовления — 4–6 недель с момента подтверждения заказа. Готовность изделия уточняется у менеджера.</p>
+                        </div>
+                    </div>
+
+                    <div class="pdp-accordion__item js-pdp-accordion">
+                        <button class="pdp-accordion__toggle" type="button" aria-expanded="false">
+                            ДОСТАВКА
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.0007 13.1716L16.9504 8.2218L18.3646 9.636L12.0007 16L5.63672 9.636L7.05093 8.2218L12.0007 13.1716Z" fill="#161616" />
+                            </svg>
+                        </button>
+                        <div class="pdp-accordion__body" hidden>
+                            <p>Доставка по Москве и Московской области — от 2 000 ₽. Доставка в другие регионы — по тарифам транспортных компаний. Подъём на этаж оплачивается отдельно.</p>
+                        </div>
                     </div>
                 </div>
-
-                <div class="pdp-accordion__item js-pdp-accordion">
-                    <button class="pdp-accordion__toggle" type="button" aria-expanded="false">
-                        СРОК ИЗГОТОВЛЕНИЯ
-                        <svg class="pdp-accordion__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <path d="M4 6L8 10L12 6" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                    <div class="pdp-accordion__body" hidden>
-                        <p>Стандартный срок изготовления — 4–6 недель с момента подтверждения заказа. Готовность изделия уточняется у менеджера.</p>
-                    </div>
-                </div>
-
-                <div class="pdp-accordion__item js-pdp-accordion">
-                    <button class="pdp-accordion__toggle" type="button" aria-expanded="false">
-                        ДОСТАВКА
-                        <svg class="pdp-accordion__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <path d="M4 6L8 10L12 6" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                    <div class="pdp-accordion__body" hidden>
-                        <p>Доставка по Москве и Московской области — от 2 000 ₽. Доставка в другие регионы — по тарифам транспортных компаний. Подъём на этаж оплачивается отдельно.</p>
-                    </div>
-                </div>
-
             </div>
         </div>
 
         
-        <div class="pdp-gallery">
+        <div class="pdp-gallery py-0 py-md-5">
             <div class="container-xl">
                 <div class="pdp-gallery__grid">
                     <div class="pdp-gallery__item">
-                        <img src="files/dis1.jpg" alt="" loading="lazy">
+                        <img src="files/image-pr1.jpg" alt="" loading="lazy">
+                        <div class="pdp-interiors__item-text">В интерьера Екатерины.
+                            Платуновой @kateplatunova / фанера - винтажный белый, металл - белый</div>
                     </div>
                     <div class="pdp-gallery__item">
-                        <img src="files/dis2.jpg" alt="" loading="lazy">
+                        <img src="files/image-pr2.jpg" alt="" loading="lazy">
+                        <div class="pdp-interiors__item-text">В интерьера Екатерины.
+                            Платуновой @kateplatunova / фанера - винтажный белый, металл - белый</div>
                     </div>
                     <div class="pdp-gallery__item">
-                        <img src="files/dis3.jpg" alt="" loading="lazy">
+                        <img src="files/image-pr3.jpg" alt="" loading="lazy">
+                        <div class="pdp-interiors__item-text">В интерьера Екатерины.
+                            Платуновой @kateplatunova / фанера - винтажный белый, металл - белый</div>
                     </div>
                     <div class="pdp-gallery__item">
-                        <img src="files/about.jpg" alt="" loading="lazy">
+                        <img src="files/image-pr4.jpg" alt="" loading="lazy">
+                        <div class="pdp-interiors__item-text">В интерьера Екатерины.
+                            Платуновой @kateplatunova / фанера - винтажный белый, металл - белый</div>
                     </div>
                     <div class="pdp-gallery__item">
-                        <img src="files/service.jpg" alt="" loading="lazy">
+                        <img src="files/image-pr5.jpg" alt="" loading="lazy">
+                        <div class="pdp-interiors__item-text">В интерьера Екатерины.
+                            Платуновой @kateplatunova / фанера - винтажный белый, металл - белый</div>
                     </div>
                 </div>
             </div>
         </div>
 
         
-        <section class="pdp-interiors">
+        <section class="pdp-interiors py-6">
             <div class="container-xl">
 
-                <div class="pdp-interiors__head">
+                <div class="pdp-interiors__head pb-5">
                     <h2 class="pdp-interiors__title">В ВАШИХ ИНТЕРЬЕРАХ</h2>
                     <div class="pdp-interiors__nav d-none d-lg-flex">
-                        <button class="pdp-interiors__nav-btn" type="button" aria-label="Предыдущие">
-                            <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <path d="M7 1L1 7l6 6" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <div class="arrow_btn prev" tabindex="0" role="button" aria-label="Предыдущие">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z" fill="#161616" />
                             </svg>
-                        </button>
-                        <button class="pdp-interiors__nav-btn" type="button" aria-label="Следующие">
-                            <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <path d="M1 1L7 7l-6 6" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </div>
+                        <div class="arrow_btn next" tabindex="0" role="button" aria-label="Следующие">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M13.1716 11.9993L8.2218 7.0496L9.636 5.6354L16 11.9993L9.636 18.3633L8.2218 16.9491L13.1716 11.9993Z" fill="#161616" />
                             </svg>
-                        </button>
+                        </div>
                     </div>
                 </div>
 
-                <div class="pdp-interiors__grid">
-                    <a href="#" class="pdp-interiors__item">
-                        <div class="pdp-interiors__img-wr">
-                            <img src="files/dis1.jpg" alt="ARCHPOLE & Vologod: стул «Овале»" loading="lazy">
+                <div class="swiper pdp-interiors__swiper"
+                     data-swiper
+                     data-swiper-next=".pdp-interiors .arrow_btn.next"
+                     data-swiper-prev=".pdp-interiors .arrow_btn.prev"
+                     data-swiper-pagination=".pdp-interiors .swiper-pagination"
+                     data-swiper-breakpoints='{"0":{"slidesPerView":"auto","spaceBetween":12},"992":{"slidesPerView":4,"spaceBetween":16}}'>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#" class="pdp-interiors__item">
+                                <div class="pdp-interiors__img-wr">
+                                    <img src="files/dis1.jpg" alt="ARCHPOLE & Vologod: стул «Овале»" loading="lazy">
+                                </div>
+                                <div class="pdp-interiors__item-text">В интерьера Екатерины.
+                            Платуновой @kateplatunova / фанера - винтажный белый, металл - белый</div>
+                            </a>
                         </div>
-                        <p class="pdp-interiors__caption">ARCHPOLE & Vologod: стул «Овале» в интерьере с яркой историей</p>
-                    </a>
-                    <a href="#" class="pdp-interiors__item">
-                        <div class="pdp-interiors__img-wr">
-                            <img src="files/dis2.jpg" alt="Переговорная SFT" loading="lazy">
+                        <div class="swiper-slide">
+                            <a href="#" class="pdp-interiors__item">
+                                <div class="pdp-interiors__img-wr">
+                                    <img src="files/dis2.jpg" alt="Переговорная SFT" loading="lazy">
+                                </div>
+                                <div class="pdp-interiors__item-text">В интерьера Екатерины.
+                            Платуновой @kateplatunova / фанера - винтажный белый, металл - белый</div>
+                            </a>
                         </div>
-                        <p class="pdp-interiors__caption">Многофункциональная переговорка для компании SFT</p>
-                    </a>
-                    <a href="#" class="pdp-interiors__item">
-                        <div class="pdp-interiors__img-wr">
-                            <img src="files/dis3.jpg" alt="КСЕНIАFLAT" loading="lazy">
+                        <div class="swiper-slide">
+                            <a href="#" class="pdp-interiors__item">
+                                <div class="pdp-interiors__img-wr">
+                                    <img src="files/dis3.jpg" alt="КСЕНIАFLAT" loading="lazy">
+                                </div>
+                                <div class="pdp-interiors__item-text">В интерьера Екатерины.
+                            Платуновой @kateplatunova / фанера - винтажный белый, металл - белый</div>
+                            </a>
                         </div>
-                        <p class="pdp-interiors__caption">КСЕНIАFLAT: романтичная квартира в ретростиле</p>
-                    </a>
-                    <a href="#" class="pdp-interiors__item">
-                        <div class="pdp-interiors__img-wr">
-                            <img src="files/about.jpg" alt="Коллаборация ARCHPOLE" loading="lazy">
+                        <div class="swiper-slide">
+                            <a href="#" class="pdp-interiors__item">
+                                <div class="pdp-interiors__img-wr">
+                                    <img src="files/about.jpg" alt="Коллаборация ARCHPOLE" loading="lazy">
+                                </div>
+                                <div class="pdp-interiors__item-text">В интерьера Екатерины.
+                            Платуновой @kateplatunova / фанера - винтажный белый, металл - белый</div>
+                            </a>
                         </div>
-                        <p class="pdp-interiors__caption">Самая крупная коллаборация в рамках «ARCHPOLE к»</p>
-                    </a>
+                        <div class="swiper-slide">
+                            <a href="#" class="pdp-interiors__item">
+                                <div class="pdp-interiors__img-wr">
+                                    <img src="files/about.jpg" alt="Коллаборация ARCHPOLE" loading="lazy">
+                                </div>
+                                <div class="pdp-interiors__item-text">В интерьера Екатерины.
+                            Платуновой @kateplatunova / фанера - винтажный белый, металл - белый</div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="pdp-interiors__mob-foot d-lg-none">
-                    <span class="pdp-interiors__sep"></span>
-                </div>
+                <div class="swiper-pagination"></div>
 
             </div>
         </section>
 
-        
-        <section class="pdp-related">
-            <div class="container-xl">
 
-                <div class="pdp-related__head">
-                    <h2 class="pdp-related__title">ПОХОЖИЕ ТОВАРЫ</h2>
-                    <a href="#" class="pdp-related__all d-none d-lg-flex">
-                        ВСЕ ТОВАРЫ
-                        <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <path d="M1 6h14M9 1l6 5-6 5" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
+        <section class="popular-section py-6">
+    <div class="container-xl">
+
+        <div class="popular-section__head pb-5">
+            <h2 class="popular-section__title">ПОПУЛЯРНЫЕ ТОВАРЫ</h2>
+            <div class="popular-section__controls d-none d-lg-flex">
+                <a href="#" class="btn btn-dark">ВСЕ ТОВАРЫ</a>
+                <div class="arrow_btn prev" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-3983904276607ac2">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z" fill="#161616" />
+                    </svg>
                 </div>
+                <div class="arrow_btn next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-3983904276607ac2">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.1716 11.9993L8.2218 7.0496L9.636 5.6354L16 11.9993L9.636 18.3633L8.2218 16.9491L13.1716 11.9993Z" fill="#161616" />
+                    </svg>
+                </div>
+            </div>
+        </div>
 
-                <div class="pdp-related__grid">
+        <div class="swiper popular-section__swiper"
+             data-swiper
+             data-swiper-next=".popular-section__controls .arrow_btn.next"
+             data-swiper-prev=".popular-section__controls .arrow_btn.prev"
+             data-swiper-pagination=".popular-section .swiper-pagination"
+             data-swiper-breakpoints='{"0":{"slidesPerView":"auto","spaceBetween":12},"576":{"slidesPerView":"auto","spaceBetween":12},"992":{"slidesPerView":5,"spaceBetween":9}}'>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
                     <article class="product-card">
-    <a href="#" class="product-card__link" aria-label="Табурет «Минимализм»"></a>
+    <a href="#" class="product-card__link" aria-label="Пуф-кот «Обнимун» синий"></a>
     <div class="product-card__image">
+        <div class="label">
+            <div class="label-new">
+                <span>new</span>
+            </div>
+        </div>
         <button class="product-card__wish js-wish" type="button" aria-label="В избранное">
             <svg class="norm" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M7.00057 2.64164C8.37082 1.41167 10.4883 1.4525 11.8082 2.77513C13.1281 4.09775 13.1734 6.20492 11.9458 7.57925L6.99993 12.5329L2.05413 7.57925C0.826601 6.20492 0.872486 4.09442 2.19178 2.77513C3.51257 1.45434 5.62635 1.40984 7.00057 2.64164ZM10.9824 3.59923C10.1079 2.72297 8.69609 2.68742 7.77991 3.50984L7.0011 4.20889L6.22188 3.51039C5.30306 2.68682 3.89377 2.72305 3.01674 3.60008C2.14772 4.4691 2.1041 5.86093 2.90495 6.7802L6.99993 10.8817L11.095 6.7802C11.8962 5.86058 11.8527 4.4714 10.9824 3.59923Z" fill="#161616" />
@@ -627,17 +701,24 @@
                 <path d="M7.0006 2.64164C8.37085 1.41167 10.4884 1.4525 11.8082 2.77513C13.1281 4.09775 13.1734 6.20492 11.9459 7.57925L6.99996 12.5329L2.05416 7.57925C0.826632 6.20492 0.872517 4.09442 2.19181 2.77513C3.5126 1.45434 5.62638 1.40984 7.0006 2.64164Z" fill="#161616" />
             </svg>
         </button>
-        <img src="files/product2.jpg" alt="Табурет «Минимализм»" loading="lazy">
+        <img src="files/product1.png" alt="Пуф-кот «Обнимун» синий" loading="lazy">
     </div>
     <div class="product-card__body">
-        <div class="product-card__name">Табурет «Минимализм»</div>
-        <div class="product-card__price">7 800 ₽</div>
+        <div class="product-card__name">Пуф-кот «Обнимун» синий</div>
+        <div class="product-card__price">14 000 ₽</div>
     </div>
 </article>
 
+                </div>
+                <div class="swiper-slide">
                     <article class="product-card">
-    <a href="#" class="product-card__link" aria-label="Табурет домик для котиков «NATURALE»"></a>
+    <a href="#" class="product-card__link" aria-label="Арт стул «Овале»"></a>
     <div class="product-card__image">
+        <div class="label">
+            <div class="label-new">
+                <span>new</span>
+            </div>
+        </div>
         <button class="product-card__wish js-wish" type="button" aria-label="В избранное">
             <svg class="norm" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M7.00057 2.64164C8.37082 1.41167 10.4883 1.4525 11.8082 2.77513C13.1281 4.09775 13.1734 6.20492 11.9458 7.57925L6.99993 12.5329L2.05413 7.57925C0.826601 6.20492 0.872486 4.09442 2.19178 2.77513C3.51257 1.45434 5.62635 1.40984 7.00057 2.64164ZM10.9824 3.59923C10.1079 2.72297 8.69609 2.68742 7.77991 3.50984L7.0011 4.20889L6.22188 3.51039C5.30306 2.68682 3.89377 2.72305 3.01674 3.60008C2.14772 4.4691 2.1041 5.86093 2.90495 6.7802L6.99993 10.8817L11.095 6.7802C11.8962 5.86058 11.8527 4.4714 10.9824 3.59923Z" fill="#161616" />
@@ -646,17 +727,24 @@
                 <path d="M7.0006 2.64164C8.37085 1.41167 10.4884 1.4525 11.8082 2.77513C13.1281 4.09775 13.1734 6.20492 11.9459 7.57925L6.99996 12.5329L2.05416 7.57925C0.826632 6.20492 0.872517 4.09442 2.19181 2.77513C3.5126 1.45434 5.62638 1.40984 7.0006 2.64164Z" fill="#161616" />
             </svg>
         </button>
-        <img src="files/product3.jpg" alt="Табурет домик для котиков «NATURALE»" loading="lazy">
+        <img src="files/product2.png" alt="Арт стул «Овале»" loading="lazy">
     </div>
     <div class="product-card__body">
-        <div class="product-card__name">Табурет домик для котиков «NATURALE»</div>
-        <div class="product-card__price">52 400 ₽</div>
+        <div class="product-card__name">Арт стул «Овале»</div>
+        <div class="product-card__price">53 200 ₽</div>
     </div>
 </article>
 
+                </div>
+                <div class="swiper-slide">
                     <article class="product-card">
     <a href="#" class="product-card__link" aria-label="Стол барный «Боксер»"></a>
     <div class="product-card__image">
+        <div class="label">
+            <div class="label-new">
+                <span>new</span>
+            </div>
+        </div>
         <button class="product-card__wish js-wish" type="button" aria-label="В избранное">
             <svg class="norm" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M7.00057 2.64164C8.37082 1.41167 10.4883 1.4525 11.8082 2.77513C13.1281 4.09775 13.1734 6.20492 11.9458 7.57925L6.99993 12.5329L2.05413 7.57925C0.826601 6.20492 0.872486 4.09442 2.19178 2.77513C3.51257 1.45434 5.62635 1.40984 7.00057 2.64164ZM10.9824 3.59923C10.1079 2.72297 8.69609 2.68742 7.77991 3.50984L7.0011 4.20889L6.22188 3.51039C5.30306 2.68682 3.89377 2.72305 3.01674 3.60008C2.14772 4.4691 2.1041 5.86093 2.90495 6.7802L6.99993 10.8817L11.095 6.7802C11.8962 5.86058 11.8527 4.4714 10.9824 3.59923Z" fill="#161616" />
@@ -665,7 +753,7 @@
                 <path d="M7.0006 2.64164C8.37085 1.41167 10.4884 1.4525 11.8082 2.77513C13.1281 4.09775 13.1734 6.20492 11.9459 7.57925L6.99996 12.5329L2.05416 7.57925C0.826632 6.20492 0.872517 4.09442 2.19181 2.77513C3.5126 1.45434 5.62638 1.40984 7.0006 2.64164Z" fill="#161616" />
             </svg>
         </button>
-        <img src="files/product4.jpg" alt="Стол барный «Боксер»" loading="lazy">
+        <img src="files/product3.png" alt="Стол барный «Боксер»" loading="lazy">
     </div>
     <div class="product-card__body">
         <div class="product-card__name">Стол барный «Боксер»</div>
@@ -673,9 +761,16 @@
     </div>
 </article>
 
+                </div>
+                <div class="swiper-slide">
                     <article class="product-card">
-    <a href="#" class="product-card__link" aria-label="Пуф-кот «Феникс»-синий"></a>
+    <a href="#" class="product-card__link" aria-label="Диван «Тюлень» без хранения"></a>
     <div class="product-card__image">
+        <div class="label">
+            <div class="label-new">
+                <span>new</span>
+            </div>
+        </div>
         <button class="product-card__wish js-wish" type="button" aria-label="В избранное">
             <svg class="norm" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M7.00057 2.64164C8.37082 1.41167 10.4883 1.4525 11.8082 2.77513C13.1281 4.09775 13.1734 6.20492 11.9458 7.57925L6.99993 12.5329L2.05413 7.57925C0.826601 6.20492 0.872486 4.09442 2.19178 2.77513C3.51257 1.45434 5.62635 1.40984 7.00057 2.64164ZM10.9824 3.59923C10.1079 2.72297 8.69609 2.68742 7.77991 3.50984L7.0011 4.20889L6.22188 3.51039C5.30306 2.68682 3.89377 2.72305 3.01674 3.60008C2.14772 4.4691 2.1041 5.86093 2.90495 6.7802L6.99993 10.8817L11.095 6.7802C11.8962 5.86058 11.8527 4.4714 10.9824 3.59923Z" fill="#161616" />
@@ -684,23 +779,49 @@
                 <path d="M7.0006 2.64164C8.37085 1.41167 10.4884 1.4525 11.8082 2.77513C13.1281 4.09775 13.1734 6.20492 11.9459 7.57925L6.99996 12.5329L2.05416 7.57925C0.826632 6.20492 0.872517 4.09442 2.19181 2.77513C3.5126 1.45434 5.62638 1.40984 7.0006 2.64164Z" fill="#161616" />
             </svg>
         </button>
-        <img src="files/product5.jpg" alt="Пуф-кот «Феникс»-синий" loading="lazy">
+        <img src="files/product4.png" alt="Диван «Тюлень» без хранения" loading="lazy">
     </div>
     <div class="product-card__body">
-        <div class="product-card__name">Пуф-кот «Феникс»-синий</div>
-        <div class="product-card__price">34 000 ₽</div>
+        <div class="product-card__name">Диван «Тюлень» без хранения</div>
+        <div class="product-card__price">198 000 ₽</div>
     </div>
 </article>
 
                 </div>
-
-                <div class="pdp-related__mob-foot d-lg-none">
-                    <span class="pdp-related__sep"></span>
-                    <a href="#" class="btn btn-dark">ВСЕ ТОВАРЫ</a>
-                </div>
-
+                <div class="swiper-slide">
+                    <article class="product-card">
+    <a href="#" class="product-card__link" aria-label="Кухня «Швед» двойной модуль"></a>
+    <div class="product-card__image">
+        <div class="label">
+            <div class="label-new">
+                <span>new</span>
             </div>
-        </section>
+        </div>
+        <button class="product-card__wish js-wish" type="button" aria-label="В избранное">
+            <svg class="norm" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.00057 2.64164C8.37082 1.41167 10.4883 1.4525 11.8082 2.77513C13.1281 4.09775 13.1734 6.20492 11.9458 7.57925L6.99993 12.5329L2.05413 7.57925C0.826601 6.20492 0.872486 4.09442 2.19178 2.77513C3.51257 1.45434 5.62635 1.40984 7.00057 2.64164ZM10.9824 3.59923C10.1079 2.72297 8.69609 2.68742 7.77991 3.50984L7.0011 4.20889L6.22188 3.51039C5.30306 2.68682 3.89377 2.72305 3.01674 3.60008C2.14772 4.4691 2.1041 5.86093 2.90495 6.7802L6.99993 10.8817L11.095 6.7802C11.8962 5.86058 11.8527 4.4714 10.9824 3.59923Z" fill="#161616" />
+            </svg>
+            <svg class="active" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.0006 2.64164C8.37085 1.41167 10.4884 1.4525 11.8082 2.77513C13.1281 4.09775 13.1734 6.20492 11.9459 7.57925L6.99996 12.5329L2.05416 7.57925C0.826632 6.20492 0.872517 4.09442 2.19181 2.77513C3.5126 1.45434 5.62638 1.40984 7.0006 2.64164Z" fill="#161616" />
+            </svg>
+        </button>
+        <img src="files/product5.png" alt="Кухня «Швед» двойной модуль" loading="lazy">
+    </div>
+    <div class="product-card__body">
+        <div class="product-card__name">Кухня «Швед» двойной модуль</div>
+        <div class="product-card__price">38 000 ₽</div>
+    </div>
+</article>
+
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <a href="#" class="btn btn-dark d-lg-none">ВСЕ ТОВАРЫ</a>
+
+    </div>
+</section>
+
 
     </div>
     <footer class="footer">

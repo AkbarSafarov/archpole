@@ -592,7 +592,7 @@ button {
 
 .hero__title {
     font-family: var(--second-family);
-    font-weight: 400;
+    font-weight: 600;
     font-size: 56px;
     line-height: 100%;
     color: #161616;
@@ -838,9 +838,9 @@ button {
 }
 
 @media all and (max-width: 767px) {
-    .py-5 { padding-top: 1.5rem !important; padding-bottom: 1.5rem !important; }
-    .pt-5 { padding-top: 1.5rem !important; }
-    .pb-5 { padding-bottom: 1.5rem !important; }
+    //.py-5 { padding-top: 1.5rem !important; padding-bottom: 1.5rem !important; }
+    //.pt-5 { padding-top: 1.5rem !important; }
+    //.pb-5 { padding-bottom: 1.5rem !important; }
 }
 @media all and (max-width: 767px) {
     .my-5 { margin-top: 1.5rem !important; margin-bottom: 1.5rem !important; }

@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",function(){var n=document.getElementById("logoutModal");n&&(document.querySelectorAll(".js-logout-trigger").forEach(function(e){e.addEventListener("click",function(e){e.preventDefault(),n.hidden=!1})}),n.querySelectorAll(".js-modal-close").forEach(function(e){e.addEventListener("click",function(){n.hidden=!0})}))});

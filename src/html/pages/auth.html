@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    @@include('head.html', {"title": "Авторизация - Archpole", "description": "Вход в аккаунт Archpole"})
+</head>
+<body class="auth-body">
+
+<div class="auth">
+
+    <!-- Left photo panel — desktop only -->
+    <div class="auth__photo d-none d-lg-block">
+        <img src="img/auth.jpg" alt="Archpole интерьер">
+    </div>
+
+    <!-- Right form panel -->
+    <div class="auth__panel">
+        <div class="auth__card">
+
+            <!-- Logo -->
+            <a href="index.html" class="auth__logo" aria-label="Archpole">
+                <svg width="152" height="28" viewBox="0 0 173 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#auth-logo-clip)">
+                        <path d="M16.8194 0L17.316 28.936C17.332 29.872 16.419 31.504 15.7862 32H14.4087C13.9201 27.52 13.9281 23.584 13.8881 17.656L3.48403 17.488L3.43597 28.224C3.43597 29.208 2.86731 31.144 2.49088 32.008H0V0H16.8194ZM13.9361 3.72H3.39593L3.40394 14.288H13.9441L13.9361 3.72Z" fill="#161616"/>
+                        <path d="M128.148 0L128.445 28.864C128.445 29.616 127.692 31.536 127.435 32H111.377L111.329 0H128.148ZM125.169 3.704H114.468L114.476 28.08H125.177L125.169 3.704Z" fill="#161616"/>
+                        <path d="M39.2453 0L39.4616 17.416L28.1605 17.704L39.0131 28.744C38.5566 29.464 37.1709 30.704 36.6103 30.624L25.9019 20.336L25.4854 30.472C25.4534 31.336 22.4579 31.336 22.4579 30.568L22.4259 0.008H39.2453V0ZM36.1858 3.704L25.6136 3.728L25.6376 14.28L36.2098 14.256L36.1858 3.704Z" fill="#161616"/>
+                        <path d="M156.181 0H173V3.672L159.016 3.84V14.128L173 14.384V17.392L159.072 17.56L158.992 27.936L173 28.152V32H157.086C154.619 32.272 155.836 2.648 156.181 0Z" fill="#161616"/>
+                        <path d="M70.4815 0.0001875L70.073 14.1362L80.5492 14.2162L80.8935 0.0001875H84.0973L83.857 28.0802C83.849 29.3602 83.5366 31.0162 83.2803 31.9922H81.6304C81.246 31.1522 80.6533 29.1762 80.6533 28.2242V17.4802L70.2092 17.6402C70.1131 23.5842 70.073 27.4802 69.7206 31.9922H68.287L66.8613 30.5442L67.2778 -0.0078125H70.4815V0.0001875Z" fill="#161616"/>
+                        <path d="M105.722 0C106.099 5.48 106.099 10.776 106.123 17.36L92.3548 17.584L92.2747 28.92C92.2747 29.664 91.7141 31.44 91.4898 32H89.6557C89.5436 31.68 89.1751 30.208 89.1671 29.408L88.9028 0.008H105.722V0ZM92.2747 3.688L92.2587 14.248L102.823 14.264L102.839 3.704L92.2747 3.688Z" fill="#161616"/>
+                        <path d="M61.6713 0L61.1667 3.704L47.9194 3.824L47.9354 27.992L61.5432 28.168C61.8796 29.528 61.0626 31.384 59.9333 31.992H45.5807C45.3404 31.52 44.5956 29.6 44.5956 28.856L44.8519 0H61.6713Z" fill="#161616"/>
+                        <path d="M136.958 0L136.678 27.848L150.59 28.2L150.566 32H134.451C134.211 31.536 133.482 29.632 133.49 28.84L133.747 0H136.95H136.958Z" fill="#161616"/>
+                    </g>
+                    <defs>
+                        <clipPath id="auth-logo-clip">
+                            <rect width="173" height="32" fill="white"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+            </a>
+
+            <!-- Yandex ID -->
+            <button class="auth__yandex" type="button">
+                <span class="auth__yandex-text">Войти с</span>
+                <span class="auth__yandex-ya">Я</span>
+                <span class="auth__yandex-id">ID</span>
+            </button>
+
+            <!-- Divider -->
+            <div class="auth__or"><span>или</span></div>
+
+            <!-- Form -->
+            <form class="auth__form js-auth-form" novalidate>
+
+                <!-- Email -->
+                <div class="auth__field js-auth-email-field">
+                    <input class="auth__input" type="email" id="authEmail"
+                           placeholder="Электронная почта" autocomplete="email">
+                    <p class="auth__field-error" id="authEmailError" hidden>Такой аккаунт не зарегистрирован</p>
+                </div>
+
+                <!-- Password -->
+                <div class="auth__field">
+                    <div class="auth__pass-row">
+                        <input class="auth__input" type="password" id="authPass"
+                               placeholder="Пароль" autocomplete="current-password">
+                        <button class="auth__eye js-auth-eye" type="button"
+                                aria-label="Показать/скрыть пароль" hidden>
+                            <!-- Eye open (shown when password is hidden) -->
+                            <svg class="js-eye-open" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M1.18164 12C2.12215 6.87976 6.60812 3 12.0003 3C17.3924 3 21.8784 6.87976 22.8189 12C21.8784 17.1202 17.3924 21 12.0003 21C6.60812 21 2.12215 17.1202 1.18164 12ZM12.0003 17C14.7617 17 17.0003 14.7614 17.0003 12C17.0003 9.23858 14.7617 7 12.0003 7C9.23884 7 7.00026 9.23858 7.00026 12C7.00026 14.7614 9.23884 17 12.0003 17ZM12.0003 15C10.3434 15 9.00026 13.6569 9.00026 12C9.00026 10.3431 10.3434 9 12.0003 9C13.6571 9 15.0003 10.3431 15.0003 12C15.0003 13.6569 13.6571 15 12.0003 15Z" fill="#9f9f9f"/>
+                            </svg>
+                            <!-- Eye closed (shown when password is visible) -->
+                            <svg class="js-eye-closed" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" hidden>
+                                <path d="M4.52047 5.93457L1.39366 2.80777L2.80788 1.39355L22.6069 21.1925L21.1927 22.6068L17.8827 19.2968C16.1814 20.3755 14.1638 21.0002 12.0003 21.0002C6.60812 21.0002 2.12215 17.1204 1.18164 12.0002C1.61832 9.62282 2.81932 7.5129 4.52047 5.93457ZM14.7577 16.1718L13.2937 14.7078C12.902 14.8952 12.4634 15.0002 12.0003 15.0002C10.3434 15.0002 9.00026 13.657 9.00026 12.0002C9.00026 11.537 9.10522 11.0984 9.29263 10.7067L7.82866 9.24277C7.30514 10.0332 7.00026 10.9811 7.00026 12.0002C7.00026 14.7616 9.23884 17.0002 12.0003 17.0002C13.0193 17.0002 13.9672 16.6953 14.7577 16.1718ZM7.97446 3.76015C9.22127 3.26959 10.5793 3.00016 12.0003 3.00016C17.3924 3.00016 21.8784 6.87992 22.8189 12.0002C22.5067 13.6998 21.8038 15.2628 20.8068 16.5925L16.947 12.7327C16.9821 12.4936 17.0003 12.249 17.0003 12.0002C17.0003 9.23873 14.7617 7.00016 12.0003 7.00016C11.7514 7.00016 11.5068 7.01833 11.2677 7.05343L7.97446 3.76015Z" fill="#9f9f9f"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <a href="forgot-password.html" class="auth__forgot">Забыли пароль?</a>
+                <button class="auth__submit js-auth-submit" type="submit" disabled>ВОЙТИ</button>
+            </form>
+
+            <p class="auth__signup">У вас нет аккаунта?&nbsp; <a href="register.html">Зарегистрироваться</a></p>
+
+        </div>
+    </div>
+
+</div>
+
+<script src="libs/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

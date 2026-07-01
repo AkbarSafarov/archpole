@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",function(){var e=document.getElementById("fpEmail"),t=document.querySelector(".js-fp-submit"),n=document.getElementById("fpStep1"),d=document.getElementById("fpStep2");e&&t&&(e.addEventListener("input",function(){t.disabled=0===this.value.trim().length}),t.addEventListener("click",function(){n.hidden=!0,d.hidden=!1}))});

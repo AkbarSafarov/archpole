@@ -349,66 +349,87 @@
     <div class="content_block_wr">
         <section class="catalog-pg">
 
-    
+
     <div class="container-xl">
-        <nav class="coll-breadcrumbs" aria-label="Вы здесь">
-            <ol class="coll-breadcrumbs__list">
-                <li class="coll-breadcrumbs__item"><a href="index.html" class="coll-breadcrumbs__link">Главная</a></li>
-                <li class="coll-breadcrumbs__item"><a href="catalog-3.html" class="coll-breadcrumbs__link">Каталог</a></li>
-                <li class="coll-breadcrumbs__item"><a href="#" class="coll-breadcrumbs__link">Сидения</a></li>
-                <li class="coll-breadcrumbs__item"><span class="coll-breadcrumbs__current">Пуфы</span></li>
-            </ol>
-        </nav>
+        <nav class="path_block" aria-label="Хлебные крошки" role="navigation"
+     itemscope itemtype="http://schema.org/BreadcrumbList">
+    <div class="path_block__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+        <a class="path_block__link" href="/" itemprop="item" title="Главная">
+            <span class="path_block__text" itemprop="name">Главная</span>
+        </a>
+        <meta itemprop="position" content="1">
+    </div>
+    <div class="path_block__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+        <i class="path_block__sep" aria-hidden="true"></i>
+        <a class="path_block__link" href="/catalog/" itemprop="item" title="Каталог">
+            <span class="path_block__text" itemprop="name">Каталог</span>
+        </a>
+        <meta itemprop="position" content="2">
+    </div>
+    <div class="path_block__item" aria-current="page" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+        <i class="path_block__sep" aria-hidden="true"></i>
+        <span itemprop="item">
+            <span class="path_block__text" itemprop="name">Смесители</span>
+        </span>
+        <meta itemprop="position" content="3">
+    </div>
+</nav>
+
     </div>
 
-    
+
     <div class="container-xl">
         <div class="catalog-pg__head">
             <a href="#" class="catalog-pg__back" aria-label="Назад">
-                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7 1L1 7l6 6" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z" fill="#161616" />
                 </svg>
             </a>
-            <h1 class="catalog-pg__title">ПУФЫ</h1>
+            <h1 class="hero__title">ПУФЫ</h1>
         </div>
     </div>
 
-    
     <div class="container-xl">
-        <div class="catalog-pg__sortbar">
-            <div class="catalog-pg__sortbar-left js-sort-close-area">
-                <div class="catalog-pg__sort-wrap js-sort-wrap">
-                    <button class="catalog-pg__sort-btn js-sort-toggle" type="button" aria-expanded="false">
-                        <span class="js-sort-label">Сначала дешевле</span>
-                        <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 1l5 5 5-5" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                    <ul class="catalog-pg__sort-list js-sort-list" hidden>
-                        <li><button type="button" class="catalog-pg__sort-opt js-sort-opt is-active">Сначала дешевле</button></li>
-                        <li><button type="button" class="catalog-pg__sort-opt js-sort-opt">Сначала дороже</button></li>
-                        <li><button type="button" class="catalog-pg__sort-opt js-sort-opt">По популярности</button></li>
-                        <li><button type="button" class="catalog-pg__sort-opt js-sort-opt">Новинки</button></li>
-                    </ul>
-                </div>
-                <label class="catalog-pg__instock">
-                    <span>В наличии</span>
-                    <span class="catalog-pg__toggle">
-                        <input type="checkbox" checked>
-                        <span class="catalog-pg__toggle-track"></span>
-                    </span>
-                </label>
-            </div>
-            <span class="catalog-pg__items-count d-none d-lg-block">6 товаров</span>
+        <div class="catalog-pg__sortbar pt-3 pt-lg-3 pb-3 pb-lg-5">
+    <div class="catalog-pg__sortbar-left js-sort-close-area">
+        <div class="catalog-pg__sort-wrap js-sort-wrap">
+            <button class="catalog-pg__sort-btn js-sort-toggle" type="button" aria-expanded="false">
+                <span class="js-sort-label">Сначала дешевле</span>
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.00003 9.88421L13.1248 5.75938L14.3033 6.93788L9.00003 12.2412L3.69672 6.93788L4.87522 5.75938L9.00003 9.88421Z" fill="#161616" />
+                </svg>
+            </button>
+            <ul class="catalog-pg__sort-list js-sort-list" hidden>
+                <li><button type="button" class="catalog-pg__sort-opt js-sort-opt is-active">Сначала дешевле</button></li>
+                <li><button type="button" class="catalog-pg__sort-opt js-sort-opt">Сначала дороже</button></li>
+                <li><button type="button" class="catalog-pg__sort-opt js-sort-opt">По популярности</button></li>
+                <li><button type="button" class="catalog-pg__sort-opt js-sort-opt">Новинки</button></li>
+            </ul>
         </div>
+        <label class="catalog-pg__instock">
+            <span>В наличии</span>
+            <span class="catalog-pg__toggle">
+                <input type="checkbox" checked>
+                <span class="catalog-pg__toggle-track"></span>
+            </span>
+        </label>
+    </div>
+    <span class="catalog-pg__items-count d-none d-lg-block">30 товаров</span>
+</div>
     </div>
 
-    
+
     <div class="container-xl">
         <div class="catalog-pg__grid">
+
             <article class="product-card">
-    <a href="#" class="product-card__link" aria-label="Пуф-кот «Обнимун» синий"></a>
+    <a href="#" class="product-card__link" aria-label="Табурет «Минимализм»"></a>
     <div class="product-card__image">
+        <div class="label">
+            <div class="label-new">
+                <span>new</span>
+            </div>
+        </div>
         <button class="product-card__wish js-wish" type="button" aria-label="В избранное">
             <svg class="norm" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M7.00057 2.64164C8.37082 1.41167 10.4883 1.4525 11.8082 2.77513C13.1281 4.09775 13.1734 6.20492 11.9458 7.57925L6.99993 12.5329L2.05413 7.57925C0.826601 6.20492 0.872486 4.09442 2.19178 2.77513C3.51257 1.45434 5.62635 1.40984 7.00057 2.64164ZM10.9824 3.59923C10.1079 2.72297 8.69609 2.68742 7.77991 3.50984L7.0011 4.20889L6.22188 3.51039C5.30306 2.68682 3.89377 2.72305 3.01674 3.60008C2.14772 4.4691 2.1041 5.86093 2.90495 6.7802L6.99993 10.8817L11.095 6.7802C11.8962 5.86058 11.8527 4.4714 10.9824 3.59923Z" fill="#161616" />
@@ -417,17 +438,22 @@
                 <path d="M7.0006 2.64164C8.37085 1.41167 10.4884 1.4525 11.8082 2.77513C13.1281 4.09775 13.1734 6.20492 11.9459 7.57925L6.99996 12.5329L2.05416 7.57925C0.826632 6.20492 0.872517 4.09442 2.19181 2.77513C3.5126 1.45434 5.62638 1.40984 7.0006 2.64164Z" fill="#161616" />
             </svg>
         </button>
-        <img src="files/product1.jpg" alt="Пуф-кот «Обнимун» синий" loading="lazy">
+        <img src="files/ca1.png" alt="Табурет «Минимализм»" loading="lazy">
     </div>
     <div class="product-card__body">
-        <div class="product-card__name">Пуф-кот «Обнимун» синий</div>
-        <div class="product-card__price">14 000 ₽</div>
+        <div class="product-card__name">Табурет «Минимализм»</div>
+        <div class="product-card__price">7 390 ₽</div>
     </div>
 </article>
 
             <article class="product-card">
-    <a href="#" class="product-card__link" aria-label="Пуф-кот «Обнимун» красный"></a>
+    <a href="#" class="product-card__link" aria-label="Стол барный «Боксер»"></a>
     <div class="product-card__image">
+        <div class="label">
+            <div class="label-new">
+                <span>new</span>
+            </div>
+        </div>
         <button class="product-card__wish js-wish" type="button" aria-label="В избранное">
             <svg class="norm" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M7.00057 2.64164C8.37082 1.41167 10.4883 1.4525 11.8082 2.77513C13.1281 4.09775 13.1734 6.20492 11.9458 7.57925L6.99993 12.5329L2.05413 7.57925C0.826601 6.20492 0.872486 4.09442 2.19178 2.77513C3.51257 1.45434 5.62635 1.40984 7.00057 2.64164ZM10.9824 3.59923C10.1079 2.72297 8.69609 2.68742 7.77991 3.50984L7.0011 4.20889L6.22188 3.51039C5.30306 2.68682 3.89377 2.72305 3.01674 3.60008C2.14772 4.4691 2.1041 5.86093 2.90495 6.7802L6.99993 10.8817L11.095 6.7802C11.8962 5.86058 11.8527 4.4714 10.9824 3.59923Z" fill="#161616" />
@@ -436,17 +462,22 @@
                 <path d="M7.0006 2.64164C8.37085 1.41167 10.4884 1.4525 11.8082 2.77513C13.1281 4.09775 13.1734 6.20492 11.9459 7.57925L6.99996 12.5329L2.05416 7.57925C0.826632 6.20492 0.872517 4.09442 2.19181 2.77513C3.5126 1.45434 5.62638 1.40984 7.0006 2.64164Z" fill="#161616" />
             </svg>
         </button>
-        <img src="files/product2.jpg" alt="Пуф-кот «Обнимун» красный" loading="lazy">
+        <img src="files/ca2.png" alt="Стол барный «Боксер»" loading="lazy">
     </div>
     <div class="product-card__body">
-        <div class="product-card__name">Пуф-кот «Обнимун» красный</div>
-        <div class="product-card__price">14 000 ₽</div>
+        <div class="product-card__name">Стол барный «Боксер»</div>
+        <div class="product-card__price">118 000 ₽</div>
     </div>
 </article>
 
             <article class="product-card">
-    <a href="#" class="product-card__link" aria-label="Пуф-кот «Обнимун» зеленый"></a>
+    <a href="#" class="product-card__link" aria-label="Табурет домик для котиков «NATURALE»"></a>
     <div class="product-card__image">
+        <div class="label">
+            <div class="label-new">
+                <span>new</span>
+            </div>
+        </div>
         <button class="product-card__wish js-wish" type="button" aria-label="В избранное">
             <svg class="norm" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M7.00057 2.64164C8.37082 1.41167 10.4883 1.4525 11.8082 2.77513C13.1281 4.09775 13.1734 6.20492 11.9458 7.57925L6.99993 12.5329L2.05413 7.57925C0.826601 6.20492 0.872486 4.09442 2.19178 2.77513C3.51257 1.45434 5.62635 1.40984 7.00057 2.64164ZM10.9824 3.59923C10.1079 2.72297 8.69609 2.68742 7.77991 3.50984L7.0011 4.20889L6.22188 3.51039C5.30306 2.68682 3.89377 2.72305 3.01674 3.60008C2.14772 4.4691 2.1041 5.86093 2.90495 6.7802L6.99993 10.8817L11.095 6.7802C11.8962 5.86058 11.8527 4.4714 10.9824 3.59923Z" fill="#161616" />
@@ -455,17 +486,22 @@
                 <path d="M7.0006 2.64164C8.37085 1.41167 10.4884 1.4525 11.8082 2.77513C13.1281 4.09775 13.1734 6.20492 11.9459 7.57925L6.99996 12.5329L2.05416 7.57925C0.826632 6.20492 0.872517 4.09442 2.19181 2.77513C3.5126 1.45434 5.62638 1.40984 7.0006 2.64164Z" fill="#161616" />
             </svg>
         </button>
-        <img src="files/product3.jpg" alt="Пуф-кот «Обнимун» зеленый" loading="lazy">
+        <img src="files/product4.png" alt="Табурет домик для котиков «NATURALE»" loading="lazy">
     </div>
     <div class="product-card__body">
-        <div class="product-card__name">Пуф-кот «Обнимун» зеленый</div>
-        <div class="product-card__price">14 000 ₽</div>
+        <div class="product-card__name">Табурет домик для котиков «NATURALE»</div>
+        <div class="product-card__price">52 990 ₽</div>
     </div>
 </article>
 
             <article class="product-card">
-    <a href="#" class="product-card__link" aria-label="Пуф-кот «Обнимун» желтый"></a>
+    <a href="#" class="product-card__link" aria-label="Табурет ящик «BIG N1»"></a>
     <div class="product-card__image">
+        <div class="label">
+            <div class="label-new">
+                <span>new</span>
+            </div>
+        </div>
         <button class="product-card__wish js-wish" type="button" aria-label="В избранное">
             <svg class="norm" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M7.00057 2.64164C8.37082 1.41167 10.4883 1.4525 11.8082 2.77513C13.1281 4.09775 13.1734 6.20492 11.9458 7.57925L6.99993 12.5329L2.05413 7.57925C0.826601 6.20492 0.872486 4.09442 2.19178 2.77513C3.51257 1.45434 5.62635 1.40984 7.00057 2.64164ZM10.9824 3.59923C10.1079 2.72297 8.69609 2.68742 7.77991 3.50984L7.0011 4.20889L6.22188 3.51039C5.30306 2.68682 3.89377 2.72305 3.01674 3.60008C2.14772 4.4691 2.1041 5.86093 2.90495 6.7802L6.99993 10.8817L11.095 6.7802C11.8962 5.86058 11.8527 4.4714 10.9824 3.59923Z" fill="#161616" />
@@ -474,17 +510,22 @@
                 <path d="M7.0006 2.64164C8.37085 1.41167 10.4884 1.4525 11.8082 2.77513C13.1281 4.09775 13.1734 6.20492 11.9459 7.57925L6.99996 12.5329L2.05416 7.57925C0.826632 6.20492 0.872517 4.09442 2.19181 2.77513C3.5126 1.45434 5.62638 1.40984 7.0006 2.64164Z" fill="#161616" />
             </svg>
         </button>
-        <img src="files/product4.jpg" alt="Пуф-кот «Обнимун» желтый" loading="lazy">
+        <img src="files/product5.png" alt="Табурет ящик «BIG N1»" loading="lazy">
     </div>
     <div class="product-card__body">
-        <div class="product-card__name">Пуф-кот «Обнимун» желтый</div>
-        <div class="product-card__price">14 000 ₽</div>
+        <div class="product-card__name">Табурет ящик «BIG N1»</div>
+        <div class="product-card__price">46 300 ₽</div>
     </div>
 </article>
 
             <article class="product-card">
-    <a href="#" class="product-card__link" aria-label="Пуф-кот «Обнимун» черный"></a>
+    <a href="#" class="product-card__link" aria-label="Кровать «Облако»"></a>
     <div class="product-card__image">
+        <div class="label">
+            <div class="label-new">
+                <span>new</span>
+            </div>
+        </div>
         <button class="product-card__wish js-wish" type="button" aria-label="В избранное">
             <svg class="norm" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M7.00057 2.64164C8.37082 1.41167 10.4883 1.4525 11.8082 2.77513C13.1281 4.09775 13.1734 6.20492 11.9458 7.57925L6.99993 12.5329L2.05413 7.57925C0.826601 6.20492 0.872486 4.09442 2.19178 2.77513C3.51257 1.45434 5.62635 1.40984 7.00057 2.64164ZM10.9824 3.59923C10.1079 2.72297 8.69609 2.68742 7.77991 3.50984L7.0011 4.20889L6.22188 3.51039C5.30306 2.68682 3.89377 2.72305 3.01674 3.60008C2.14772 4.4691 2.1041 5.86093 2.90495 6.7802L6.99993 10.8817L11.095 6.7802C11.8962 5.86058 11.8527 4.4714 10.9824 3.59923Z" fill="#161616" />
@@ -493,17 +534,22 @@
                 <path d="M7.0006 2.64164C8.37085 1.41167 10.4884 1.4525 11.8082 2.77513C13.1281 4.09775 13.1734 6.20492 11.9459 7.57925L6.99996 12.5329L2.05416 7.57925C0.826632 6.20492 0.872517 4.09442 2.19181 2.77513C3.5126 1.45434 5.62638 1.40984 7.0006 2.64164Z" fill="#161616" />
             </svg>
         </button>
-        <img src="files/product5.jpg" alt="Пуф-кот «Обнимун» черный" loading="lazy">
+        <img src="files/product2.png" alt="Кровать «Облако»" loading="lazy">
     </div>
     <div class="product-card__body">
-        <div class="product-card__name">Пуф-кот «Обнимун» черный</div>
-        <div class="product-card__price">14 000 ₽</div>
+        <div class="product-card__name">Кровать «Облако»</div>
+        <div class="product-card__price">269 000 ₽</div>
     </div>
 </article>
 
             <article class="product-card">
-    <a href="#" class="product-card__link" aria-label="Пуф-кот «Обнимун» серый"></a>
+    <a href="#" class="product-card__link" aria-label="Кровать «Облако»"></a>
     <div class="product-card__image">
+        <div class="label">
+            <div class="label-new">
+                <span>new</span>
+            </div>
+        </div>
         <button class="product-card__wish js-wish" type="button" aria-label="В избранное">
             <svg class="norm" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M7.00057 2.64164C8.37082 1.41167 10.4883 1.4525 11.8082 2.77513C13.1281 4.09775 13.1734 6.20492 11.9458 7.57925L6.99993 12.5329L2.05413 7.57925C0.826601 6.20492 0.872486 4.09442 2.19178 2.77513C3.51257 1.45434 5.62635 1.40984 7.00057 2.64164ZM10.9824 3.59923C10.1079 2.72297 8.69609 2.68742 7.77991 3.50984L7.0011 4.20889L6.22188 3.51039C5.30306 2.68682 3.89377 2.72305 3.01674 3.60008C2.14772 4.4691 2.1041 5.86093 2.90495 6.7802L6.99993 10.8817L11.095 6.7802C11.8962 5.86058 11.8527 4.4714 10.9824 3.59923Z" fill="#161616" />
@@ -512,17 +558,17 @@
                 <path d="M7.0006 2.64164C8.37085 1.41167 10.4884 1.4525 11.8082 2.77513C13.1281 4.09775 13.1734 6.20492 11.9459 7.57925L6.99996 12.5329L2.05416 7.57925C0.826632 6.20492 0.872517 4.09442 2.19181 2.77513C3.5126 1.45434 5.62638 1.40984 7.0006 2.64164Z" fill="#161616" />
             </svg>
         </button>
-        <img src="files/product1.jpg" alt="Пуф-кот «Обнимун» серый" loading="lazy">
+        <img src="files/product2.png" alt="Кровать «Облако»" loading="lazy">
     </div>
     <div class="product-card__body">
-        <div class="product-card__name">Пуф-кот «Обнимун» серый</div>
-        <div class="product-card__price">14 000 ₽</div>
+        <div class="product-card__name">Кровать «Облако»</div>
+        <div class="product-card__price">269 000 ₽</div>
     </div>
 </article>
+
 
         </div>
     </div>
-
 </section>
 
     </div>
