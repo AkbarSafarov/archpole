@@ -1,69 +1,37 @@
 <section class="catalog-pg">
 
-    
+
     <div class="container-xl">
-        <nav class="coll-breadcrumbs" aria-label="Вы здесь">
-            <ol class="coll-breadcrumbs__list">
-                <li class="coll-breadcrumbs__item"><a href="index.html" class="coll-breadcrumbs__link">Главная</a></li>
-                <li class="coll-breadcrumbs__item"><a href="catalog-3.html" class="coll-breadcrumbs__link">Каталог</a></li>
-                <li class="coll-breadcrumbs__item"><a href="#" class="coll-breadcrumbs__link">Сидения</a></li>
-                <li class="coll-breadcrumbs__item"><span class="coll-breadcrumbs__current">Пуфы</span></li>
-            </ol>
-        </nav>
+        @@include('path.html')
     </div>
 
-    
+
     <div class="container-xl">
         <div class="catalog-pg__head">
             <a href="#" class="catalog-pg__back" aria-label="Назад">
-                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7 1L1 7l6 6" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z" fill="#161616" />
                 </svg>
             </a>
-            <h1 class="catalog-pg__title">ПУФЫ</h1>
+            <h1 class="hero__title">ПУФЫ</h1>
         </div>
     </div>
 
-    
     <div class="container-xl">
-        <div class="catalog-pg__sortbar">
-            <div class="catalog-pg__sortbar-left js-sort-close-area">
-                <div class="catalog-pg__sort-wrap js-sort-wrap">
-                    <button class="catalog-pg__sort-btn js-sort-toggle" type="button" aria-expanded="false">
-                        <span class="js-sort-label">Сначала дешевле</span>
-                        <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 1l5 5 5-5" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                    <ul class="catalog-pg__sort-list js-sort-list" hidden>
-                        <li><button type="button" class="catalog-pg__sort-opt js-sort-opt is-active">Сначала дешевле</button></li>
-                        <li><button type="button" class="catalog-pg__sort-opt js-sort-opt">Сначала дороже</button></li>
-                        <li><button type="button" class="catalog-pg__sort-opt js-sort-opt">По популярности</button></li>
-                        <li><button type="button" class="catalog-pg__sort-opt js-sort-opt">Новинки</button></li>
-                    </ul>
-                </div>
-                <label class="catalog-pg__instock">
-                    <span>В наличии</span>
-                    <span class="catalog-pg__toggle">
-                        <input type="checkbox" checked>
-                        <span class="catalog-pg__toggle-track"></span>
-                    </span>
-                </label>
-            </div>
-            <span class="catalog-pg__items-count d-none d-lg-block">6 товаров</span>
-        </div>
+        @@include('sortbar.html')
     </div>
 
-    
+
     <div class="container-xl">
         <div class="catalog-pg__grid">
-            @@include('product.html', {"img": "files/product1.jpg", "name": "Пуф-кот «Обнимун» синий", "price": "14 000 ₽"})
-            @@include('product.html', {"img": "files/product2.jpg", "name": "Пуф-кот «Обнимун» красный", "price": "14 000 ₽"})
-            @@include('product.html', {"img": "files/product3.jpg", "name": "Пуф-кот «Обнимун» зеленый", "price": "14 000 ₽"})
-            @@include('product.html', {"img": "files/product4.jpg", "name": "Пуф-кот «Обнимун» желтый", "price": "14 000 ₽"})
-            @@include('product.html', {"img": "files/product5.jpg", "name": "Пуф-кот «Обнимун» черный", "price": "14 000 ₽"})
-            @@include('product.html', {"img": "files/product1.jpg", "name": "Пуф-кот «Обнимун» серый", "price": "14 000 ₽"})
+
+            @@include('product.html', {"img": "files/ca1.png", "name": "Табурет «Минимализм»", "price": "7 390 ₽"})
+            @@include('product.html', {"img": "files/ca2.png", "name": "Стол барный «Боксер»", "price": "118 000 ₽"})
+            @@include('product.html', {"img": "files/product4.png", "name": "Табурет домик для котиков «NATURALE»", "price": "52 990 ₽"})
+            @@include('product.html', {"img": "files/product5.png", "name": "Табурет ящик «BIG N1»", "price": "46 300 ₽"})
+            @@include('product.html', {"img": "files/product2.png", "name": "Кровать «Облако»", "price": "269 000 ₽"})
+            @@include('product.html', {"img": "files/product2.png", "name": "Кровать «Облако»", "price": "269 000 ₽"})
+
         </div>
     </div>
-
 </section>

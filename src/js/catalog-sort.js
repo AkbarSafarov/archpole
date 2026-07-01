@@ -60,14 +60,45 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var collTags = document.querySelectorAll('.js-coll-tag');
     if (collTags.length) {
+        var collRight = document.querySelector('.cat5-collections__right');
+        var collPhoto = collRight && collRight.querySelector('.cat5-collections__photo img');
+        var collCardImg = collRight && collRight.querySelector('.product-card__image img');
+        var collCardName = collRight && collRight.querySelector('.product-card__name');
+        var collCardPrice = collRight && collRight.querySelector('.product-card__price');
+        var collCardNew = collRight && collRight.querySelector('.product-card__image .new');
+
         collTags.forEach(function (tag) {
             tag.addEventListener('click', function (e) {
                 e.preventDefault();
                 collTags.forEach(function (t) { t.classList.remove('is-active'); });
                 this.classList.add('is-active');
+
+                var photo = this.dataset.photo;
+                var productImg = this.dataset.productImg;
+                var productName = this.dataset.productName;
+                var productPrice = this.dataset.productPrice;
+                var isNew = this.dataset.new === 'true';
+
+                if (collRight) collRight.classList.add('is-loading');
+
+                if (collPhoto && photo) {
+                    collPhoto.src = photo;
+                    collPhoto.onload = function () {
+                        if (collRight) collRight.classList.remove('is-loading');
+                    };
+                }
+                if (collCardImg && productImg) {
+                    collCardImg.src = productImg;
+                    collCardImg.alt = productName || '';
+                }
+                if (collCardName && productName) collCardName.textContent = productName;
+                if (collCardPrice && productPrice) collCardPrice.textContent = productPrice;
+                if (collCardNew) collCardNew.style.display = isNew ? '' : 'none';
             });
         });
     }
+
+
 
     var tabs = document.querySelectorAll('.collection-pg__tab');
     if (tabs.length) {

@@ -24,14 +24,13 @@ body {
     background: #fff;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6 {
     font-family: var(--third-family);
     font-weight: 400;
     font-style: normal;
     color: var(--brand-black);
 }
 
-h1 {margin-top: 0; font-size: $H1Size !important;}
 h2 {font-size: round($H1Size - 2);}
 h3 {font-size: round($H1Size - 4);}
 h4 {font-size: round($H1Size - 6);}
@@ -40,7 +39,6 @@ h6 {font-size: round($H1Size - 9);}
 h5, h6 {font-size: round($H1Size - 10);}
 
 @media all and (max-width: 1024px) {
-    h1 {margin-top: 0; font-size: 28px !important;}
     h2 {font-size: 26px;}
     h3 {font-size: 24px;}
     h4 {font-size: 22px;}
@@ -548,51 +546,62 @@ button {
 }
 
 .path_block {
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 143%;
-    color: var(--t-black-40);
-    margin-bottom: 32px;
-    flex-wrap: wrap;
+    padding: 12px 0;
+    display: flex;
+    align-items: center;
+    gap: 7px;
 
-    @media all and (max-width: 990px) {
-        margin-bottom: 24px;
-    }
-    
-    a {
-        color: var(--brand-black);
-        text-decoration: none;
+    &__link {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 100%;
+        text-align: center;
+        color: #8a8a8a;
+
+        .path_block__text {
+            padding-right: 21px;
+            position: relative;
+            display: inline-block;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                width: 14px;
+                height: 14px;
+                background: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.68344 6.99959L4.79605 4.11227L5.621 3.28732L9.33334 6.99959L5.621 10.7119L4.79605 9.88696L7.68344 6.99959Z' fill='%238A8A8A' /%3E%3C/svg%3E") 50% no-repeat;
+                margin: auto;
+            }
+        }
     }
 
-    span {
-        width: 16px;
-        height: 16px;
-        background: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.3538 8.35378L6.35378 13.3538C6.30733 13.4002 6.25218 13.4371 6.19148 13.4622C6.13079 13.4874 6.06573 13.5003 6.00003 13.5003C5.93434 13.5003 5.86928 13.4874 5.80859 13.4622C5.74789 13.4371 5.69274 13.4002 5.64628 13.3538C5.59983 13.3073 5.56298 13.2522 5.53784 13.1915C5.5127 13.1308 5.49976 13.0657 5.49976 13C5.49976 12.9343 5.5127 12.8693 5.53784 12.8086C5.56298 12.7479 5.59983 12.6927 5.64628 12.6463L10.2932 8.00003L5.64628 3.35378C5.55246 3.25996 5.49976 3.13272 5.49976 3.00003C5.49976 2.86735 5.55246 2.7401 5.64628 2.64628C5.7401 2.55246 5.86735 2.49976 6.00003 2.49976C6.13272 2.49976 6.25996 2.55246 6.35378 2.64628L11.3538 7.64628C11.4003 7.69272 11.4372 7.74786 11.4623 7.80856C11.4875 7.86926 11.5004 7.93433 11.5004 8.00003C11.5004 8.06574 11.4875 8.13081 11.4623 8.1915C11.4372 8.2522 11.4003 8.30735 11.3538 8.35378Z' fill='%23191415' fill-opacity='0.4' /%3E%3C/svg%3E") 50% no-repeat;
+    &__item {
+        span {
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 100%;
+            text-align: center;
+            color: #161616;
+        }
     }
 }
 
-.title_h1 {
-    margin-bottom: 48px;
-    align-items: end;
+.hero__title {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 100%;
+    color: #161616;
+    text-transform: uppercase;
+    margin: 0;
 
-    h1 {
-        margin: 0;
-    }
-
-    .counter {
-        font-family: var(--font-family);
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 100%;
-        letter-spacing: 0.13em;
-        text-transform: uppercase;
-        color: var(--t-black-80);
-        padding-bottom: 9px;
-
-        span {
-            color: var(--t-black-40);
-        }
+    @media (max-width: 991px) {
+        font-size: 42px;
+        padding: 32px 0 !important;
     }
 }
 

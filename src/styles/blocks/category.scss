@@ -141,3 +141,30 @@
 
     }
 }
+
+.catalog-section__desktop-page {
+    @media (max-width: 991px) {
+
+        .catalog-section__list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0 32px;
+
+            .catalog-section__link {
+                font-size: 20px;
+                padding: 13px 0;
+
+                .catalog-section__chevron {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        .catalog-section__list {
+            grid-template-columns: 1fr;
+            gap: 0;
+        }
+    }
+}

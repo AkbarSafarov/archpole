@@ -12,99 +12,58 @@
 
             
             <div class="container-xl">
-                <nav class="coll-breadcrumbs" aria-label="Вы здесь">
-                    <ol class="coll-breadcrumbs__list">
-                        <li class="coll-breadcrumbs__item"><a href="index.html" class="coll-breadcrumbs__link">Главная</a></li>
-                        <li class="coll-breadcrumbs__item"><a href="catalog-3.html" class="coll-breadcrumbs__link">Каталог</a></li>
-                        <li class="coll-breadcrumbs__item"><span class="coll-breadcrumbs__current">Сидения</span></li>
-                    </ol>
-                </nav>
+                @@include('path.html')
             </div>
 
             
             <div class="container-xl">
                 <div class="catalog-pg__head">
                     <a href="#" class="catalog-pg__back" aria-label="Назад">
-                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7 1L1 7l6 6" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z" fill="#161616" />
                         </svg>
                     </a>
-                    <h1 class="catalog-pg__title">СИДЕНИЯ</h1>
+                    <h1 class="hero__title">КАТАЛОГ</h1>
                 </div>
             </div>
 
             
             <div class="container-xl">
-                <div class="cat6-subnav">
-                    <button class="cat6-subnav__arrow cat6-subnav__arrow--prev js-subnav-prev" type="button" aria-label="Назад">
-                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7 1L1 7l6 6" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
+                <div class="cat6-subnav pt-lg-1 pb-2 pb-lg-5">
                     <div class="cat6-subnav__scroll js-subnav-scroll">
                         <div class="cat6-subnav__tabs">
                             <a href="#" class="cat6-subnav__tab js-subnav-tab">
-                                <img src="files/cat-icon1.svg" alt="Табуреты" class="cat6-subnav__tab-img">
+                                <img src="files/ca-1.png" alt="Табуреты" class="cat6-subnav__tab-img">
                                 <span>Табуреты</span>
                             </a>
                             <a href="#" class="cat6-subnav__tab js-subnav-tab">
-                                <img src="files/cat-icon2.svg" alt="Скамьи" class="cat6-subnav__tab-img">
+                                <img src="files/ca-2.png" alt="Скамьи" class="cat6-subnav__tab-img">
                                 <span>Скамьи</span>
                             </a>
                             <a href="#" class="cat6-subnav__tab js-subnav-tab">
-                                <img src="files/cat-icon3.svg" alt="Барные стулья и табуреты" class="cat6-subnav__tab-img">
+                                <img src="files/ca-3.png" alt="Барные стулья и табуреты" class="cat6-subnav__tab-img">
                                 <span>Барные стулья и табуреты</span>
                             </a>
                             <a href="#" class="cat6-subnav__tab js-subnav-tab is-active">
-                                <img src="files/cat-icon4.svg" alt="Стулья" class="cat6-subnav__tab-img">
+                                <img src="files/ca-4.png" alt="Стулья" class="cat6-subnav__tab-img">
                                 <span>Стулья</span>
                             </a>
                             <a href="#" class="cat6-subnav__tab js-subnav-tab">
-                                <img src="files/cat-icon5.svg" alt="Диваны" class="cat6-subnav__tab-img">
+                                <img src="files/ca-5.png" alt="Диваны" class="cat6-subnav__tab-img">
                                 <span>Диваны</span>
                             </a>
                             <a href="#" class="cat6-subnav__tab js-subnav-tab">
-                                <img src="files/cat-icon6.svg" alt="Кресла" class="cat6-subnav__tab-img">
+                                <img src="files/ca-6.png" alt="Кресла" class="cat6-subnav__tab-img">
                                 <span>Кресла</span>
                             </a>
                         </div>
                     </div>
-                    <button class="cat6-subnav__arrow cat6-subnav__arrow--next js-subnav-next" type="button" aria-label="Вперёд">
-                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 1L7 7l-6 6" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
                 </div>
             </div>
 
             
             <div class="container-xl">
-                <div class="catalog-pg__sortbar">
-                    <div class="catalog-pg__sortbar-left js-sort-close-area">
-                        <div class="catalog-pg__sort-wrap js-sort-wrap">
-                            <button class="catalog-pg__sort-btn js-sort-toggle" type="button" aria-expanded="false">
-                                <span class="js-sort-label">Сначала дешевле</span>
-                                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1 1l5 5 5-5" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </button>
-                            <ul class="catalog-pg__sort-list js-sort-list" hidden>
-                                <li><button type="button" class="catalog-pg__sort-opt js-sort-opt is-active">Сначала дешевле</button></li>
-                                <li><button type="button" class="catalog-pg__sort-opt js-sort-opt">Сначала дороже</button></li>
-                                <li><button type="button" class="catalog-pg__sort-opt js-sort-opt">По популярности</button></li>
-                                <li><button type="button" class="catalog-pg__sort-opt js-sort-opt">Новинки</button></li>
-                            </ul>
-                        </div>
-                        <label class="catalog-pg__instock">
-                            <span>В наличии</span>
-                            <span class="catalog-pg__toggle">
-                                <input type="checkbox" checked>
-                                <span class="catalog-pg__toggle-track"></span>
-                            </span>
-                        </label>
-                    </div>
-                    <span class="catalog-pg__items-count d-none d-lg-block">30 товаров</span>
-                </div>
+                @@include('sortbar.html')
             </div>
 
             
@@ -113,16 +72,20 @@
 
                     
 
-                    @@include('product.html', {"img": "files/product1.jpg", "name": "Табурет «Минимализм»", "price": "7 390 ₽"})
+                    @@include('product.html', {"img": "files/product1.png", "name": "Табурет «Минимализм»", "price": "7 390 ₽"})
 
                     <article class="product-card">
                         <a href="#" class="product-card__link" aria-label="Кровать «Облако»"></a>
                         <div class="product-card__image">
+                            <div class="label">
+                                <div class="label-stock">
+                                    <span>В наличии</span>
+                                </div>
+                            </div>
                             <button class="product-card__wish js-wish" type="button" aria-label="В избранное">
                                 <svg width="20" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.0008 3.77378C11.9583 2.01667 14.9833 2.075 16.8688 3.96447C18.7544 5.85393 18.8191 8.86417 17.0655 10.8275L9.99988 17.9042L2.93444 10.8275C1.18083 8.86417 1.24638 5.84918 3.13109 3.96447C5.01793 2.07763 8.03762 2.01406 10.0008 3.77378Z" stroke="#161616" stroke-width="1.4" fill="none"/></svg>
                             </button>
-                            <span class="product-card__badge product-card__badge--stock">В наличии</span>
-                            <img src="files/product2.jpg" alt="Кровать «Облако»" loading="lazy">
+                            <img src="files/product2.png" alt="Кровать «Облако»" loading="lazy">
                         </div>
                         <div class="product-card__body">
                             <p class="product-card__name">Кровать «Облако»</p>
@@ -131,156 +94,114 @@
                         </div>
                     </article>
 
-                    @@include('product.html', {"img": "files/product3.jpg", "name": "Стол барный «Боксер»", "price": "118 000 ₽"})
-                    @@include('product.html', {"img": "files/product4.jpg", "name": "Табурет домик для котиков «NATURALE»", "price": "52 990 ₽"})
-                    @@include('product.html', {"img": "files/product5.jpg", "name": "Табурет ящик «BIG N1»", "price": "46 300 ₽"})
+                    @@include('product.html', {"img": "files/product3.png", "name": "Стол барный «Боксер»", "price": "118 000 ₽"})
+                    @@include('product.html', {"img": "files/product4.png", "name": "Табурет домик для котиков «NATURALE»", "price": "52 990 ₽"})
+                    @@include('product.html', {"img": "files/product5.png", "name": "Табурет ящик «BIG N1»", "price": "46 300 ₽"})
 
-                    
 
-                    @@include('product.html', {"img": "files/product2.jpg", "name": "Кровать «Облако»", "price": "269 000 ₽"})
+                    @@include('product.html', {"img": "files/product2.png", "name": "Кровать «Облако»", "price": "269 000 ₽"})
+                    @@include('product.html', {"img": "files/product2.png", "name": "Кровать «Облако»", "price": "269 000 ₽"})
+                    @@include('product.html', {"img": "files/product3.png", "name": "Стол барный «Боксер» — белый", "price": "118 000 ₽"})
+                    @@include('product.html', {"img": "files/product4.png", "name": "Табурет домик для котиков «NATURALE»", "price": "52 990 ₽"})
+                    @@include('product.html', {"img": "files/product5.png", "name": "Тумба-стеллаж «Решето»", "price": "42 000 ₽"})
+
+                    @@include('product.html', {"img": "files/product1.png", "name": "Кровать односпальная с ящиком «Соломон»", "price": "109 000 ₽"})
+                    @@include('product.html', {"img": "files/product2.png", "name": "Кровать Кот «Обнимун»", "price": "127 000 ₽"})
+                    @@include('product.html', {"img": "files/product3.png", "name": "Табурет «Ласточка»", "price": "39 800 ₽"})
+                    @@include('product.html', {"img": "files/product4.png", "name": "Пуф-кот «Обнимун» синий", "price": "14 000 ₽"})
+                    @@include('product.html', {"img": "files/product5.png", "name": "Арт стул «Овале»", "price": "53 200 ₽"})
+
+                </div>
+            </div>
+
+            <section class="py-6">
+                <div class="cat6-promo">
+                    <div class="cat6-promo__left">
+                        <div class="arrow">
+                            <div class="arrow_btn prev" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-3983904276607ac2">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z" fill="#161616" />
+                                </svg>
+                            </div>
+                            <div class="arrow_btn next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-3983904276607ac2">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.1716 11.9993L8.2218 7.0496L9.636 5.6354L16 11.9993L9.636 18.3633L8.2218 16.9491L13.1716 11.9993Z" fill="#161616" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="swiper cat6-promo__swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" data-photo="files/promo.jpg">
+                                    @@include('product.html', {"img": "files/product5.png", "name": "Арт стул «Овале»", "price": "53 200 ₽"})
+                                </div>
+                                <div class="swiper-slide" data-photo="files/service.jpg">
+                                    @@include('product.html', {"img": "files/product1.png", "name": "Табурет «Минимализм»", "price": "7 390 ₽"})
+                                </div>
+                                <div class="swiper-slide" data-photo="files/promo.jpg">
+                                    @@include('product.html', {"img": "files/product3.png", "name": "Стол барный «Боксер»", "price": "118 000 ₽"})
+                                </div>
+                                <div class="swiper-slide" data-photo="files/service.jpg">
+                                    @@include('product.html', {"img": "files/product4.png", "name": "Табурет «NATURALE»", "price": "52 990 ₽"})
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="cat6-promo__photo">
+                        <img src="files/ju2.jpg" alt="">
+                    </div>
+
+                </div>
+                <div class="swiper-pagination cat6-promo__dots"></div>
+            </section>
+            <div class="container-xl">
+                <div class="catalog-pg__grid">
+
+
+
+                    @@include('product.html', {"img": "files/product1.png", "name": "Табурет «Минимализм»", "price": "7 390 ₽"})
 
                     <article class="product-card">
-                        <a href="#" class="product-card__link" aria-label="Табурет ящик «BIG N1» — беж"></a>
+                        <a href="#" class="product-card__link" aria-label="Кровать «Облако»"></a>
                         <div class="product-card__image">
+                            <div class="label">
+                                <div class="label-stock">
+                                    <span>В наличии</span>
+                                </div>
+                            </div>
                             <button class="product-card__wish js-wish" type="button" aria-label="В избранное">
                                 <svg width="20" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.0008 3.77378C11.9583 2.01667 14.9833 2.075 16.8688 3.96447C18.7544 5.85393 18.8191 8.86417 17.0655 10.8275L9.99988 17.9042L2.93444 10.8275C1.18083 8.86417 1.24638 5.84918 3.13109 3.96447C5.01793 2.07763 8.03762 2.01406 10.0008 3.77378Z" stroke="#161616" stroke-width="1.4" fill="none"/></svg>
                             </button>
-                            <span class="product-card__badge product-card__badge--new">NEW</span>
-                            <img src="files/product1.jpg" alt="Табурет ящик «BIG N1» — беж" loading="lazy">
+                            <img src="files/product2.png" alt="Кровать «Облако»" loading="lazy">
                         </div>
                         <div class="product-card__body">
-                            <p class="product-card__name">Табурет ящик «BIG N1» — беж</p>
+                            <p class="product-card__name">Кровать «Облако»</p>
                             <div class="product-card__line"></div>
-                            <p class="product-card__price">46 300 ₽</p>
+                            <p class="product-card__price">269 000 ₽</p>
                         </div>
                     </article>
 
-                    @@include('product.html', {"img": "files/product3.jpg", "name": "Стол барный «Боксер» — белый", "price": "118 000 ₽"})
-                    @@include('product.html', {"img": "files/product4.jpg", "name": "Табурет домик для котиков «NATURALE»", "price": "52 990 ₽"})
-                    @@include('product.html', {"img": "files/product5.jpg", "name": "Тумба-стеллаж «Решето»", "price": "42 000 ₽"})
+                    @@include('product.html', {"img": "files/product3.png", "name": "Стол барный «Боксер»", "price": "118 000 ₽"})
+                    @@include('product.html', {"img": "files/product4.png", "name": "Табурет домик для котиков «NATURALE»", "price": "52 990 ₽"})
+                    @@include('product.html', {"img": "files/product5.png", "name": "Табурет ящик «BIG N1»", "price": "46 300 ₽"})
 
-                    
 
-                    <div class="cat6-promo">
-                        <div class="cat6-promo__card">
-                            <span class="cat6-promo__new">NEW</span>
-                            <div class="cat6-promo__img-wr">
-                                <img src="files/product2.jpg" alt="Арт стул «Овале»">
-                            </div>
-                            <div class="cat6-promo__info">
-                                <p class="cat6-promo__name">Арт стул «Овале»</p>
-                                <p class="cat6-promo__price">53 200 ₽</p>
-                            </div>
-                            <a href="#" class="cat6-promo__see-btn">ПОСМОТРЕТЬ В ИНТЕРЬЕРЕ</a>
-                            <button class="cat6-promo__nav cat6-promo__nav--prev" type="button" aria-label="Назад">
-                                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M7 1L1 7l6 6" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </button>
-                            <button class="cat6-promo__nav cat6-promo__nav--next" type="button" aria-label="Вперёд">
-                                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1 1L7 7l-6 6" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </button>
-                        </div>
-                        <div class="cat6-promo__photo">
-                            <img src="files/service.jpg" alt="Интерьер с Арт стулом «Овале»">
-                        </div>
-                        <div class="cat6-promo__dots">
-                            <button class="cat6-promo__dot is-active" type="button" aria-label="Слайд 1"></button>
-                            <button class="cat6-promo__dot" type="button" aria-label="Слайд 2"></button>
-                            <button class="cat6-promo__dot" type="button" aria-label="Слайд 3"></button>
-                        </div>
-                    </div>
-
-                    
-
-                    @@include('product.html', {"img": "files/product1.jpg", "name": "Кровать односпальная с ящиком «Соломон»", "price": "109 000 ₽"})
-                    @@include('product.html', {"img": "files/product2.jpg", "name": "Кровать Кот «Обнимун»", "price": "127 000 ₽"})
-                    @@include('product.html', {"img": "files/product3.jpg", "name": "Табурет «Ласточка»", "price": "39 800 ₽"})
-                    @@include('product.html', {"img": "files/product4.jpg", "name": "Пуф-кот «Обнимун» синий", "price": "14 000 ₽"})
-                    @@include('product.html', {"img": "files/product5.jpg", "name": "Арт стул «Овале»", "price": "53 200 ₽"})
-
-                    
-
-                    @@include('product.html', {"img": "files/product1.jpg", "name": "Табурет «FULLMOON»", "price": "8 900 ₽"})
-                    @@include('product.html', {"img": "files/product2.jpg", "name": "Диван «Телепень» без кроликов", "price": "39 000 ₽"})
-                    @@include('product.html', {"img": "files/product3.jpg", "name": "Кухня «Шведу» двойной модуль", "price": "16 000 ₽"})
-                    @@include('product.html', {"img": "files/product4.jpg", "name": "ТВ стойка «Скобка X»", "price": "32 000 ₽"})
-                    @@include('product.html', {"img": "files/product5.jpg", "name": "Гардероб «Решето»", "price": "39 800 ₽"})
+                    @@include('product.html', {"img": "files/product2.png", "name": "Кровать «Облако»", "price": "269 000 ₽"})
+                    @@include('product.html', {"img": "files/product2.png", "name": "Кровать «Облако»", "price": "269 000 ₽"})
+                    @@include('product.html', {"img": "files/product3.png", "name": "Стол барный «Боксер» — белый", "price": "118 000 ₽"})
+                    @@include('product.html', {"img": "files/product4.png", "name": "Табурет домик для котиков «NATURALE»", "price": "52 990 ₽"})
+                    @@include('product.html', {"img": "files/product5.png", "name": "Тумба-стеллаж «Решето»", "price": "42 000 ₽"})
 
                 </div>
             </div>
-
-            
             <div class="container-xl">
-                <nav class="cat6-pagination" aria-label="Страницы каталога">
-                    <div class="cat6-pagination__pages">
-                        <a href="#" class="cat6-pagination__page is-active" aria-current="page">1</a>
-                        <a href="#" class="cat6-pagination__page">2</a>
-                        <a href="#" class="cat6-pagination__page">3</a>
-                        <span class="cat6-pagination__ellipsis">...</span>
-                        <a href="#" class="cat6-pagination__page">16</a>
-                    </div>
-                </nav>
+                @@include('page-pagination.html')
             </div>
 
         </section>
 
-        
-        <section class="cat6-interiors">
-            <div class="container-xl">
 
-                <div class="cat6-interiors__head">
-                    <h2 class="cat6-interiors__title">ИНТЕРЬЕРЫ</h2>
-                    <a href="#" class="cat6-interiors__all-link d-none d-lg-flex">
-                        ВСЕ ИНТЕРЬЕРЫ
-                        <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <path d="M1 6h14M9 1l6 5-6 5" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
-                </div>
-
-                <div class="cat6-interiors__grid">
-
-                    <a href="#" class="cat6-interiors__item">
-                        <div class="cat6-interiors__img-wr">
-                            <img src="files/dis1.jpg" alt="ARCHPOLE & Vologod: стул «Овале»" loading="lazy">
-                        </div>
-                        <p class="cat6-interiors__caption">ARCHPOLE & Vologod: стул «Овале» в интерьере с яркой историей</p>
-                    </a>
-
-                    <a href="#" class="cat6-interiors__item">
-                        <div class="cat6-interiors__img-wr">
-                            <img src="files/dis2.jpg" alt="Многофункциональная переговорка для компании SFT" loading="lazy">
-                        </div>
-                        <p class="cat6-interiors__caption">Многофункциональная переговорка для компании SFT</p>
-                    </a>
-
-                    <a href="#" class="cat6-interiors__item">
-                        <div class="cat6-interiors__img-wr">
-                            <img src="files/dis3.jpg" alt="КСЕНIАFLAT" loading="lazy">
-                        </div>
-                        <p class="cat6-interiors__caption">КСЕНIАFLAT: романтичная квартира в ретростиле на шаблоне</p>
-                    </a>
-
-                    <a href="#" class="cat6-interiors__item">
-                        <div class="cat6-interiors__img-wr">
-                            <img src="files/about.jpg" alt="Коллаборация ARCHPOLE" loading="lazy">
-                        </div>
-                        <p class="cat6-interiors__caption">Самая крупная коллаборация в рамках «ARCHPOLE к» — мы используем ваш дизайн за лето</p>
-                    </a>
-
-                </div>
-
-                
-                <div class="cat6-interiors__mob-foot d-lg-none">
-                    <span class="cat6-interiors__sep"></span>
-                    <a href="#" class="btn btn-dark">ВСЕ ИНТЕРЬЕРЫ</a>
-                </div>
-
-            </div>
-        </section>
+        @@include('interiors.html')
 
     </div>
     @@include('footer.html')
