@@ -9,20 +9,17 @@ document.addEventListener('DOMContentLoaded', function () {
     var eyeOpen     = eyeBtn  ? eyeBtn.querySelector('.js-eye-open')   : null;
     var eyeClosed   = eyeBtn  ? eyeBtn.querySelector('.js-eye-closed') : null;
 
-    // ── Enable / disable submit ───────────────────────────────────────
     function updateBtn() {
         if (!submitBtn) return;
         var ok = emailInput.value.trim().length > 0 && passInput.value.length > 0;
         submitBtn.disabled = !ok;
     }
 
-    // ── Clear email error ─────────────────────────────────────────────
     function clearEmailError() {
-        if (emailField) emailField.classList.remove('auth__field--error');
+        if (emailField) emailField.classList.remove('reg-field--error');
         if (emailError) emailError.hidden = true;
     }
 
-    // ── Email input ───────────────────────────────────────────────────
     if (emailInput) {
         emailInput.addEventListener('input', function () {
             updateBtn();
@@ -30,7 +27,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // ── Password input ────────────────────────────────────────────────
     if (passInput) {
         passInput.addEventListener('input', function () {
             updateBtn();
@@ -38,7 +34,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // ── Eye toggle ─────────────────────────────────────────────────────
     if (eyeBtn) {
         eyeBtn.addEventListener('click', function () {
             var isHidden = passInput.type === 'password';
@@ -48,7 +43,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // ── Form submit ───────────────────────────────────────────────────
     var form = document.querySelector('.js-auth-form');
     if (form) {
         form.addEventListener('submit', function (e) {
@@ -59,12 +53,11 @@ document.addEventListener('DOMContentLoaded', function () {
             var validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
             if (!validEmail) {
-                if (emailField) emailField.classList.add('auth__field--error');
+                if (emailField) emailField.classList.add('reg-field--error');
                 if (emailError) emailError.hidden = false;
                 return;
             }
 
-            // Success → go to profile
             window.location.href = 'profile.html';
         });
     }

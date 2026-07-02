@@ -57,7 +57,7 @@
                             <h2 class="profile-pg__section-title  mb-4">МОИ ЗАКАЗЫ</h2>
 
                             <!-- Filter tabs -->
-                            <div class="orders-tabs">
+                            <div class="orders-tabs mb-4">
                                 <button class="orders-tabs__btn is-active" data-tab="active" type="button">Активные</button>
                                 <button class="orders-tabs__btn" data-tab="done" type="button">Завершенные</button>
                             </div>
@@ -66,7 +66,7 @@
                             <div class="orders-panel is-active" id="panel-active">
                                 <div class="orders-list">
 
-                                    <article class="order-card js-order-card" data-order-id="o1">
+                                    <article class="order-card js-order-card py-4">
                                         <div class="order-card__info">
                                             <div class="order-card__head">
                                                 <span class="order-card__badge order-card__badge--delivered">ДОСТАВЛЕН</span>
@@ -81,9 +81,33 @@
                                         <div class="order-card__imgs">
                                             <div class="order-card__img"><img src="files/ch.png" alt=""></div>
                                         </div>
+                                        <div class="js-order-detail" hidden>
+                                            <div class="order-drawer__header">
+                                                <span class="order-card__badge order-card__badge--delivered">ДОСТАВЛЕН</span>
+                                                <h2 class="order-drawer__title">ЗАКАЗ №4452</h2>
+                                                <p class="order-drawer__total">100 000 ₽</p>
+                                                <div class="order-drawer__meta">
+                                                    <p>Способ оплаты: <span>наличные</span></p>
+                                                    <p>Дата заказа: <span>12.01.2026</span></p>
+                                                    <p>Доставка: <span>г. Москва, ул. Тверская, дом 1</span></p>
+                                                </div>
+                                            </div>
+                                            <div class="order-drawer__items">
+                                                <div class="order-drawer__item">
+                                                    <div class="order-drawer__item-img"><img src="files/ch.png" alt=""></div>
+                                                    <div class="order-drawer__item-info">
+                                                        <p class="order-drawer__item-name">Кровать односпальная с ящиком «Соломон»</p>
+                                                        <p class="order-drawer__item-price">100 000 ₽</p>
+                                                        <p class="order-drawer__item-spec">Размер: <span>600 × 600 × 400 мм</span></p>
+                                                        <p class="order-drawer__item-spec">Цвет: <span>красный матовый</span></p>
+                                                        <p class="order-drawer__item-spec">Кол-во: <span>1 шт.</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </article>
 
-                                    <article class="order-card js-order-card" data-order-id="o2">
+                                    <article class="order-card js-order-card py-4">
                                         <div class="order-card__info">
                                             <div class="order-card__head">
                                                 <span class="order-card__badge order-card__badge--in-work">В РАБОТЕ</span>
@@ -100,9 +124,43 @@
                                             <div class="order-card__img"><img src="files/ch.png" alt=""></div>
                                             <div class="order-card__img"><img src="files/ch.png" alt=""></div>
                                         </div>
+                                        <div class="js-order-detail" hidden>
+                                            <div class="order-drawer__header">
+                                                <span class="order-card__badge order-card__badge--in-work">В РАБОТЕ</span>
+                                                <h2 class="order-drawer__title">ЗАКАЗ №4452</h2>
+                                                <p class="order-drawer__total">125 000 ₽</p>
+                                                <div class="order-drawer__meta">
+                                                    <p>Способ оплаты: <span>наличные</span></p>
+                                                    <p>Дата заказа: <span>12.01.2026</span></p>
+                                                    <p>Доставка: <span>г. Москва, ул. Тверская, дом 1</span></p>
+                                                </div>
+                                            </div>
+                                            <div class="order-drawer__items">
+                                                <div class="order-drawer__item">
+                                                    <div class="order-drawer__item-img"><img src="files/ch.png" alt=""></div>
+                                                    <div class="order-drawer__item-info">
+                                                        <p class="order-drawer__item-name">Стул «Красный»</p>
+                                                        <p class="order-drawer__item-price">42 000 ₽</p>
+                                                        <p class="order-drawer__item-spec">Размер: <span>600 × 600 × 400 мм</span></p>
+                                                        <p class="order-drawer__item-spec">Цвет: <span>красный матовый</span></p>
+                                                        <p class="order-drawer__item-spec">Кол-во: <span>1 шт.</span></p>
+                                                    </div>
+                                                </div>
+                                                <div class="order-drawer__item">
+                                                    <div class="order-drawer__item-img"><img src="files/ch.png" alt=""></div>
+                                                    <div class="order-drawer__item-info">
+                                                        <p class="order-drawer__item-name">Столик кофейный «Красный»</p>
+                                                        <p class="order-drawer__item-price">41 000 ₽</p>
+                                                        <p class="order-drawer__item-spec">Размер: <span>600 × 600 × 400 мм</span></p>
+                                                        <p class="order-drawer__item-spec">Цвет: <span>красный матовый</span></p>
+                                                        <p class="order-drawer__item-spec">Кол-во: <span>1 шт.</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </article>
 
-                                    <article class="order-card js-order-card" data-order-id="o3">
+                                    <article class="order-card js-order-card py-4">
                                         <div class="order-card__info">
                                             <div class="order-card__head">
                                                 <span class="order-card__badge order-card__badge--in-work">В РАБОТЕ</span>
@@ -119,9 +177,53 @@
                                             <div class="order-card__img"><img src="files/ch.png" alt=""></div>
                                             <div class="order-card__img"><img src="files/ch.png" alt=""></div>
                                         </div>
+                                        <div class="js-order-detail" hidden>
+                                            <div class="order-drawer__header">
+                                                <span class="order-card__badge order-card__badge--in-work">В РАБОТЕ</span>
+                                                <h2 class="order-drawer__title">ЗАКАЗ №4564</h2>
+                                                <p class="order-drawer__total">278 000 ₽</p>
+                                                <div class="order-drawer__meta">
+                                                    <p>Способ оплаты: <span>наличные</span></p>
+                                                    <p>Дата заказа: <span>12.01.2026</span></p>
+                                                    <p>Доставка: <span>г. Москва, ул. Тверская, дом 1</span></p>
+                                                </div>
+                                            </div>
+                                            <div class="order-drawer__items">
+                                                <div class="order-drawer__item">
+                                                    <div class="order-drawer__item-img"><img src="files/ch.png" alt=""></div>
+                                                    <div class="order-drawer__item-info">
+                                                        <p class="order-drawer__item-name">Кровать «Облако»</p>
+                                                        <p class="order-drawer__item-price">228 000 ₽</p>
+                                                        <p class="order-drawer__item-spec">Размер: <span>600 × 600 × 400 мм</span></p>
+                                                        <p class="order-drawer__item-spec">Цвет: <span>красный матовый</span></p>
+                                                        <p class="order-drawer__item-spec">Кол-во: <span>1 шт.</span></p>
+                                                    </div>
+                                                </div>
+                                                <div class="order-drawer__item">
+                                                    <div class="order-drawer__item-img"><img src="files/ch.png" alt=""></div>
+                                                    <div class="order-drawer__item-info">
+                                                        <p class="order-drawer__item-name">Табурет «Ластонка»</p>
+                                                        <p class="order-drawer__item-price">28 000 ₽</p>
+                                                        <p class="order-drawer__item-spec">Размер: <span>600 × 600 × 400 мм</span></p>
+                                                        <p class="order-drawer__item-spec">Цвет: <span>красный матовый</span></p>
+                                                        <p class="order-drawer__item-spec">Кол-во: <span>1 шт.</span></p>
+                                                    </div>
+                                                </div>
+                                                <div class="order-drawer__item">
+                                                    <div class="order-drawer__item-img"><img src="files/ch.png" alt=""></div>
+                                                    <div class="order-drawer__item-info">
+                                                        <p class="order-drawer__item-name">Стол рабочий</p>
+                                                        <p class="order-drawer__item-price">22 000 ₽</p>
+                                                        <p class="order-drawer__item-spec">Размер: <span>600 × 600 × 400 мм</span></p>
+                                                        <p class="order-drawer__item-spec">Цвет: <span>красный матовый</span></p>
+                                                        <p class="order-drawer__item-spec">Кол-во: <span>1 шт.</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </article>
 
-                                    <article class="order-card js-order-card" data-order-id="o4">
+                                    <article class="order-card js-order-card py-4">
                                         <div class="order-card__info">
                                             <div class="order-card__head">
                                                 <span class="order-card__badge order-card__badge--cancelled">ОТМЕНЕН</span>
@@ -136,6 +238,40 @@
                                         <div class="order-card__imgs">
                                             <div class="order-card__img"><img src="files/ch.png" alt=""></div>
                                             <div class="order-card__img"><img src="files/ch.png" alt=""></div>
+                                        </div>
+                                        <div class="js-order-detail" hidden>
+                                            <div class="order-drawer__header">
+                                                <span class="order-card__badge order-card__badge--cancelled">ОТМЕНЕН</span>
+                                                <h2 class="order-drawer__title">ЗАКАЗ №8646</h2>
+                                                <p class="order-drawer__total">298 000 ₽</p>
+                                                <div class="order-drawer__meta">
+                                                    <p>Способ оплаты: <span>наличные</span></p>
+                                                    <p>Дата заказа: <span>12.01.2026</span></p>
+                                                    <p>Доставка: <span>г. Москва, ул. Тверская, дом 1</span></p>
+                                                </div>
+                                            </div>
+                                            <div class="order-drawer__items">
+                                                <div class="order-drawer__item">
+                                                    <div class="order-drawer__item-img"><img src="files/ch.png" alt=""></div>
+                                                    <div class="order-drawer__item-info">
+                                                        <p class="order-drawer__item-name">Тумба чёрная</p>
+                                                        <p class="order-drawer__item-price">148 000 ₽</p>
+                                                        <p class="order-drawer__item-spec">Размер: <span>600 × 600 × 400 мм</span></p>
+                                                        <p class="order-drawer__item-spec">Цвет: <span>красный матовый</span></p>
+                                                        <p class="order-drawer__item-spec">Кол-во: <span>1 шт.</span></p>
+                                                    </div>
+                                                </div>
+                                                <div class="order-drawer__item">
+                                                    <div class="order-drawer__item-img"><img src="files/ch.png" alt=""></div>
+                                                    <div class="order-drawer__item-info">
+                                                        <p class="order-drawer__item-name">Кровать «Золото»</p>
+                                                        <p class="order-drawer__item-price">150 000 ₽</p>
+                                                        <p class="order-drawer__item-spec">Размер: <span>600 × 600 × 400 мм</span></p>
+                                                        <p class="order-drawer__item-spec">Цвет: <span>красный матовый</span></p>
+                                                        <p class="order-drawer__item-spec">Кол-во: <span>1 шт.</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </article>
 
@@ -171,9 +307,7 @@
                         <path d="M1 1L15 15M15 1L1 15" stroke="#161616" stroke-width="1.5" stroke-linecap="round"/>
                     </svg>
                 </button>
-                <div class="order-drawer__scroll" id="drawerScroll">
-                    <!-- populated by JS -->
-                </div>
+                <div class="order-drawer__scroll" id="drawerScroll"></div>
                 <div class="order-drawer__footer">
                     <a href="#" class="order-drawer__support">НАПИСАТЬ В ПОДДЕРЖКУ</a>
                 </div>

@@ -8,10 +8,9 @@ document.addEventListener('DOMContentLoaded', function () {
     var confirmField = document.getElementById('confirmPassField');
     var passError    = document.getElementById('passError');
 
-    // ── Eye toggle + enable-button trigger ───────────────────────
-    document.querySelectorAll('.sec-field').forEach(function (wrap) {
-        var input = wrap.querySelector('.sec-field__input');
-        var eye   = wrap.querySelector('.sec-field__eye');
+    document.querySelectorAll('.reg-field--pass').forEach(function (wrap) {
+        var input = wrap.querySelector('.reg-field__input');
+        var eye   = wrap.querySelector('.reg-field__eye');
         if (!input || !eye) return;
 
         input.addEventListener('input', function () {
@@ -25,7 +24,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // ── Submit button: grey (disabled) / black (enabled) ─────────
     function updateSubmitBtn() {
         if (!submitBtn) return;
         submitBtn.disabled = !(
@@ -35,14 +33,12 @@ document.addEventListener('DOMContentLoaded', function () {
         );
     }
 
-    // ── Clear error state ─────────────────────────────────────────
     function clearErrors() {
-        if (newField)     newField.classList.remove('sec-field--error');
-        if (confirmField) confirmField.classList.remove('sec-field--error');
+        if (newField)     newField.classList.remove('reg-field--error');
+        if (confirmField) confirmField.classList.remove('reg-field--error');
         if (passError)    passError.hidden = true;
     }
 
-    // ── Form submit ───────────────────────────────────────────────
     var form = document.querySelector('.js-sec-form');
     if (form) {
         form.addEventListener('submit', function (e) {
@@ -50,20 +46,19 @@ document.addEventListener('DOMContentLoaded', function () {
             clearErrors();
 
             if (newInput.value !== confirmInput.value) {
-                if (newField)     newField.classList.add('sec-field--error');
-                if (confirmField) confirmField.classList.add('sec-field--error');
+                if (newField)     newField.classList.add('reg-field--error');
+                if (confirmField) confirmField.classList.add('reg-field--error');
                 if (passError)    passError.hidden = false;
                 return;
             }
 
             form.reset();
-            document.querySelectorAll('.sec-field__eye').forEach(function (btn) { btn.hidden = true; });
+            document.querySelectorAll('.reg-field__eye').forEach(function (btn) { btn.hidden = true; });
             if (submitBtn) submitBtn.disabled = true;
             showToast('Пароль успешно изменен');
         });
     }
 
-    // ── Toast ─────────────────────────────────────────────────────
     var toast     = document.getElementById('profileToast');
     var toastText = document.getElementById('profileToastText');
     var toastTimer;
@@ -89,7 +84,6 @@ document.addEventListener('DOMContentLoaded', function () {
     var toastClose = document.querySelector('.js-toast-close');
     if (toastClose) toastClose.addEventListener('click', hideToast);
 
-    // ── Logout modal ──────────────────────────────────────────────
     var logoutModal = document.getElementById('logoutModal');
     if (logoutModal) {
         document.querySelectorAll('.js-logout-trigger').forEach(function (el) {

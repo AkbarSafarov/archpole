@@ -30,17 +30,6 @@ document.addEventListener('DOMContentLoaded', function () {
     var burgerClose   = burgerMenu ? burgerMenu.querySelector('.js-burger-close') : null;
     var burgerOverlay = burgerMenu ? burgerMenu.querySelector('.js-burger-overlay') : null;
 
-    var levelHistory = ['root'];
-
-    function showLevel(id) {
-        if (!burgerMenu) return;
-        burgerMenu.querySelectorAll('.burger-menu__level').forEach(function (lvl) {
-            lvl.classList.remove('is-active');
-        });
-        var target = burgerMenu.querySelector('.burger-menu__level[data-id="' + id + '"]');
-        if (target) target.classList.add('is-active');
-    }
-
     function openMenu() {
         if (!burgerMenu) return;
         burgerMenu.classList.add('is-open');
@@ -56,39 +45,29 @@ document.addEventListener('DOMContentLoaded', function () {
         document.body.style.overflow = '';
         if (burgerBtn) burgerBtn.setAttribute('aria-expanded', 'false');
         setTimeout(function () {
-            levelHistory = ['root'];
-            showLevel('root');
+            burgerMenu.querySelectorAll('.burger-menu__sub-list.is-open').forEach(function (ul) {
+                ul.classList.remove('is-open');
+            });
         }, 320);
     }
 
-    if (burgerBtn) {
-        burgerBtn.addEventListener('click', openMenu);
-    }
-
-    if (burgerClose) {
-        burgerClose.addEventListener('click', closeMenu);
-    }
-
-    if (burgerOverlay) {
-        burgerOverlay.addEventListener('click', closeMenu);
-    }
+    if (burgerBtn)     burgerBtn.addEventListener('click', openMenu);
+    if (burgerClose)   burgerClose.addEventListener('click', closeMenu);
+    if (burgerOverlay) burgerOverlay.addEventListener('click', closeMenu);
 
     if (burgerMenu) {
-        burgerMenu.querySelectorAll('.js-burger-nav').forEach(function (link) {
+        burgerMenu.querySelectorAll('.js-burger-toggle').forEach(function (link) {
             link.addEventListener('click', function (e) {
                 e.preventDefault();
-                var target = this.dataset.target;
-                if (!target) return;
-                levelHistory.push(target);
-                showLevel(target);
+                var subList = this.parentElement.querySelector(':scope > .burger-menu__sub-list');
+                if (subList) subList.classList.add('is-open');
             });
         });
 
         burgerMenu.querySelectorAll('.js-burger-back').forEach(function (btn) {
             btn.addEventListener('click', function () {
-                if (levelHistory.length <= 1) return;
-                levelHistory.pop();
-                showLevel(levelHistory[levelHistory.length - 1]);
+                var subList = this.closest('.burger-menu__sub-list');
+                if (subList) subList.classList.remove('is-open');
             });
         });
     }
@@ -98,8 +77,4 @@ document.addEventListener('DOMContentLoaded', function () {
             closeMenu();
         }
     });
-
-    if (burgerMenu) {
-        burgerMenu.querySelector('.burger-menu__overlay').addEventListener('click', closeMenu);
-    }
 });

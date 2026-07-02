@@ -95,7 +95,7 @@
     }
 
     &__swiper {
-        min-height: 160px; // prevents collapse with fade stacking
+        min-height: 160px;
 
         .swiper-slide { height: auto; }
     }

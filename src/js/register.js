@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var required = [nameInput, surnameInput, emailInput, phoneInput, passInput, confirmInput];
 
-    // ── Enable / disable submit ───────────────────────────────────────
     function updateBtn() {
         if (!submitBtn) return;
         var allFilled = required.every(function (el) {
@@ -22,18 +21,15 @@ document.addEventListener('DOMContentLoaded', function () {
         submitBtn.disabled = !(allFilled && agreed);
     }
 
-    // ── Simple text inputs ────────────────────────────────────────────
     [nameInput, surnameInput, emailInput].forEach(function (el) {
         if (el) el.addEventListener('input', updateBtn);
     });
 
-    // ── Phone mask ────────────────────────────────────────────────────
     if (typeof IMask !== 'undefined' && phoneInput) {
         IMask(phoneInput, { mask: '+{7} 000 000-00-00' });
     }
     if (phoneInput) phoneInput.addEventListener('input', updateBtn);
 
-    // ── Eye toggles ───────────────────────────────────────────────────
     function setupEye(input, eyeBtn) {
         if (!input || !eyeBtn) return;
 
@@ -55,10 +51,8 @@ document.addEventListener('DOMContentLoaded', function () {
     setupEye(passInput,    document.getElementById('regPassEye'));
     setupEye(confirmInput, document.getElementById('regConfirmEye'));
 
-    // ── Consent checkbox ──────────────────────────────────────────────
     if (consentCheck) consentCheck.addEventListener('change', updateBtn);
 
-    // ── Form submit ───────────────────────────────────────────────────
     var form = document.querySelector('.js-reg-form');
     if (form) {
         form.addEventListener('submit', function (e) {

@@ -29,7 +29,6 @@ document.addEventListener('DOMContentLoaded', function () {
         return '<button class="promo-copy js-promo-copy" data-code="' + code + '" type="button" title="Скопировать">' + COPY_SVG + '</button>';
     }
 
-    // ── Add-promo modal open / close ──────────────────────────────
     var modal       = document.getElementById('promoModal');
     var clientInput = document.getElementById('promoClient');
     var discountInput = document.getElementById('promoDiscount');
@@ -55,7 +54,6 @@ document.addEventListener('DOMContentLoaded', function () {
         if (e.key === 'Escape' && modal && !modal.hidden) modal.hidden = true;
     });
 
-    // ── Generate promo code ───────────────────────────────────────
     var promoEmpty     = document.getElementById('promoEmpty');
     var promoTable     = document.getElementById('promoTable');
     var promoTableBody = document.getElementById('promoTableBody');
@@ -75,7 +73,6 @@ document.addEventListener('DOMContentLoaded', function () {
             var displayDate = formatDate(date);
             var pct         = discount.replace('%', '') + '%';
 
-            // Add table row
             if (promoTableBody) {
                 var tr = document.createElement('tr');
                 tr.innerHTML =
@@ -88,7 +85,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 bindCopy(tr);
             }
 
-            // Add mobile card
             if (promoCards) {
                 var card = document.createElement('div');
                 card.className = 'promo-card';
@@ -105,18 +101,15 @@ document.addEventListener('DOMContentLoaded', function () {
                 bindCopy(card);
             }
 
-            // Show lists, hide empty state
             if (promoEmpty) promoEmpty.hidden = true;
             if (promoTable) promoTable.hidden = false;
             if (promoCards) promoCards.hidden = false;
 
-            // Reset and close modal
             form.reset();
             if (modal) modal.hidden = true;
         });
     }
 
-    // ── Toast ─────────────────────────────────────────────────────
     var toast     = document.getElementById('profileToast');
     var toastText = document.getElementById('profileToastText');
     var toastTimer;
@@ -142,7 +135,6 @@ document.addEventListener('DOMContentLoaded', function () {
     var toastClose = document.querySelector('.js-toast-close');
     if (toastClose) toastClose.addEventListener('click', hideToast);
 
-    // ── Copy to clipboard ─────────────────────────────────────────
     function bindCopy(container) {
         container.querySelectorAll('.js-promo-copy').forEach(function (btn) {
             btn.addEventListener('click', function (e) {
@@ -158,7 +150,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     bindCopy(document);
 
-    // ── Logout modal ──────────────────────────────────────────────
     var logoutModal = document.getElementById('logoutModal');
     if (logoutModal) {
         document.querySelectorAll('.js-logout-trigger').forEach(function (el) {

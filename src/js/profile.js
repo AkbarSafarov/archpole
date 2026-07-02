@@ -1,12 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-    // ── Date mask (dd.mm.yyyy) ────────────────────────────────────
     var dateInput = document.getElementById('p-birth');
     if (dateInput && typeof IMask !== 'undefined') {
         IMask(dateInput, { mask: '00.00.0000' });
     }
 
-    // ── Phone mask + send button ──────────────────────────────────
     var phoneInput   = document.getElementById('p-phone');
     var phoneSendBtn = document.querySelector('.js-phone-send');
     var smsRow       = document.getElementById('smsRow');
@@ -23,7 +21,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Show SMS row when ► is clicked
     if (phoneSendBtn && smsRow) {
         phoneSendBtn.addEventListener('click', function () {
             phoneSendBtn.hidden = true;
@@ -32,14 +29,12 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Enable ПОДТВЕРДИТЬ when code is typed
     if (smsInput && verifyBtn) {
         smsInput.addEventListener('input', function () {
             verifyBtn.disabled = this.value.trim().length === 0;
         });
     }
 
-    // Verify code → hide row + toast
     if (verifyBtn) {
         verifyBtn.addEventListener('click', function () {
             if (smsRow) smsRow.hidden = true;
@@ -47,7 +42,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // ── Personal data form → toast ────────────────────────────────
     var personalForm = document.querySelector('.js-personal-form');
     if (personalForm) {
         personalForm.addEventListener('submit', function (e) {
@@ -56,7 +50,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // ── Toast ─────────────────────────────────────────────────────
     var toast     = document.getElementById('profileToast');
     var toastText = document.getElementById('profileToastText');
     var toastTimer;
@@ -82,7 +75,6 @@ document.addEventListener('DOMContentLoaded', function () {
     var toastClose = document.querySelector('.js-toast-close');
     if (toastClose) toastClose.addEventListener('click', hideToast);
 
-    // ── Logout modal ──────────────────────────────────────────────
     var logoutModal = document.getElementById('logoutModal');
     if (logoutModal) {
         document.querySelectorAll('.js-logout-trigger').forEach(function (el) {

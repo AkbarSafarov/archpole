@@ -1,5 +1,4 @@
-﻿// Container padding: 32px on PC/tablet, 12px on mobile
-[class*="container"] {
+﻿[class*="container"] {
     --bs-gutter-x: 64px;
 
     @media (max-width: 767px) {
@@ -7,7 +6,6 @@
     }
 }
 
-// Custom spacing level 6: 56px (PC + tablet ≤991px), 48px (mobile ≤767px)
 .pt-6 { padding-top: 56px !important; }
 .pb-6 { padding-bottom: 56px !important; }
 .py-6 { padding-top: 56px !important; padding-bottom: 56px !important; }

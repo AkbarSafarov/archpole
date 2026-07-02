@@ -5,8 +5,6 @@
     background: #fff;
 }
 
-// ── Announcement bar ─────────────────────────────────────────────────────────
-
 .header__announce {
     background: #ffc800;
     padding: 8px 0px;
@@ -41,8 +39,6 @@
     &:hover { opacity: 1; }
 }
 
-// ── Main row ─────────────────────────────────────────────────────────────────
-
 .header__main {
     padding: 24px 0;
 
@@ -65,8 +61,6 @@
     }
 }
 
-// ── Logo ─────────────────────────────────────────────────────────────────────
-
 .header__logo {
     flex: 0 0 156px;
     text-decoration: none;
@@ -80,8 +74,6 @@
         }
     }
 }
-
-// ── Desktop navigation ────────────────────────────────────────────────────────
 
 .header__nav {
     align-items: center;
@@ -113,15 +105,11 @@
     &:hover { opacity: 0.5; }
 }
 
-// ── Right group ───────────────────────────────────────────────────────────────
-
 .header__right {
     gap: 8px;
     flex-shrink: 0;
     margin-left: auto;
 }
-
-// ── Search ────────────────────────────────────────────────────────────────────
 
 .header__search {
     display: flex;
@@ -153,8 +141,6 @@
     &::placeholder { color: #b5b5b5;}
 }
 
-// ── Icon buttons ──────────────────────────────────────────────────────────────
-
 .header__icon-btn {
     display: flex;
     align-items: center;
@@ -180,19 +166,11 @@
     }
 }
 
-// ── Mobile left/right ─────────────────────────────────────────────────────────
-
 .header__mob-left,
 .header__mob-right {
     gap: 6px;
     flex-shrink: 0;
 }
-
-.header__mob-right {
-
-}
-
-// ── Mobile nav drawer ─────────────────────────────────────────────────────────
 
 .header__drawer {
     border-bottom: 1px solid #e8e8e8;

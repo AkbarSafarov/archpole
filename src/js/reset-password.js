@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (!passInput || !confirmInput || !submitBtn) return;
 
-    // ── Eye toggles ───────────────────────────────────────────────────
     function setupEye(input, eyeBtn) {
         if (!input || !eyeBtn) return;
 
@@ -31,7 +30,6 @@ document.addEventListener('DOMContentLoaded', function () {
     setupEye(passInput,    document.getElementById('rpPassEye'));
     setupEye(confirmInput, document.getElementById('rpConfirmEye'));
 
-    // ── Enable button when both fields ≥ 6 chars ─────────────────────
     function updateBtn() {
         submitBtn.disabled = !(
             passInput.value.length >= 6 &&
@@ -39,10 +37,8 @@ document.addEventListener('DOMContentLoaded', function () {
         );
     }
 
-    // confirmInput input listener (passInput is handled inside setupEye)
     confirmInput.addEventListener('input', updateBtn);
 
-    // ── Submit ────────────────────────────────────────────────────────
     submitBtn.addEventListener('click', function () {
         step1.hidden   = true;
         success.hidden = false;
