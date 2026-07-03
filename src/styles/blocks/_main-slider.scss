@@ -58,7 +58,8 @@
 
     &__title {
         font-family: var(--second-family);
-        font-weight: 600;
+        font-weight: 400;
+        -webkit-text-stroke: 1px #fff;
         font-size: 96px;
         line-height: 80%;
         color: #fff;

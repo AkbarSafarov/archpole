@@ -191,7 +191,8 @@
 
 	&__title {
 		font-family: var(--second-family);
-		font-weight: 600;
+		font-weight: 400;
+		-webkit-text-stroke: 1px #161616;
 		font-size: 34px;
 		line-height: 100%;
 		color: #161616;
@@ -441,7 +442,8 @@
 		border: none;
 		cursor: pointer;
 		font-family: var(--second-family);
-		font-weight: 600;
+		font-weight: 400;
+		-webkit-text-stroke: 1px #161616;
 		font-size: 28px;
 		line-height: 100%;
 		color: #161616;
@@ -600,7 +602,8 @@
 
 	&__title {
 		font-family: var(--second-family);
-		font-weight: 600;
+		font-weight: 400;
+		-webkit-text-stroke: 1px #161616;
 		font-size: 56px;
 		line-height: 100%;
 		color: #161616;

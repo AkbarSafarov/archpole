@@ -22,6 +22,11 @@ body {
     font: $siteFontSize $siteFontFamily;
     line-height: 1;
     background: #fff;
+    text-box-edge: cap alphabetic;
+    text-box-trim: trim-both;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 h2, h3, h4, h5, h6 {
@@ -446,7 +451,8 @@ button {
 
 .hero__title {
     font-family: var(--second-family);
-    font-weight: 600;
+    font-weight: 400;
+    -webkit-text-stroke: 1px #161616;
     font-size: 56px;
     line-height: 100%;
     color: #161616;
@@ -477,150 +483,6 @@ button {
     }
 }
 
-.modal.modal-right .modal-dialog {
-    right: 0;
-}
-
-.modal.modal-left .modal-dialog {
-    left: 0;
-}
-
-.modal .modal-dialog {
-    position: fixed;
-    margin: 0;
-    top: 0;
-    bottom: 0;
-    height: 100%;
-    width: 541px; 
-
-    @media all and (max-width: 767px){
-        width: 100%;
-    }
-
-    .modal-content {
-        box-shadow: 0 0 32px 0 rgba(76, 76, 71, 0.16), 0 4px 8px 0 rgba(45, 45, 42, 0.16);
-        background: var(--brand-white);
-    }
-
-    .btn-close {
-        background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.2806 18.2194C19.3502 18.2891 19.4055 18.3718 19.4432 18.4629C19.4809 18.5539 19.5003 18.6515 19.5003 18.7501C19.5003 18.8486 19.4809 18.9462 19.4432 19.0372C19.4055 19.1283 19.3502 19.211 19.2806 19.2807C19.2109 19.3504 19.1281 19.4056 19.0371 19.4433C18.9461 19.4811 18.8485 19.5005 18.7499 19.5005C18.6514 19.5005 18.5538 19.4811 18.4628 19.4433C18.3717 19.4056 18.289 19.3504 18.2193 19.2807L11.9999 13.0604L5.78055 19.2807C5.63982 19.4214 5.44895 19.5005 5.24993 19.5005C5.05091 19.5005 4.86003 19.4214 4.7193 19.2807C4.57857 19.1399 4.49951 18.9491 4.49951 18.7501C4.49951 18.551 4.57857 18.3602 4.7193 18.2194L10.9396 12.0001L4.7193 5.78068C4.57857 5.63995 4.49951 5.44907 4.49951 5.25005C4.49951 5.05103 4.57857 4.86016 4.7193 4.71943C4.86003 4.5787 5.05091 4.49963 5.24993 4.49963C5.44895 4.49963 5.63982 4.5787 5.78055 4.71943L11.9999 10.9397L18.2193 4.71943C18.36 4.5787 18.5509 4.49963 18.7499 4.49963C18.949 4.49963 19.1398 4.5787 19.2806 4.71943C19.4213 4.86016 19.5003 5.05103 19.5003 5.25005C19.5003 5.44907 19.4213 5.63995 19.2806 5.78068L13.0602 12.0001L19.2806 18.2194Z' fill='%23191415' fill-opacity='0.8' /%3E%3C/svg%3E") 50% no-repeat;
-        width: 48px;
-        height: 48px;
-        top: 12px;
-        right: 12px;
-        position: absolute;
-        padding: 0;
-        outline: none;
-        z-index: 100;
-        opacity: 1;
-    }
-
-    .modal-header {
-        padding: 24px 60px 24px 24px;
-        border: none;
-
-        @media all and (max-width: 767px) {
-            padding: 16px 50px 16px 16px;
-            align-items: center !important;
-        }
-    }
-
-    .modal-title {
-        font-family: var(--third-family);
-        font-weight: 400;
-        font-size: 28px;
-        line-height: 114%;
-        letter-spacing: -0.01em;
-        color: var(--brand-black);
-
-        @media all and (max-width: 767px) {
-            font-size: 26px;
-        }
-    }
-
-    .modal-body {
-        overflow-y: auto;
-    }
-}
-
-.modal.modal-right {
-    &.modal-map {
-
-        .modal-body {
-            flex: none;
-        }
-
-        @media all and (max-width: 767px){
-            .modal-body {
-                order: 1;
-            }
-
-            .modal-header {
-                order: 1;
-            }
-
-            .btn_button {
-                width: 100%;
-                padding: 14px 24px;
-            }
-        }
-    }
-}
-
-.modal .modal-content {
-    height: 100%;
-    border-radius: 0;
-}
-
-.modal.modal-right .modal-dialog {
-    transform: translateX(100%);
-    transition: transform .3s ease-out;
-}
-
-.modal.modal-right.show .modal-dialog {
-    transform: translateX(0);
-}
-
-.modal.modal-left .modal-dialog {
-    transform: translateX(-100%);
-    transition: transform .3s ease-out;
-}
-
-.modal.modal-left.show .modal-dialog {
-    transform: translateX(0);
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-5px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.catalog_list {
-    padding: 32px 0 48px;
-
-    @media all and (max-width: 767px){
-        padding: 24px 0;
-    }
-
-    .row {
-        --bs-gutter-y: 1.5rem;    
-        --bs-gutter-x: 1.5rem;    
-    }
-
-    .item {
-        display: flex;
-    }
-
-    .product_item  {
-        width: 100%;
-    }
-}
 
 .page_list {
 

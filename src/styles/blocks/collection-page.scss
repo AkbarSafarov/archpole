@@ -74,7 +74,8 @@
 
 	&__title {
 		font-family: var(--second-family);
-		font-size: 72px;
+		font-weight: 400;
+		-webkit-text-stroke: 1px #161616;
 		font-weight: 600;
 		line-height: 1;
 		color: #161616;
