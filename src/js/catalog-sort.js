@@ -51,7 +51,6 @@ document.addEventListener('DOMContentLoaded', function () {
     if (subnavTabs.length) {
         subnavTabs.forEach(function (tab) {
             tab.addEventListener('click', function (e) {
-                e.preventDefault();
                 subnavTabs.forEach(function (t) { t.classList.remove('is-active'); });
                 this.classList.add('is-active');
             });
@@ -103,9 +102,12 @@ document.addEventListener('DOMContentLoaded', function () {
     var promoEl = document.querySelector('.cat6-promo__swiper');
     if (promoEl) {
         var promoPhoto = document.querySelector('.cat6-promo__photo img');
-        var originalSlides = Array.from(promoEl.querySelectorAll('.swiper-slide')).map(function (s) {
-            return s.dataset.photo || null;
-        });
+
+        function updatePromoPhoto(swiper) {
+            var activeSlide = swiper.slides[swiper.activeIndex];
+            var photo = activeSlide && activeSlide.dataset.photo;
+            if (photo && promoPhoto) promoPhoto.src = photo;
+        }
 
         new Swiper(promoEl, {
             loop: true,
@@ -120,9 +122,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 clickable: true
             },
             on: {
+                init: function () {
+                    updatePromoPhoto(this);
+                },
                 slideChange: function () {
-                    var photo = originalSlides[this.realIndex];
-                    if (photo && promoPhoto) promoPhoto.src = photo;
+                    updatePromoPhoto(this);
                 }
             }
         });

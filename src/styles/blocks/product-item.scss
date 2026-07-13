@@ -1,3 +1,20 @@
+.label {
+
+    span {
+        display: inline-block;
+        position: relative;
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 100%;
+        text-transform: uppercase;
+        text-align: center;
+        background: var(--v-sticker-label, #161616);
+        color: #fff;
+        padding: 4px 4px;
+    }
+}
+
 .product-card {
     display: flex;
     flex-direction: column;
@@ -37,31 +54,6 @@
         top: 0;
         left: 0;
         font-size: 0;
-
-        span {
-            display: inline-block;
-            position: relative;
-            font-family: var(--font-family);
-            font-weight: 500;
-            font-size: 12px;
-            line-height: 100%;
-            text-transform: uppercase;
-            text-align: center;
-            color: #fff;
-            padding: 4px 4px;
-        }
-
-        &-new {
-            span {
-                background: #161616;
-            }
-        }
-
-        &-stock {
-            span {
-                background: #161616;
-            }
-        }
     }
 
     &:hover {

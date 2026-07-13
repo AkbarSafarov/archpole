@@ -160,39 +160,12 @@
 		margin-bottom: 14px;
 	}
 
-	&__badge {
-		display: inline-block;
-		font-family: var(--font-family);
-		font-weight: 500;
-		font-size: 12px;
-		line-height: 100%;
-		text-transform: uppercase;
-		color: #fff;
-		padding: 4px 4px;
 
-		&--new {
-			background: #e74c3c;
-			color: #fff;
-		}
-
-		&--stock {
-			background: #161616;
-		}
-
-		&--sale {
-			background: #e74c3c;
-			color: #fff;
-		}
-
-		@media (max-width: 991px) {
-			font-size: 10px;
-		}
-	}
 
 	&__title {
 		font-family: var(--second-family);
 		font-weight: 400;
-		-webkit-text-stroke: 1px #161616;
+		-webkit-text-stroke: .8px #161616;
 		font-size: 34px;
 		line-height: 100%;
 		color: #161616;
@@ -443,7 +416,7 @@
 		cursor: pointer;
 		font-family: var(--second-family);
 		font-weight: 400;
-		-webkit-text-stroke: 1px #161616;
+		-webkit-text-stroke: .8px #161616;
 		font-size: 28px;
 		line-height: 100%;
 		color: #161616;

@@ -80,6 +80,7 @@
     gap: 32px;
     flex: 1;
     justify-content: start;
+    padding: 4px 0 0 39px;
 
     ul {
         padding: 0;
@@ -94,7 +95,7 @@
 .header__nav-link {
     font-family: var(--second-family);
     font-weight: 400;
-    -webkit-text-stroke: 1px #161616;
+    -webkit-text-stroke: .6px #161616;
     font-size: 22px;
     line-height: 100%;
     text-transform: uppercase;
@@ -102,6 +103,14 @@
     text-decoration: none;
     white-space: nowrap;
     transition: opacity 0.15s;
+    text-box-edge: cap alphabetic;
+    text-box-trim: trim-both;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-style: normal;
+    letter-spacing: 0;
+    vertical-align: middle;
 
     &:hover { opacity: 0.5; }
 }
@@ -119,7 +128,7 @@
     border: 2px solid #161616;
     padding: 0 12px 0 6px;
     height: 32px;
-    margin-right: 8px;
+    margin-right: 0;
 }
 
 .header__search-icon {
@@ -137,7 +146,8 @@
     line-height: 100%;
     text-transform: uppercase;
     color: #000;
-    width: 206px;
+    width: 209px;
+    padding: 3px 0 0 5px;
 
     &::placeholder { color: #b5b5b5;}
 }
