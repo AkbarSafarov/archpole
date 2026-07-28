@@ -3,12 +3,27 @@ document.addEventListener('DOMContentLoaded', function () {
     var header = document.querySelector('.header');
     if (!header) return;
 
+    function setHeaderHeight() {
+        document.documentElement.style.setProperty('--header-height', header.offsetHeight + 'px');
+    }
+
+    setHeaderHeight();
+    window.addEventListener('resize', setHeaderHeight);
+
+    if (window.ResizeObserver) {
+        new ResizeObserver(setHeaderHeight).observe(header);
+    }
+
     var announce      = header.querySelector('.js-announce');
     var announceClose = header.querySelector('.js-announce-close');
 
     if (announceClose && announce) {
         announceClose.addEventListener('click', function () {
             announce.hidden = true;
+            setHeaderHeight();
+            try {
+                localStorage.setItem('announceClosed', '1');
+            } catch (e) {}
         });
     }
 

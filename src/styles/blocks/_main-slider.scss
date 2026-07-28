@@ -31,7 +31,7 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        min-height: 100vh;
+        min-height: calc(80vh - var(--header-height, 0px));
         height: auto;
 
         &::before {
@@ -39,6 +39,10 @@
             position: absolute;
             inset: 0;
             z-index: 1;
+        }
+
+        @media (max-width: 767px) {
+            min-height: calc(90vh - var(--header-height, 0px));
         }
     }
 
@@ -48,6 +52,7 @@
         align-items: flex-end;
         position: relative;
         z-index: 2;
+        padding-top: 30px;
     }
 
     &__content {
@@ -59,15 +64,16 @@
     &__title {
         font-family: var(--second-family);
         font-weight: 400;
-        -webkit-text-stroke: 1px #fff;
+        -webkit-text-stroke: .7px #fff;
         font-size: 96px;
         line-height: 80%;
         color: #fff;
-        margin: 0 0 9px;
+        margin: 0 0 24px;
 
-        @media (max-width: 991px) { font-size: 64px;
+        @media (max-width: 991px) {
+            font-size: 64px;
             margin-bottom: 16px;}
-    }
+        }
 
     &__text {
         font-family: var(--font-family);
@@ -77,8 +83,10 @@
         color: #fff;
         margin: 0 0 32px;
 
-        @media (max-width: 991px) { font-size: 16px;
-            margin-bottom: 24px;}
+        @media (max-width: 991px) {
+            font-size: 16px;
+            margin-bottom: 24px;
+        }
     }
 
     .swiper-pagination {

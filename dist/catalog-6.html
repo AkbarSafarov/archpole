@@ -19,7 +19,7 @@
     <header class="header">
 
     
-    <div class="header__announce js-announce">
+    <div class="header__announce js-announce" id="header-announce">
         <div class="container-xl d-flex justify-content-between">
             <p class="header__announce-text">ДОРОГИЕ ДАМЫ, В ЧЕСТЬ ПРАЗДНИКА 8 МАРТА У НАС СКИДКА НА ДЕКОР 25%</p>
             <button class="header__announce-close js-announce-close" type="button" aria-label="Закрыть">
@@ -29,6 +29,15 @@
             </button>
         </div>
     </div>
+    <script>
+        (function () {
+            try {
+                if (localStorage.getItem('announceClosed') === '1') {
+                    document.getElementById('header-announce').hidden = true;
+                }
+            } catch (e) {}
+        })();
+    </script>
 
     
     <div class="header__main">
@@ -345,7 +354,7 @@
     <div class="path_block__item" aria-current="page" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
         <i class="path_block__sep" aria-hidden="true"></i>
         <span itemprop="item">
-            <span class="path_block__text" itemprop="name">Смесители</span>
+            <span class="path_block__text" itemprop="name">Сиденья</span>
         </span>
         <meta itemprop="position" content="3">
     </div>
@@ -361,7 +370,7 @@
                             <path d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z" fill="#161616" />
                         </svg>
                     </a>
-                    <h1 class="hero__title">КАТАЛОГ</h1>
+                    <h1 class="hero__title">СИДЕНЬЯ</h1>
                 </div>
             </div>
 

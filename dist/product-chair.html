@@ -19,7 +19,7 @@
     <header class="header">
 
     
-    <div class="header__announce js-announce">
+    <div class="header__announce js-announce" id="header-announce">
         <div class="container-xl d-flex justify-content-between">
             <p class="header__announce-text">ДОРОГИЕ ДАМЫ, В ЧЕСТЬ ПРАЗДНИКА 8 МАРТА У НАС СКИДКА НА ДЕКОР 25%</p>
             <button class="header__announce-close js-announce-close" type="button" aria-label="Закрыть">
@@ -29,6 +29,15 @@
             </button>
         </div>
     </div>
+    <script>
+        (function () {
+            try {
+                if (localStorage.getItem('announceClosed') === '1') {
+                    document.getElementById('header-announce').hidden = true;
+                }
+            } catch (e) {}
+        })();
+    </script>
 
     
     <div class="header__main">
@@ -344,7 +353,7 @@
     <div class="path_block__item" aria-current="page" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
         <i class="path_block__sep" aria-hidden="true"></i>
         <span itemprop="item">
-            <span class="path_block__text" itemprop="name">Смесители</span>
+            <span class="path_block__text" itemprop="name">Стулья</span>
         </span>
         <meta itemprop="position" content="3">
     </div>
