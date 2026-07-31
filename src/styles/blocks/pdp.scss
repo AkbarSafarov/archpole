@@ -181,12 +181,74 @@
 	}
 
 	&__price-row {
+		position: relative;
 		display: flex;
 		align-items: baseline;
 		gap: 12px;
 
 		@media (max-width: 767px) {
 
+		}
+	}
+
+	&__price-toggle {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		background: none;
+		border: none;
+		padding: 0;
+		cursor: pointer;
+
+		&[aria-expanded="true"] .pdp-hero__price-chev {
+			transform: rotate(180deg);
+		}
+	}
+
+	&__price-chev {
+		flex-shrink: 0;
+		transition: transform 0.2s;
+	}
+
+	&__price-breakdown {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		margin-top: 14px;
+		background: #161616;
+		color: #fff;
+		padding: 8px;
+		min-width: 250px;
+		z-index: 50;
+
+		&[hidden] { display: none; }
+
+		&::before {
+			content: '';
+			position: absolute;
+			bottom: 100%;
+			left: 20px;
+			border: 6px solid transparent;
+			border-bottom-color: #161616;
+		}
+	}
+
+	&__price-line {
+		display: flex;
+		align-items: baseline;
+		gap: 5px;
+		font-family: var(--font-family);
+		font-weight: 400;
+		font-size: 13px;
+		line-height: 145%;
+		color: #b5b5b5;
+		white-space: nowrap;
+
+		& + & { margin-top: 2px; }
+
+		strong {
+			font-weight: 600;
+			color: #fff;
 		}
 	}
 
@@ -221,13 +283,18 @@
 
 	&__option {
 		display: flex;
-		align-items: center;
-		gap: 8px;
+		flex-direction: column;
 		border-top: 1.50px solid #dfdfdf;
 
 		@media (max-width: 767px) {
 
 		}
+	}
+
+	&__option-head {
+		display: flex;
+		align-items: center;
+		gap: 8px;
 	}
 
 	&__option-label {
@@ -289,48 +356,196 @@
 		transition: transform 0.2s;
 	}
 
-	&__option-list {
-		position: absolute;
-		top: 100%;
-		left: 0;
-		right: 0;
-		background: #fff;
-		border: 1.5px solid #dfdfdf;
-		border-top: none;
-		z-index: 100;
-		list-style: none;
-		margin: 0;
-		padding: 0;
-
-		&[hidden] { display: none; }
+	&__option-ctrl[aria-expanded="true"] &__option-swatch {
+		display: none;
 	}
 
-	&__option-item {
+	&__option-panel {
+		padding: 0 0 20px;
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+
+		&[hidden] { display: none; }
+
+		&--swatches {
+			flex-direction: row;
+			align-items: flex-start;
+			gap: 16px;
+
+			@media (max-width: 767px) { gap: 12px; }
+		}
+	}
+
+	// Radio row (Габариты)
+	&__radio {
 		display: flex;
 		align-items: center;
 		gap: 10px;
-		padding: 12px 16px;
+		padding: 8px 0;
 		cursor: pointer;
+		width: 100%;
+	}
+
+	&__radio-input {
+		position: absolute;
+		opacity: 0;
+		width: 0;
+		height: 0;
+	}
+
+	&__radio-dot {
+		position: relative;
+		flex-shrink: 0;
+		width: 16px;
+		height: 16px;
+		border-radius: 50%;
+		border: 1.5px solid #9f9f9f;
+		transition: border-color 0.2s;
+
+		&::after {
+			content: '';
+			position: absolute;
+			inset: 3px;
+			border-radius: 50%;
+			background: #161616;
+			transform: scale(0);
+			transition: transform 0.15s;
+		}
+	}
+
+	&__radio-input:checked + &__radio-dot {
+		border-color: #161616;
+
+		&::after { transform: scale(1); }
+	}
+
+	&__radio-text {
 		font-family: var(--font-family);
 		font-weight: 400;
 		font-size: 15px;
 		line-height: 100%;
 		color: #161616;
-		transition: background 0.15s;
+	}
 
-		&:hover { background: #f5f5f5; }
+	// Checkbox row (Дополнительные опции)
+	&__checkbox {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		padding: 8px 0;
+		cursor: pointer;
+		width: 100%;
+	}
 
-		&.is-active {
-			font-weight: 500;
-			background: #f5f5f5;
+	&__checkbox-input {
+		position: absolute;
+		opacity: 0;
+		width: 0;
+		height: 0;
+	}
+
+	&__checkbox-box {
+		position: relative;
+		flex-shrink: 0;
+		width: 16px;
+		height: 16px;
+		border: 1.5px solid #9f9f9f;
+		background: #fff;
+		transition: border-color 0.2s, background 0.2s;
+
+		&::after {
+			content: '';
+			position: absolute;
+			left: 4px;
+			top: 1px;
+			width: 5px;
+			height: 9px;
+			border: solid #fff;
+			border-width: 0 1.6px 1.6px 0;
+			transform: rotate(45deg) scale(0);
+			transition: transform 0.15s;
 		}
 	}
 
-	&__option-item-swatch {
-		width: 20px;
-		height: 20px;
+	&__checkbox-input:checked + &__checkbox-box {
+		border-color: #161616;
+		background: #161616;
+
+		&::after { transform: rotate(45deg) scale(1); }
+	}
+
+	&__checkbox-text {
+		font-family: var(--font-family);
+		font-weight: 400;
+		font-size: 15px;
+		line-height: 100%;
+		color: #161616;
+	}
+
+	// Swatch grid + preview (Отделка деревом / Отделка металла)
+	&__swatch-grid {
+		flex: 1;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+	}
+
+	&__swatch {
+		position: relative;
+		width: 24px;
+		height: 24px;
 		flex-shrink: 0;
+		border: none;
+		padding: 0;
+		cursor: pointer;
+		transition: outline-color 0.15s;
+
+		&.is-active {
+			outline: 1.5px solid #161616;
+		}
+	}
+
+	&__swatch-check {
+		position: absolute;
+		inset: 0;
+		margin: auto;
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	&__swatch.is-active &__swatch-check {
+		opacity: 1;
+	}
+
+	&__swatch-preview-wrap {
+		flex-shrink: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 6px;
+	}
+
+	&__swatch-preview {
+		flex-shrink: 0;
+		width: 88px;
+		height: 88px;
 		display: block;
+
+		@media (max-width: 767px) {
+			width: 64px;
+			height: 64px;
+		}
+	}
+
+	&__swatch-preview-price {
+		font-family: var(--font-family);
+		font-weight: 500;
+		font-size: 13px;
+		line-height: 100%;
+		color: #161616;
+
+		&:empty { display: none; }
 	}
 
 	&__cta {
