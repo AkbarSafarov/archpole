@@ -119,6 +119,34 @@
     gap: 8px;
     flex-shrink: 0;
     margin-left: auto;
+
+    @media all and (max-width: 990px) {
+        &.is-search-open {
+            display: flex !important;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            margin: 0;
+            padding: 12px 16px;
+            background: #fff;
+            border-bottom: 1px solid #e8e8e8;
+            z-index: 999;
+
+            > *:not(.header__search) {
+                display: none;
+            }
+
+            .header__search {
+                width: 100%;
+            }
+
+            .header__search-input {
+                flex: 1;
+                width: auto;
+            }
+        }
+    }
 }
 
 .header__search {

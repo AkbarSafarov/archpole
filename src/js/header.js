@@ -31,11 +31,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (searchToggle) {
         searchToggle.addEventListener('click', function () {
-            var searchEl = header.querySelector('.header__search');
-            if (searchEl) {
-                searchEl.style.display = searchEl.style.display === 'flex' ? 'none' : 'flex';
-                var input = searchEl.querySelector('.header__search-input');
-                if (input) input.focus();
+            var searchWrap = header.querySelector('.header__right');
+            if (searchWrap) {
+                searchWrap.classList.toggle('is-search-open');
+                if (searchWrap.classList.contains('is-search-open')) {
+                    var input = searchWrap.querySelector('.header__search-input');
+                    if (input) input.focus();
+                }
             }
         });
     }
