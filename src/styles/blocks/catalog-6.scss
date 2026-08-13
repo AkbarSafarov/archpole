@@ -1,22 +1,46 @@
 .cat6-subnav {
 	display: flex;
+	align-items: center;
 
 	&__scroll {
 		flex: 1;
 		overflow-x: auto;
 		scrollbar-width: none;
 		-webkit-overflow-scrolling: touch;
+		cursor: grab;
 
 		&::-webkit-scrollbar { display: none; }
+
+		&.is-dragging {
+			cursor: grabbing;
+			user-select: none;
+		}
 
 		@media all and (max-width: 991px) {
 			margin-right: -32px;
 			padding-right: 32px;
+			cursor: auto;
 		}
 
 		@media all and (max-width: 767px) {
 			margin-right: -12px;
 			padding-right: 12px;
+		}
+	}
+
+	&__arrow {
+		flex-shrink: 0;
+
+		&.prev { margin-right: 16px; }
+		&.next { margin-left: 16px; }
+
+		&.is-disabled {
+			opacity: 0.3;
+			pointer-events: none;
+		}
+
+		@media all and (max-width: 991px) {
+			display: none;
 		}
 	}
 

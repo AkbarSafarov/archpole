@@ -37,14 +37,78 @@ document.addEventListener('DOMContentLoaded', function () {
     var subnavPrev = document.querySelector('.js-subnav-prev');
     var subnavNext = document.querySelector('.js-subnav-next');
     var subnavScroll = document.querySelector('.js-subnav-scroll');
-    if (subnavPrev && subnavNext && subnavScroll) {
-        var scrollStep = 220;
-        subnavPrev.addEventListener('click', function () {
-            subnavScroll.scrollBy({ left: -scrollStep, behavior: 'smooth' });
+    if (subnavScroll) {
+        var updateSubnavArrows = function () {
+            if (!subnavPrev && !subnavNext) return;
+            var maxScroll = subnavScroll.scrollWidth - subnavScroll.clientWidth;
+            if (subnavPrev) subnavPrev.classList.toggle('is-disabled', subnavScroll.scrollLeft <= 0);
+            if (subnavNext) subnavNext.classList.toggle('is-disabled', subnavScroll.scrollLeft >= maxScroll - 1);
+        };
+
+        if (subnavPrev && subnavNext) {
+            var scrollStep = 220;
+            subnavPrev.addEventListener('click', function () {
+                subnavScroll.scrollBy({ left: -scrollStep, behavior: 'smooth' });
+            });
+            subnavNext.addEventListener('click', function () {
+                subnavScroll.scrollBy({ left: scrollStep, behavior: 'smooth' });
+            });
+            subnavScroll.addEventListener('scroll', updateSubnavArrows);
+            window.addEventListener('resize', updateSubnavArrows);
+            updateSubnavArrows();
+        }
+
+        var isDown = false;
+        var dragged = false;
+        var startX = 0;
+        var startScrollLeft = 0;
+        var DRAG_THRESHOLD = 6;
+
+        var stopDragging = function () {
+            isDown = false;
+            subnavScroll.classList.remove('is-dragging');
+        };
+
+        subnavScroll.addEventListener('mousedown', function (e) {
+            if (e.button !== 0) return;
+            isDown = true;
+            dragged = false;
+            startX = e.pageX;
+            startScrollLeft = subnavScroll.scrollLeft;
+            subnavScroll.classList.add('is-dragging');
+            e.preventDefault();
         });
-        subnavNext.addEventListener('click', function () {
-            subnavScroll.scrollBy({ left: scrollStep, behavior: 'smooth' });
+
+        subnavScroll.addEventListener('dragstart', function (e) {
+            e.preventDefault();
         });
+
+        window.addEventListener('mousemove', function (e) {
+            if (!isDown) return;
+            var delta = e.pageX - startX;
+            if (Math.abs(delta) > DRAG_THRESHOLD) dragged = true;
+            if (dragged) {
+                e.preventDefault();
+                subnavScroll.scrollLeft = startScrollLeft - delta;
+            }
+        });
+
+        window.addEventListener('mouseup', stopDragging);
+        window.addEventListener('blur', stopDragging);
+
+        subnavScroll.addEventListener('click', function (e) {
+            if (dragged) {
+                e.preventDefault();
+                e.stopPropagation();
+                dragged = false;
+            }
+        }, true);
+
+        subnavScroll.addEventListener('wheel', function (e) {
+            if (Math.abs(e.deltaY) <= Math.abs(e.deltaX)) return;
+            subnavScroll.scrollLeft += e.deltaY;
+            e.preventDefault();
+        }, { passive: false });
     }
 
     var subnavTabs = document.querySelectorAll('.js-subnav-tab');
