@@ -418,6 +418,10 @@
 		border-color: #161616;
 
 		&::after { transform: scale(1); }
+
+		& + .pdp-hero__radio-text {
+			color: #8A8A8A;
+		}
 	}
 
 	&__radio-text {
@@ -426,6 +430,15 @@
 		font-size: 15px;
 		line-height: 100%;
 		color: #161616;
+	}
+
+	&__radio-price {
+		font-family: var(--font-family);
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 100%;
+		color: #161616;
+		margin-left: auto;
 	}
 
 	// Checkbox row (Дополнительные опции)

@@ -26,7 +26,6 @@
         font-size: 28px;
         line-height: 90%;
         color: #fff;
-        text-transform: uppercase;
         margin: 16px 0;
         display: flex;
         justify-content: space-between;
@@ -39,6 +38,10 @@
         cursor: default;
 
         &--plain { cursor: default; }
+
+        &:first-letter {
+            text-transform: uppercase;
+        }
     }
 
     &__chevron { display: none; }

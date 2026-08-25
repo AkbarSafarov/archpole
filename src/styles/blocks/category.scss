@@ -54,7 +54,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 12px 0px;
+        padding: 11px 0px;
         font-family: var(--font-family);
         font-weight: 400;
         font-size: 28px;
@@ -63,6 +63,10 @@
         transition: all 0.3s;
         border-top: 1.50px solid #dfdfdf;
         text-decoration: none;
+
+        span::first-letter {
+            text-transform: uppercase;
+        }
 
         &:hover,
         &.is-active {
@@ -76,6 +80,7 @@
         opacity: 0;
         flex-shrink: 0;
         transition: opacity 0.15s;
+        margin-right: 8px;
     }
 
     &__preview {
