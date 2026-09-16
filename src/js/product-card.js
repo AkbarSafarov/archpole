@@ -9,7 +9,18 @@ document.addEventListener('DOMContentLoaded', function () {
             slidesPerView: 'auto',
             spaceBetween: 8,
             watchSlidesProgress: true,
-            freeMode: true,
+            freeMode: {
+                enabled: true,
+                momentum: true,
+                momentumRatio: 0.8,
+                momentumVelocityRatio: 0.8,
+            },
+            mousewheel: {
+                forceToAxis: true,
+                sensitivity: 0.5,
+                releaseOnEdges: true,
+            },
+            speed: 500,
         }) : null;
 
         new Swiper(mainEl, {
